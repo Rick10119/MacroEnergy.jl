@@ -1,0 +1,127 @@
+{
+    "AluminaPlant": [
+        {
+            "type": "AluminaPlant",
+            "global_data": {
+                "nodes": {},
+                "transforms": {
+                    "id": "aluminum_plant",
+                    "timedata": "Alumina",
+                    "elec_alumina_rate": 0.15,
+                    "bauxite_alumina_rate": 2.4,
+                    "fuel_alumina_rate": 2.917,
+                    "fuel_emissions_rate": 0.181048235160161,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "elec_edge":{
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "alumina_edge":{
+                        "type": "Alumina",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": false,
+                        "can_expand": true,
+                        "capacity_size": 114.15,
+                        "investment_cost": 10000,
+                        "fixed_om_cost": 20.3775,
+                        "variable_om_cost": 0,
+                        "end_vertex": "alumina_produced"
+                    },
+                    "bauxite_edge":{
+                        "type": "Bauxite",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "fuel_edge":{
+                        "type": "NaturalGas",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge":{
+                        "type": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink"
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "alumina_plant_MA",
+                    "location": "MA",
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_MA",
+                            "end_vertex": "alumina_plant_MA"
+                        },
+                        "alumina_edge": {
+                            "start_vertex": "alumina_plant_MA",
+                            "end_vertex": "alumina_produced"
+                        },
+                        "bauxite_edge": {
+                            "start_vertex": "bauxite_source_MA",
+                            "end_vertex": "alumina_plant_MA"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "ng_source",
+                            "end_vertex": "alumina_plant_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "alumina_plant_CT",
+                    "location": "CT",
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_CT",
+                            "end_vertex": "alumina_plant_CT"
+                        },
+                        "alumina_edge": {
+                            "start_vertex": "alumina_plant_CT",
+                            "end_vertex": "alumina_produced"
+                        },
+                        "bauxite_edge": {
+                            "start_vertex": "bauxite_source_CT",
+                            "end_vertex": "alumina_plant_CT"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "ng_source",
+                            "end_vertex": "alumina_plant_CT"
+                        }
+                    }
+                },
+                {
+                    "id": "alumina_plant_ME",
+                    "location": "ME",
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_ME",
+                            "end_vertex": "alumina_plant_ME"
+                        },
+                        "alumina_edge": {
+                            "start_vertex": "alumina_plant_ME",
+                            "end_vertex": "alumina_produced"
+                        },
+                        "bauxite_edge": {
+                            "start_vertex": "bauxite_source_ME",
+                            "end_vertex": "alumina_plant_ME"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "ng_source",
+                            "end_vertex": "alumina_plant_ME"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

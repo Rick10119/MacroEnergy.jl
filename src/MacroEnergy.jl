@@ -29,6 +29,11 @@ abstract type Coal <: Commodity end ## MWh
 abstract type Biomass <: Commodity end ## tonnes
 abstract type Uranium <: Commodity end ## MWh
 abstract type LiquidFuels <: Commodity end ## MWh
+abstract type Aluminum <: Commodity end ## tonnes
+abstract type AluminumScrap <: Commodity end ## tonnes
+abstract type Alumina <: Commodity end ## tonnes
+abstract type Graphite <: Commodity end ## tonnes
+abstract type Bauxite <: Commodity end ## tonnes
 
 ## Time data types
 abstract type AbstractTimeData{T<:Commodity} end
@@ -97,7 +102,9 @@ include("model/assets/thermalhydrogen.jl")
 include("model/assets/thermalpower.jl")
 include("model/assets/powerline.jl")
 include("model/assets/vre.jl")
-
+include("model/assets/aluminumrefining.jl")
+include("model/assets/aluminumsmelting.jl")
+include("model/assets/aluminaplant.jl")
 include("model/assets/thermalhydrogenccs.jl")
 include("model/assets/thermalpowerccs.jl")
 
@@ -143,6 +150,14 @@ export AbstractAsset,
     Battery,
     Biomass,
     Coal,
+    Aluminum,
+    AluminumScrap,
+    AluminumRefining,
+    AluminumSmelting,
+    AluminaPlant,
+    Graphite,
+    Alumina,
+    Bauxite,
     BECCSElectricity,
     BECCSHydrogen,
     BECCSGasoline,
