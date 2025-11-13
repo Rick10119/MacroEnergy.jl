@@ -48,9 +48,9 @@ abstract type Bauxite <: Commodity end ## tonnes
 abstract type IronOre <: Commodity end ## tonnes
 abstract type SteelScrap <: Commodity end ## tonnes
 abstract type CrudeSteel <: Commodity end ## tonnes
-abstract type Ammonia <: Commodity end ## tonnes
+abstract type Ammonia <: Commodity end ## MWh
+abstract type Methanol <: Commodity end ## MWh
 abstract type Nitrogen <: Commodity end ## tonnes
-abstract type Methanol <: Commodity end ## tonnes
 abstract type Oxygen <: Commodity end ## tonnes
 
 ## Time data types

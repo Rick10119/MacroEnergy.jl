@@ -1,10 +1,10 @@
 struct SyntheticAmmonia <: AbstractAsset
     id::AssetId
     synthetic_ammonia_transform::Transformation
-    h2_edge::Edge{<:Hydrogen}
-    n2_edge::Edge{<:Nitrogen}
-    elec_edge::Edge{<:Electricity}
-    nh3_edge::Edge{<:Ammonia}
+    h2_edge::Edge{<:Hydrogen} ## MWh
+    n2_edge::Edge{<:Nitrogen} ## tonnes
+    elec_edge::Edge{<:Electricity} ## MWh
+    nh3_edge::Edge{<:Ammonia} ## MWh
 end
 
 function default_data(t::Type{SyntheticAmmonia}, id=missing, style="full")
@@ -20,9 +20,9 @@ function full_default_data(::Type{SyntheticAmmonia}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Ammonia",
-            :h2_consumption => 0.178,
-            :n2_consumption => 0.8251,
-            :electricity_consumption => 1.278,
+            :h2_consumption => 1.1484,
+            :n2_consumption => 0.1597,
+            :electricity_consumption => 0.2473,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -57,12 +57,13 @@ function simple_default_data(::Type{SyntheticAmmonia}, id=missing)
         :can_expand => true,
         :can_retire => true,
         :existing_capacity => 0.0,
-        :h2_consumption => 0.178,
-        :n2_consumption => 0.8251,
-        :electricity_consumption => 1.278,
-        :investment_cost => 0.0,
-        :fixed_om_cost => 0.0,
-        :variable_om_cost => 0.0,
+        :h2_consumption => 1.1484,
+        :n2_consumption => 0.1597,
+        :electricity_consumption => 0.2473,
+        :investment_cost => 1461749.91,
+        :fixed_om_cost => 1710.25,
+        :variable_om_cost => 0.02027,
+        :lifetime =>30,
     )
 end
 
