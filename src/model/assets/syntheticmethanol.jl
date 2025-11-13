@@ -21,10 +21,14 @@ function full_default_data(::Type{SyntheticMethanol}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Methanol",
-            :electricity_consumption => 1.0,  # 0.5-1.5 MWh per ton CH3OH
-            :h2_consumption => 0.2,           # ~0.2 tons H2 per ton CH3OH
-            :co2_consumption => 1.4,          # ~1.4 tons CO2 per ton CH3OH
-            :emission_rate => 0.05,           # 0.05 tons CO2 emission per ton CO2 captured
+            :electricity_consumption => 0.271,
+            :h2_consumption => 1.138,
+            :co2_consumption => 0.248,
+            :emission_rate => 0.10,
+            :investment_cost => 685961.676,
+            :fixed_om_cost => 802.575,
+            :variable_om_cost => 0.0,
+            :lifetime => 20,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -63,13 +67,14 @@ function simple_default_data(::Type{SyntheticMethanol}, id=missing)
         :can_expand => true,
         :can_retire => true,
         :existing_capacity => 0.0,
-        :electricity_consumption => 1.0,
-        :h2_consumption => 0.2,
-        :co2_consumption => 1.4,
-        :emission_rate => 0.05,
-        :investment_cost => 0.0,
-        :fixed_om_cost => 0.0,
+        :electricity_consumption => 0.271,
+        :h2_consumption => 1.138,
+        :co2_consumption => 0.248,
+        :emission_rate => 0.10,
+        :investment_cost => 685961.676,
+        :fixed_om_cost => 802.575,
         :variable_om_cost => 0.0,
+        :lifetime => 20,
     )
 end
 
@@ -232,19 +237,19 @@ function make(asset_type::Type{SyntheticMethanol}, data::AbstractDict{Symbol,Any
 
     synthetic_methanol_transform.balance_data = Dict(
         :co2_consumption => Dict(
-            ch3oh_edge.id => get(transform_data, :co2_consumption, 1.4),
+            ch3oh_edge.id => get(transform_data, :co2_consumption, 0.248),
             co2_captured_edge.id => 1.0,
         ),
         :elec_consumption => Dict(
-            ch3oh_edge.id => get(transform_data, :electricity_consumption, 1.0),
+            ch3oh_edge.id => get(transform_data, :electricity_consumption, 0.271),
             elec_edge.id => 1.0,
         ),
         :h2_consumption => Dict(
-            ch3oh_edge.id => get(transform_data, :h2_consumption, 0.2),
+            ch3oh_edge.id => get(transform_data, :h2_consumption, 1.138),
             h2_edge.id => 1.0,
         ),
         :emissions => Dict(
-            co2_captured_edge.id => get(transform_data, :emission_rate, 0.05),
+            co2_captured_edge.id => get(transform_data, :emission_rate, 0.10),
             co2_emission_edge.id => 1.0
         )
     )
