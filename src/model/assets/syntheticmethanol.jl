@@ -1,11 +1,11 @@
 struct SyntheticMethanol <: AbstractAsset
     id::AssetId
     synthetic_methanol_transform::Transformation
-    co2_captured_edge::Edge{<:CO2Captured}
-    ch3oh_edge::Edge{<:Methanol}
-    elec_edge::Edge{<:Electricity}
-    h2_edge::Edge{<:Hydrogen}
-    co2_emission_edge::Edge{<:CO2}
+    co2_captured_edge::Edge{<:CO2Captured} ## tonnes
+    ch3oh_edge::Edge{<:Methanol} ## MWh
+    elec_edge::Edge{<:Electricity} ## MWh
+    h2_edge::Edge{<:Hydrogen} ## MWh
+    co2_emission_edge::Edge{<:CO2} ## tonnes
 end
 
 function default_data(t::Type{SyntheticMethanol}, id=missing, style="full")
