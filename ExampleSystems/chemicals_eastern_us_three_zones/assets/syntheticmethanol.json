@@ -1,0 +1,161 @@
+{
+    "syntheticmethanol": [
+        {
+            "type": "SyntheticMethanol",
+            "global_data": {
+                "transforms": {
+                    "timedata": "Methanol",
+                    "electricity_consumption": 1.0,
+                    "h2_consumption": 0.2,
+                    "co2_consumption": 1.4,
+                    "emission_rate": 0.05,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges": {
+                    "co2_captured_edge": {
+                        "commodity": "CO2Captured",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "ch3oh_edge": {
+                        "commodity": "Methanol",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "constraints": {
+                            "CapacityConstraint": true
+                        }
+                    },
+                    "elec_edge": {
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "h2_edge": {
+                        "commodity": "Hydrogen",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "co2_emission_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "synthetic_methanol_plant_MA",
+                    "location": "MA",
+                    "can_expand": true,
+                    "can_retire": true,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 15000.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 15.0,
+                    "electricity_consumption": 1.0,
+                    "h2_consumption": 0.2,
+                    "co2_consumption": 1.4,
+                    "emission_rate": 0.05,
+                    "edges": {
+                        "co2_captured_edge": {
+                            "start_vertex": "co2_captured_supply_MA"
+                        },
+                        "ch3oh_edge": {
+                            "end_vertex": "ch3oh_node_MA"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_MA"
+                        },
+                        "h2_edge": {
+                            "start_vertex": "h2_node_MA"
+                        },
+                        "co2_emission_edge": {
+                            "end_vertex": "co2_sink"
+                        }
+                    }
+                },
+                {
+                    "id": "synthetic_methanol_plant_CT",
+                    "location": "CT",
+                    "can_expand": true,
+                    "can_retire": true,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 15000.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 15.0,
+                    "electricity_consumption": 1.0,
+                    "h2_consumption": 0.2,
+                    "co2_consumption": 1.4,
+                    "emission_rate": 0.05,
+                    "edges": {
+                        "co2_captured_edge": {
+                            "start_vertex": "co2_captured_supply_CT"
+                        },
+                        "ch3oh_edge": {
+                            "end_vertex": "ch3oh_node_CT"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_CT"
+                        },
+                        "h2_edge": {
+                            "start_vertex": "h2_node_CT"
+                        },
+                        "co2_emission_edge": {
+                            "end_vertex": "co2_sink"
+                        }
+                    }
+                },
+                {
+                    "id": "synthetic_methanol_plant_ME",
+                    "location": "ME",
+                    "can_expand": true,
+                    "can_retire": true,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 15000.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 15.0,
+                    "electricity_consumption": 1.0,
+                    "h2_consumption": 0.2,
+                    "co2_consumption": 1.4,
+                    "emission_rate": 0.05,
+                    "edges": {
+                        "co2_captured_edge": {
+                            "start_vertex": "co2_captured_supply_ME"
+                        },
+                        "ch3oh_edge": {
+                            "end_vertex": "ch3oh_node_ME"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_ME"
+                        },
+                        "h2_edge": {
+                            "start_vertex": "h2_node_ME"
+                        },
+                        "co2_emission_edge": {
+                            "end_vertex": "co2_sink"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+} 

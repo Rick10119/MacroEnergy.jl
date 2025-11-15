@@ -1,0 +1,141 @@
+{
+    "syntheticammonia": [
+        {
+            "type": "SyntheticAmmonia",
+            "global_data": {
+                "transforms": {
+                    "timedata": "Ammonia",
+                    "h2_consumption": 0.178,
+                    "n2_consumption": 0.8251,
+                    "electricity_consumption": 1.278,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges": {
+                    "h2_edge": {
+                        "commodity": "Hydrogen",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "n2_edge": {
+                        "commodity": "Nitrogen",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "elec_edge": {
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {}
+                    },
+                    "nh3_edge": {
+                        "commodity": "Ammonia",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": false,
+                        "can_expand": true,
+                        "constraints": {
+                            "CapacityConstraint": true
+                        }
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "synthetic_ammonia_plant_MA",
+                    "location": "MA",
+                    "can_expand": true,
+                    "can_retire": false,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 10.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 1.0,
+                    "lifetime": 20,
+                    "h2_consumption": 0.178,
+                    "n2_consumption": 0.8251,
+                    "electricity_consumption": 1.278,
+                    "edges": {
+                        "h2_edge": {
+                            "start_vertex": "h2_node_MA"
+                        },
+                        "n2_edge": {
+                            "start_vertex": "n2_node_MA"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_MA"
+                        },
+                        "nh3_edge": {
+                            "end_vertex": "nh3_node_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "synthetic_ammonia_plant_CT",
+                    "location": "CT",
+                    "can_expand": true,
+                    "can_retire": false,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 10.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 1.0,
+                    "h2_consumption": 0.178,
+                    "n2_consumption": 0.8251,
+                    "electricity_consumption": 1.278,
+                    "edges": {
+                        "h2_edge": {
+                            "start_vertex": "h2_node_CT"
+                        },
+                        "n2_edge": {
+                            "start_vertex": "n2_node_CT"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_CT"
+                        },
+                        "nh3_edge": {
+                            "end_vertex": "nh3_node_CT"
+                        }
+                    }
+                },
+                {
+                    "id": "synthetic_ammonia_plant_ME",
+                    "location": "ME",
+                    "can_expand": true,
+                    "can_retire": false,
+                    "existing_capacity": 10.0,
+                    "capacity_size": 10.0,
+                    "investment_cost": 10.0,
+                    "fixed_om_cost": 0.0,
+                    "variable_om_cost": 1.0,
+                    "h2_consumption": 0.178,
+                    "n2_consumption": 0.8251,
+                    "electricity_consumption": 1.278,
+                    "edges": {
+                        "h2_edge": {
+                            "start_vertex": "h2_node_ME"
+                        },
+                        "n2_edge": {
+                            "start_vertex": "n2_node_ME"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_ME"
+                        },
+                        "nh3_edge": {
+                            "end_vertex": "nh3_node_ME"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+} 

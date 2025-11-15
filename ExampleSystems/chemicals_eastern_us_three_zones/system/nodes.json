@@ -1,0 +1,368 @@
+{
+    "nodes": [
+        {
+            "type": "NaturalGas",
+            "global_data": {
+                "time_interval": "NaturalGas"
+            },
+            "instance_data": [
+                {
+                    "id": "ng_source"
+                }
+            ]
+        },
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity",
+                "max_nsd": [
+                    1,
+                    0.04,
+                    0.024,
+                    0.003
+                ],
+                "price_nsd": [
+                    50000.0,
+                    45000.0,
+                    27500.0,
+                    10000.0
+                ],
+                "constraints": {
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "elec_MA",
+                    "location": "MA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand.csv",
+                            "header": "Demand_MW_z1"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_CT",
+                    "location": "CT",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand.csv",
+                            "header": "Demand_MW_z2"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_ME",
+                    "location": "ME",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand.csv",
+                            "header": "Demand_MW_z3"
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "type": "CO2",
+            "global_data": {
+                "time_interval": "CO2"
+            },
+            "instance_data": [
+                {
+                    "id": "co2_sink",
+                    "constraints": {
+                        "CO2CapConstraint": false
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 2.295e7
+                        }
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_captured_sink"
+                },
+                {
+                    "id": "co2_captured_supply_MA",
+                    "location": "MA",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        1
+                    ]
+                },
+                {
+                    "id": "co2_captured_supply_CT",
+                    "location": "CT",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        1
+                    ]
+                },
+                {
+                    "id": "co2_captured_supply_ME",
+                    "location": "ME",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        1
+                    ]
+                }
+            ]
+        },
+
+
+
+        {
+            "type": "Ammonia",
+            "global_data": {
+                "time_interval": "Ammonia",
+                "max_nsd": [
+                    1,
+                    0.04,
+                    0.024,
+                    0.003
+                ],
+                "price_nsd": [
+                    50000.0,
+                    45000.0,
+                    27500.0,
+                    10000.0
+                ],
+                "constraints": {
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "nh3_node_MA",
+                    "location": "MA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_ammonia_demand_per_node.csv",
+                            "header": "Ammonia_Demand_Tons_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "nh3_node_CT",
+                    "location": "CT",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_ammonia_demand_per_node.csv",
+                            "header": "Ammonia_Demand_Tons_CT"
+                        }
+                    }
+                },
+                {
+                    "id": "nh3_node_ME",
+                    "location": "ME",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_ammonia_demand_per_node.csv",
+                            "header": "Ammonia_Demand_Tons_ME"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Hydrogen",
+            "global_data": {
+                "time_interval": "Hydrogen",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "h2_node_MA",
+                    "location": "MA",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        20
+                    ]
+                },
+                {
+                    "id": "h2_node_CT",
+                    "location": "CT",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        20
+                    ]
+                },
+                {
+                    "id": "h2_node_ME",
+                    "location": "ME",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        20
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Nitrogen",
+            "global_data": {
+                "time_interval": "Nitrogen",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "n2_node_MA",
+                    "location": "MA",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        50
+                    ]
+                },
+                {
+                    "id": "n2_node_CT",
+                    "location": "CT",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        50
+                    ]
+                },
+                {
+                    "id": "n2_node_ME",
+                    "location": "ME",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        50
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Methanol",
+            "global_data": {
+                "time_interval": "Methanol",
+                "max_nsd": [
+                    1,
+                    0.04,
+                    0.024,
+                    0.003
+                ],
+                "price_nsd": [
+                    50000.0,
+                    45000.0,
+                    27500.0,
+                    10000.0
+                ],
+                "constraints": {
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "ch3oh_node_MA",
+                    "location": "MA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_methanol_demand_per_node.csv",
+                            "header": "Methanol_Demand_Tons_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "ch3oh_node_CT",
+                    "location": "CT",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_methanol_demand_per_node.csv",
+                            "header": "Methanol_Demand_Tons_CT"
+                        }
+                    }
+                },
+                {
+                    "id": "ch3oh_node_ME",
+                    "location": "ME",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/hourly_methanol_demand_per_node.csv",
+                            "header": "Methanol_Demand_Tons_ME"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Oxygen",
+            "global_data": {
+                "time_interval": "Oxygen",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "o2_node_MA",
+                    "location": "MA",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        30
+                    ]
+                },
+                {
+                    "id": "o2_node_CT",
+                    "location": "CT",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        30
+                    ]
+                },
+                {
+                    "id": "o2_node_ME",
+                    "location": "ME",
+                    "max_supply": [
+                        1000000
+                    ],
+                    "price_supply": [
+                        30
+                    ]
+                }
+            ]
+        }
+    ]
+}
