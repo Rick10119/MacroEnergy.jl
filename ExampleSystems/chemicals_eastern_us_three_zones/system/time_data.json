@@ -7,8 +7,7 @@
         "Ammonia": 1,
         "Nitrogen": 1,
         "Hydrogen": 1,
-        "Methanol": 1,
-        "Oxygen": 1
+        "Methanol": 1
     },
     "HoursPerSubperiod": {
         "Electricity": 8760,
@@ -18,8 +17,7 @@
         "Ammonia": 8760,
         "Nitrogen": 8760,
         "Hydrogen": 8760,
-        "Methanol": 8760,
-        "Oxygen": 8760
+        "Methanol": 8760
     },
     "PeriodLength": 8760,
     "NumberOfSubperiods": 1

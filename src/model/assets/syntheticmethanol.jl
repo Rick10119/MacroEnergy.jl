@@ -26,7 +26,7 @@ function full_default_data(::Type{SyntheticMethanol}, id=missing)
             :co2_consumption => 0.248,
             :emission_rate => 0.10,
             :investment_cost => 685961.676,
-            :fixed_om_cost => 802.575,
+            :fixed_om_cost => 1175.6697,
             :variable_om_cost => 0.0,
             :lifetime => 20,
             :constraints => Dict{Symbol, Bool}(
@@ -72,7 +72,7 @@ function simple_default_data(::Type{SyntheticMethanol}, id=missing)
         :co2_consumption => 0.248,
         :emission_rate => 0.10,
         :investment_cost => 685961.676,
-        :fixed_om_cost => 802.575,
+        :fixed_om_cost => 1175.6697,
         :variable_om_cost => 0.0,
         :lifetime => 20,
     )

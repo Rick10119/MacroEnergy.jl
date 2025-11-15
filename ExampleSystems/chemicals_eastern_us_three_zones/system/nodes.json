@@ -322,47 +322,6 @@
                     }
                 }
             ]
-        },
-        {
-            "type": "Oxygen",
-            "global_data": {
-                "time_interval": "Oxygen",
-                "constraints": {
-                    "BalanceConstraint": true
-                }
-            },
-            "instance_data": [
-                {
-                    "id": "o2_node_MA",
-                    "location": "MA",
-                    "max_supply": [
-                        1000000
-                    ],
-                    "price_supply": [
-                        30
-                    ]
-                },
-                {
-                    "id": "o2_node_CT",
-                    "location": "CT",
-                    "max_supply": [
-                        1000000
-                    ],
-                    "price_supply": [
-                        30
-                    ]
-                },
-                {
-                    "id": "o2_node_ME",
-                    "location": "ME",
-                    "max_supply": [
-                        1000000
-                    ],
-                    "price_supply": [
-                        30
-                    ]
-                }
-            ]
         }
     ]
 }

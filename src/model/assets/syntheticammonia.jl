@@ -23,6 +23,10 @@ function full_default_data(::Type{SyntheticAmmonia}, id=missing)
             :h2_consumption => 1.1484,
             :n2_consumption => 0.1597,
             :electricity_consumption => 0.2473,
+            :investment_cost => 1461749.91,
+            :fixed_om_cost => 2512.7481,
+            :variable_om_cost => 0.02027,
+            :lifetime => 30,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -61,7 +65,7 @@ function simple_default_data(::Type{SyntheticAmmonia}, id=missing)
         :n2_consumption => 0.1597,
         :electricity_consumption => 0.2473,
         :investment_cost => 1461749.91,
-        :fixed_om_cost => 1710.25,
+        :fixed_om_cost => 2512.7481,
         :variable_om_cost => 0.02027,
         :lifetime =>30,
     )

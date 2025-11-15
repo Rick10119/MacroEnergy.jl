@@ -4,14 +4,13 @@ struct ThermalAmmoniaCCS{T} <: AbstractAsset
     nh3_edge::Union{Edge{<:Ammonia},EdgeWithUC{<:Ammonia}}
     elec_edge::Edge{<:Electricity}
     fuel_edge::Edge{<:T}
-    n2_edge::Edge{<:Nitrogen}
     co2_edge::Edge{<:CO2}
     co2_captured_edge::Edge{<:CO2Captured}
 end
 
 ThermalAmmoniaCCS(id::AssetId, thermalammoniaccs_transform::Transformation, nh3_edge::Union{Edge{<:Ammonia},EdgeWithUC{<:Ammonia}}, elec_edge::Edge{<:Electricity},
-fuel_edge::Edge{T}, n2_edge::Edge{<:Nitrogen}, co2_edge::Edge{<:CO2}, co2_captured_edge::Edge{<:CO2Captured}) where T<:Commodity =
-    ThermalAmmoniaCCS{T}(id, thermalammoniaccs_transform, nh3_edge, elec_edge, fuel_edge, n2_edge, co2_edge, co2_captured_edge)
+fuel_edge::Edge{T}, co2_edge::Edge{<:CO2}, co2_captured_edge::Edge{<:CO2Captured}) where T<:Commodity =
+    ThermalAmmoniaCCS{T}(id, thermalammoniaccs_transform, nh3_edge, elec_edge, fuel_edge, co2_edge, co2_captured_edge)
 
 function default_data(t::Type{ThermalAmmoniaCCS}, id=missing, style="full")
     if style == "full"
@@ -26,11 +25,14 @@ function full_default_data(::Type{ThermalAmmoniaCCS}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Ammonia",
-            :electricity_consumption => 0.3,  # 0.25-0.4 MWh per ton NH3
-            :fuel_consumption => 6.89,        # ~0.4-0.5 tons CH4 per ton NH3 = 6.89 MWh per ton NH3
-            :n2_consumption => 1.27,          # 1.27 tons N2 per ton NH3
             :emission_rate => 0.0091,            # 5% CO2 emission rate, 0.181048235160161 tons CO2 per MWh of CH4
             :capture_rate => 0.17195,             # 95% CO2 capture rate
+            :electricity_consumption => 0.07342, # data from the literature https://www.sciencedirect.com/science/article/pii/S0306261920313453, 1.93 times the electricity consumption of a thermalammonia without CCS
+            :fuel_consumption => 1.3095,        # MWh of CH4
+            :investment_cost => 2720959.03, # 130% of the investment cost of a thermalammonia without CCS
+            :fixed_om_cost => 109232.584,
+            :variable_om_cost => 1.17195,
+            :lifetime => 30,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -51,9 +53,6 @@ function full_default_data(::Type{ThermalAmmoniaCCS}, id=missing)
             ),
             :fuel_edge => @edge_data(
                 :commodity => missing,
-            ),
-            :n2_edge => @edge_data(
-                :commodity => "Nitrogen",
             ),
             :co2_edge => @edge_data(
                 :commodity=>"CO2",
@@ -82,7 +81,6 @@ function simple_default_data(::Type{ThermalAmmoniaCCS}, id=missing)
         :fixed_om_cost => 0.0,
         :variable_om_cost => 0.0,
         :fuel_consumption => 6.89,
-        :n2_consumption => 1.27,
         :electricity_consumption => 0.3,
         :emission_rate => 0.0091,
         :capture_rate => 0.17195,
@@ -228,32 +226,6 @@ function make(asset_type::Type{ThermalAmmoniaCCS}, data::AbstractDict{Symbol,Any
         fuel_end_node,
     )
 
-    n2_edge_key = :n2_edge
-    @process_data(
-        n2_edge_data, 
-        data[:edges][n2_edge_key], 
-        [
-            (data[:edges][n2_edge_key], key),
-            (data[:edges][n2_edge_key], Symbol("n2_", key)),
-            (data, Symbol("n2_", key)),
-        ]
-    )
-    @start_vertex(
-        n2_start_node,
-        n2_edge_data,
-        Nitrogen,
-        [(n2_edge_data, :start_vertex), (data, :location)],
-    )
-    n2_end_node = thermalammoniaccs_transform
-    n2_edge = Edge(
-        Symbol(id, "_", n2_edge_key),
-        n2_edge_data,
-        system.time_data[:Nitrogen],
-        Nitrogen,
-        n2_start_node,
-        n2_end_node,
-    )
-
     co2_edge_key = :co2_edge
     @process_data(
         co2_edge_data, 
@@ -308,16 +280,12 @@ function make(asset_type::Type{ThermalAmmoniaCCS}, data::AbstractDict{Symbol,Any
 
     thermalammoniaccs_transform.balance_data = Dict(
         :energy => Dict(
-            nh3_edge.id => get(transform_data, :fuel_consumption, 6.89),
+            nh3_edge.id => get(transform_data, :fuel_consumption, 1.3095),
             fuel_edge.id => 1.0,
         ),
         :electricity => Dict(
-            nh3_edge.id => get(transform_data, :electricity_consumption, 0.3),
+            nh3_edge.id => get(transform_data, :electricity_consumption, 0.07342),
             elec_edge.id => 1.0
-        ),
-        :nitrogen => Dict(
-            nh3_edge.id => get(transform_data, :n2_consumption, 1.27),
-            n2_edge.id => 1.0,
         ),
         :emissions => Dict(
             fuel_edge.id => get(transform_data, :emission_rate, 0.0091),
@@ -330,5 +298,5 @@ function make(asset_type::Type{ThermalAmmoniaCCS}, data::AbstractDict{Symbol,Any
     )
  
 
-    return ThermalAmmoniaCCS(id, thermalammoniaccs_transform, nh3_edge, elec_edge, fuel_edge, n2_edge, co2_edge, co2_captured_edge)
+    return ThermalAmmoniaCCS(id, thermalammoniaccs_transform, nh3_edge, elec_edge, fuel_edge, co2_edge, co2_captured_edge)
 end 

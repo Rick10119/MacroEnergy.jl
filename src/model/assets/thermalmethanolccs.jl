@@ -4,14 +4,13 @@ struct ThermalMethanolCCS{T} <: AbstractAsset
     ch3oh_edge::Union{Edge{<:Methanol},EdgeWithUC{<:Methanol}}
     elec_edge::Edge{<:Electricity}
     fuel_edge::Edge{<:T}
-    o2_edge::Edge{<:Oxygen}
     co2_edge::Edge{<:CO2}
     co2_captured_edge::Edge{<:CO2Captured}
 end
 
 ThermalMethanolCCS(id::AssetId, thermalmethanolccs_transform::Transformation, ch3oh_edge::Union{Edge{<:Methanol},EdgeWithUC{<:Methanol}}, elec_edge::Edge{<:Electricity},
-fuel_edge::Edge{T}, o2_edge::Edge{<:Oxygen}, co2_edge::Edge{<:CO2}, co2_captured_edge::Edge{<:CO2Captured}) where T<:Commodity =
-    ThermalMethanolCCS{T}(id, thermalmethanolccs_transform, ch3oh_edge, elec_edge, fuel_edge, o2_edge, co2_edge, co2_captured_edge)
+fuel_edge::Edge{T}, co2_edge::Edge{<:CO2}, co2_captured_edge::Edge{<:CO2Captured}) where T<:Commodity =
+    ThermalMethanolCCS{T}(id, thermalmethanolccs_transform, ch3oh_edge, elec_edge, fuel_edge, co2_edge, co2_captured_edge)
 
 function default_data(t::Type{ThermalMethanolCCS}, id=missing, style="full")
     if style == "full"
@@ -26,11 +25,14 @@ function full_default_data(::Type{ThermalMethanolCCS}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Methanol",
-            :electricity_consumption => 0.325,  # 0.25-0.4 MWh per ton CH3OH
-            :fuel_consumption => 0.475,         # ~0.4-0.55 tons CH4 per ton CH3OH = 0.475 MWh per ton CH3OH
-            :o2_consumption => 0.95,            # 0.95 tons O2 per ton CH3OH
-            :emission_rate => 0.095,            # 5% CO2 emission rate, 1.9 tons CO2 per ton CH3OH * 0.05
-            :capture_rate => 1.805,             # 95% CO2 capture rate, 1.9 tons CO2 per ton CH3OH * 0.95
+            :electricity_consumption => 0.0,  # -0.10 MWh per MWh of Methanol. Source: https://www.osti.gov/biblio/1601964
+            :fuel_consumption => 1.7158,         # 103% of the fuel consumption of a thermalmethanol without CCS
+            :emission_rate => 0.0110645539,              # tons CO2 per MWh of CH3OH (1ton/ton)
+            :capture_rate => 0.099576,             # 90% CO2 capture rate of a thermalmethanol without CCS
+            :investment_cost => 125386.335, # 134% of the investment cost of a thermalmethanol without CCS
+            :fixed_om_cost => 50154.1732,
+            :variable_om_cost => 2.0062,
+            :lifetime => 30,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -51,9 +53,6 @@ function full_default_data(::Type{ThermalMethanolCCS}, id=missing)
             ),
             :fuel_edge => @edge_data(
                 :commodity => missing,
-            ),
-            :o2_edge => @edge_data(
-                :commodity => "Oxygen",
             ),
             :co2_edge => @edge_data(
                 :commodity=>"CO2",
@@ -78,20 +77,13 @@ function simple_default_data(::Type{ThermalMethanolCCS}, id=missing)
         :fuel_commodity => "NaturalGas",
         :co2_sink => missing,
         :uc => false,
-        :investment_cost => 0.0,
-        :fixed_om_cost => 0.0,
-        :variable_om_cost => 0.0,
-        :fuel_consumption => 0.475,
-        :o2_consumption => 0.95,
-        :electricity_consumption => 0.325,
-        :emission_rate => 0.095,
-        :capture_rate => 1.805,
-        :startup_cost => 0.0,
-        :startup_fuel_consumption => 0.0,
-        :min_up_time => 0,
-        :min_down_time => 0,
-        :ramp_up_fraction => 0.0,
-        :ramp_down_fraction => 0.0,
+        :investment_cost => 125386.335,
+        :fixed_om_cost => 50154.1732,
+        :variable_om_cost => 2.0062,
+        :fuel_consumption => 1.7158,
+        :electricity_consumption => 0.0,
+        :emission_rate => 0.0110645539,
+        :capture_rate => 0.099576,
     )
 end
 
@@ -228,32 +220,6 @@ function make(asset_type::Type{ThermalMethanolCCS}, data::AbstractDict{Symbol,An
         fuel_end_node,
     )
 
-    o2_edge_key = :o2_edge
-    @process_data(
-        o2_edge_data, 
-        data[:edges][o2_edge_key], 
-        [
-            (data[:edges][o2_edge_key], key),
-            (data[:edges][o2_edge_key], Symbol("o2_", key)),
-            (data, Symbol("o2_", key)),
-        ]
-    )
-    @start_vertex(
-        o2_start_node,
-        o2_edge_data,
-        Oxygen,
-        [(o2_edge_data, :start_vertex), (data, :location)],
-    )
-    o2_end_node = thermalmethanolccs_transform
-    o2_edge = Edge(
-        Symbol(id, "_", o2_edge_key),
-        o2_edge_data,
-        system.time_data[:Oxygen],
-        Oxygen,
-        o2_start_node,
-        o2_end_node,
-    )
-
     co2_edge_key = :co2_edge
     @process_data(
         co2_edge_data, 
@@ -308,27 +274,23 @@ function make(asset_type::Type{ThermalMethanolCCS}, data::AbstractDict{Symbol,An
 
     thermalmethanolccs_transform.balance_data = Dict(
         :energy => Dict(
-            ch3oh_edge.id => get(transform_data, :fuel_consumption, 0.475),
+            ch3oh_edge.id => get(transform_data, :fuel_consumption, 1.7158),
             fuel_edge.id => 1.0,
         ),
         :electricity => Dict(
-            ch3oh_edge.id => get(transform_data, :electricity_consumption, 0.325),
+            ch3oh_edge.id => get(transform_data, :electricity_consumption, 0.0),
             elec_edge.id => 1.0
         ),
-        :oxygen => Dict(
-            ch3oh_edge.id => get(transform_data, :o2_consumption, 0.95),
-            o2_edge.id => 1.0,
-        ),
         :emissions => Dict(
-            fuel_edge.id => get(transform_data, :emission_rate, 0.009),
+            fuel_edge.id => get(transform_data, :emission_rate, 0.0110645539),
             co2_edge.id => 1.0,
         ),
         :capture => Dict(
-            fuel_edge.id => get(transform_data, :capture_rate, 0.081),
+            fuel_edge.id => get(transform_data, :capture_rate, 0.099576),
             co2_captured_edge.id => 1.0,
         ),
     )
  
 
-    return ThermalMethanolCCS(id, thermalmethanolccs_transform, ch3oh_edge, elec_edge, fuel_edge, o2_edge, co2_edge, co2_captured_edge)
+    return ThermalMethanolCCS(id, thermalmethanolccs_transform, ch3oh_edge, elec_edge, fuel_edge, co2_edge, co2_captured_edge)
 end 

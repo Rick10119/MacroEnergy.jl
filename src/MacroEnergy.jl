@@ -51,7 +51,6 @@ abstract type CrudeSteel <: Commodity end ## tonnes
 abstract type Ammonia <: Commodity end ## MWh
 abstract type Methanol <: Commodity end ## MWh
 abstract type Nitrogen <: Commodity end ## tonnes
-abstract type Oxygen <: Commodity end ## tonnes
 
 ## Time data types
 abstract type AbstractTimeData{T<:Commodity} end
