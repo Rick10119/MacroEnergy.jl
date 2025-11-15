@@ -4,13 +4,12 @@ struct ThermalMethanol{T} <: AbstractAsset
     ch3oh_edge::Union{Edge{<:Methanol},EdgeWithUC{<:Methanol}}
     elec_edge::Edge{<:Electricity}
     fuel_edge::Edge{<:T}
-    o2_edge::Edge{<:Oxygen}
     co2_edge::Edge{<:CO2}
 end
 
 ThermalMethanol(id::AssetId, thermalmethanol_transform::Transformation, ch3oh_edge::Union{Edge{<:Methanol},EdgeWithUC{<:Methanol}}, elec_edge::Edge{<:Electricity},
-fuel_edge::Edge{T}, o2_edge::Edge{<:Oxygen}, co2_edge::Edge{<:CO2}) where T<:Commodity =
-    ThermalMethanol{T}(id, thermalmethanol_transform, ch3oh_edge, elec_edge, fuel_edge, o2_edge, co2_edge)
+fuel_edge::Edge{T}, co2_edge::Edge{<:CO2}) where T<:Commodity =
+    ThermalMethanol{T}(id, thermalmethanol_transform, ch3oh_edge, elec_edge, fuel_edge, co2_edge)
 
 function default_data(t::Type{ThermalMethanol}, id=missing, style="full")
     if style == "full"
@@ -25,10 +24,13 @@ function full_default_data(::Type{ThermalMethanol}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Methanol",
-            :electricity_consumption => 0.325,  # 0.25-0.4 MWh per ton CH3OH
-            :fuel_consumption => 0.475,         # ~0.4-0.55 tons CH4 per ton CH3OH = 0.475 MWh per ton CH3OH
-            :o2_consumption => 0.95,            # 0.95 tons O2 per ton CH3OH
-            :emission_rate => 2.0,              # ~1.5-2.5 tons CO2 per ton CH3OH
+            :electricity_consumption => -0.10,  # -0.10 MWh per MWh of Methanol. Source: https://www.osti.gov/biblio/1601964
+            :fuel_consumption => 1.66586,         # 1.66586 MWh of CH4 per MWh of CH3OH
+            :emission_rate => 0.110645539,              # tons CO2 per MWh of CH3OH (1ton/ton)
+            :investment_cost => 934641.774,
+            :fixed_om_cost => 37456.44,
+            :variable_om_cost => 1.8325,
+            :lifetime => 30,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -50,9 +52,6 @@ function full_default_data(::Type{ThermalMethanol}, id=missing)
             :fuel_edge => @edge_data(
                 :commodity => missing,
             ),
-            :o2_edge => @edge_data(
-                :commodity => "Oxygen",
-            ),
             :co2_edge => @edge_data(
                 :commodity=>"CO2",
                 :co2_sink => missing,
@@ -73,19 +72,12 @@ function simple_default_data(::Type{ThermalMethanol}, id=missing)
         :fuel_commodity => "NaturalGas",
         :co2_sink => missing,
         :uc => false,
-        :investment_cost => 0.0,
-        :fixed_om_cost => 0.0,
-        :variable_om_cost => 0.0,
-        :fuel_consumption => 0.475,
-        :o2_consumption => 0.95,
-        :electricity_consumption => 0.325,
-        :emission_rate => 2.0,
-        :startup_cost => 0.0,
-        :startup_fuel_consumption => 0.0,
-        :min_up_time => 0,
-        :min_down_time => 0,
-        :ramp_up_fraction => 0.0,
-        :ramp_down_fraction => 0.0,
+        :investment_cost => 934641.774,
+        :fixed_om_cost => 37456.44,
+        :variable_om_cost => 1.8325,
+        :fuel_consumption => 1.66586,
+        :electricity_consumption => -0.10,
+        :emission_rate => 0.110645539,
     )
 end
 
@@ -222,32 +214,6 @@ function make(asset_type::Type{ThermalMethanol}, data::AbstractDict{Symbol,Any},
         fuel_end_node,
     )
 
-    o2_edge_key = :o2_edge
-    @process_data(
-        o2_edge_data, 
-        data[:edges][o2_edge_key], 
-        [
-            (data[:edges][o2_edge_key], key),
-            (data[:edges][o2_edge_key], Symbol("o2_", key)),
-            (data, Symbol("o2_", key)),
-        ]
-    )
-    @start_vertex(
-        o2_start_node,
-        o2_edge_data,
-        Oxygen,
-        [(o2_edge_data, :start_vertex), (data, :location)],
-    )
-    o2_end_node = thermalmethanol_transform
-    o2_edge = Edge(
-        Symbol(id, "_", o2_edge_key),
-        o2_edge_data,
-        system.time_data[:Oxygen],
-        Oxygen,
-        o2_start_node,
-        o2_end_node,
-    )
-
     co2_edge_key = :co2_edge
     @process_data(
         co2_edge_data, 
@@ -276,23 +242,19 @@ function make(asset_type::Type{ThermalMethanol}, data::AbstractDict{Symbol,Any},
 
     thermalmethanol_transform.balance_data = Dict(
         :energy => Dict(
-            ch3oh_edge.id => get(transform_data, :fuel_consumption, 0.475),
+            ch3oh_edge.id => get(transform_data, :fuel_consumption, 1.66586),
             fuel_edge.id => 1.0,
         ),
         :electricity => Dict(
-            ch3oh_edge.id => get(transform_data, :electricity_consumption, 0.325),
+            ch3oh_edge.id => get(transform_data, :electricity_consumption, -0.10),
             elec_edge.id => 1.0
         ),
-        :oxygen => Dict(
-            ch3oh_edge.id => get(transform_data, :o2_consumption, 0.95),
-            o2_edge.id => 1.0,
-        ),
         :emissions => Dict(
-            fuel_edge.id => get(transform_data, :emission_rate, 0.09),
+            fuel_edge.id => get(transform_data, :emission_rate, 0.110645539),
             co2_edge.id => 1.0,
         ),
     )
  
 
-    return ThermalMethanol(id, thermalmethanol_transform, ch3oh_edge, elec_edge, fuel_edge, o2_edge, co2_edge)
+    return ThermalMethanol(id, thermalmethanol_transform, ch3oh_edge, elec_edge, fuel_edge, co2_edge)
 end 
