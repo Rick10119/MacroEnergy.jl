@@ -27,7 +27,7 @@ The codebase includes six production technologies:
 | **CO₂ Emission Rate** | 0.181048235160161 | tons CO₂/MWh CH₄ | Direct emissions |
 | **Investment Cost** | 2,093,045.41 | $/MW | Capital cost |
 | **Fixed O&M Cost** | 84,025.0649 | $/MW-yr | Annual fixed operating cost |
-| **Variable O&M Cost** | 0.9015 | - | Variable operating cost |
+| **Variable O&M Cost** | 0.9015 | $/MWh NH₃ | Variable operating cost |
 | **Lifetime** | 30 | years | Asset lifetime |
 
 **Inputs:**
@@ -52,7 +52,7 @@ The codebase includes six production technologies:
 | **CO₂ Capture Rate** | 0.17195 | - | 95% capture rate |
 | **Investment Cost** | 2,720,959.03 | $/MW | 130% of thermal ammonia without CCS |
 | **Fixed O&M Cost** | 109,232.584 | $/MW-yr | Higher than without CCS |
-| **Variable O&M Cost** | 1.17195 | - | Higher than without CCS |
+| **Variable O&M Cost** | 1.17195 | $/MWh NH₃ | Higher than without CCS |
 | **Lifetime** | 30 | years | Asset lifetime |
 
 **Inputs:**
@@ -83,7 +83,7 @@ The codebase includes six production technologies:
 | **Electricity Consumption** | 0.2473 | MWh/MWh NH₃ | Electrical energy |
 | **Investment Cost** | 1,461,749.91 | $/MW | Capital cost |
 | **Fixed O&M Cost** | 2,512.7481 | $/MW-yr | Annual fixed operating cost |
-| **Variable O&M Cost** | 0.02027 | - | Variable operating cost |
+| **Variable O&M Cost** | 0.02027 | $/MWh NH₃ | Variable operating cost |
 | **Lifetime** | 30 | years | Asset lifetime |
 
 **Inputs:**
@@ -116,7 +116,7 @@ The codebase includes six production technologies:
 | **CO₂ Emission Rate** | 0.110645539 | tons CO₂/MWh CH₃OH | Direct emissions (1 ton/ton) |
 | **Investment Cost** | 934,641.774 | $/MW | Capital cost |
 | **Fixed O&M Cost** | 37,456.44 | $/MW-yr | Annual fixed operating cost |
-| **Variable O&M Cost** | 1.8325 | - | Variable operating cost |
+| **Variable O&M Cost** | 1.8325 | $/MWh CH₃OH | Variable operating cost |
 | **Lifetime** | 30 | years | Asset lifetime |
 
 **Inputs:**
@@ -145,7 +145,7 @@ The codebase includes six production technologies:
 | **CO₂ Capture Rate** | 0.099576 | - | 90% capture rate |
 | **Investment Cost** | 981,373.863 | $/MW | 105% of thermal methanol without CCS |
 | **Fixed O&M Cost** | 39,328.8 | $/MW-yr | 105% of thermal methanol without CCS |
-| **Variable O&M Cost** | 1.924125 | - | 105% of thermal methanol without CCS |
+| **Variable O&M Cost** | 1.924125 | $/MWh CH₃OH | 105% of thermal methanol without CCS |
 | **Lifetime** | 30 | years | Asset lifetime |
 
 **Inputs:**
@@ -178,7 +178,7 @@ The codebase includes six production technologies:
 | **CO₂ Emission Rate** | 0.10 | - | 10% of CO₂ consumed is emitted |
 | **Investment Cost** | 685,961.676 | $/MW | Capital cost |
 | **Fixed O&M Cost** | 1,175.6697 | $/MW-yr | Annual fixed operating cost |
-| **Variable O&M Cost** | 0.0121 | - | Variable operating cost |
+| **Variable O&M Cost** | 0.0121 | $/MWh CH₃OH | Variable operating cost |
 | **Lifetime** | 20 | years | Asset lifetime (shorter than thermal) |
 
 **Inputs:**
@@ -234,8 +234,8 @@ The codebase includes six production technologies:
 
 ### 3.3 Cost Structure Comparison
 
-| Technology | Investment ($/MW) | Fixed O&M ($/MW-yr) | Variable O&M | Lifetime |
-|------------|------------------|---------------------|---------------|----------|
+| Technology | Investment ($/MW) | Fixed O&M ($/MW-yr) | Variable O&M ($/MWh) | Lifetime |
+|------------|------------------|---------------------|---------------------|----------|
 | **Thermal Ammonia** | 2,093,045 | 84,025 | 0.9015 | 30 years |
 | **Thermal Ammonia CCS** | 2,720,959 | 109,233 | 1.1720 | 30 years |
 | **Synthetic Ammonia** | 1,461,750 | 2,513 | 0.0203 | 30 years |
@@ -257,7 +257,7 @@ The codebase includes six production technologies:
 - **CO₂ Emissions**: tons CO₂ per MWh of input fuel or output product
 - **Investment Cost**: $/MW - Capital cost per MW of capacity
 - **Fixed O&M Cost**: $/MW-yr - Annual fixed operating and maintenance cost per MW of capacity
-- **Variable O&M Cost**: Variable operating cost (unit depends on output)
+- **Variable O&M Cost**: $/MWh - Variable operating cost per MWh of output product (NH₃ or CH₃OH)
 - **Lifetime**: Asset operational lifetime in years
 
 ---
