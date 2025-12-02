@@ -49,5 +49,4 @@ output.log
 **/tmp/
 
 *.log
-
-ExampleSystems/
+/examples
