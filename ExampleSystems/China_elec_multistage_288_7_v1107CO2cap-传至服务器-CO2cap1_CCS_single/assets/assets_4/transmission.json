@@ -1,0 +1,19 @@
+{
+    "transmission": {
+        "global_data": {
+            "transforms": {},
+            "edges": {
+                "transmission_edge": {
+                    "unidirectional": false,
+                    "has_capacity": true,
+                    "commodity": "Electricity",
+                    "wacc": 0.062,
+                    "lifetime": 100,
+                    "capital_recovery_period": 100
+                }
+            }
+        },
+        "instance_data": [],
+        "type": "TransmissionLink"
+    }
+}
