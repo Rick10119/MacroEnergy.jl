@@ -1,0 +1,886 @@
+{
+    "hydrores": [
+        {
+            "type": "HydroRes",
+            "global_data": {
+                "storage": {
+                    "commodity": "HydroRes",
+                    "can_expand": false,
+                    "can_retire": false,
+                    "constraints": {
+                        "MinStorageOutflowConstraint": false
+                    }
+                },
+                "edges": {
+                    "inflow_edge": {
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "start_vertex": "hydro_source",
+                        "has_capacity": true,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        }
+                    },
+                    "discharge_edge": {
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_expand": false,
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "RampingLimitConstraint": true
+                        }
+                    },
+                    "spill_edge": {
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "end_vertex": "hydro_source",
+                        "can_expand": false,
+                        "can_retire": false,
+                        "has_capacity": false
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "Region1Beijing_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region1Beijing_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region1Beijing",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region2Tianjin_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region2Tianjin_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region2Tianjin",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region3Hebei_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region3Hebei_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region3Hebei",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region4Shanxi_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region4Shanxi_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region4Shanxi",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region5Innermongolia_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region5Innermongolia_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region5Innermongolia",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region6Liaoning_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region6Liaoning_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region6Liaoning",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region7Jilin_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region7Jilin_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region7Jilin",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region8Heilongjiang_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region8Heilongjiang_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region8Heilongjiang",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region9Shanghai_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region9Shanghai_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region9Shanghai",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region10Jiangsu_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region10Jiangsu_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region10Jiangsu",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region11Zhejiang_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region11Zhejiang_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region11Zhejiang",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region12Anhui_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region12Anhui_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region12Anhui",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region13Fujian_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region13Fujian_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region13Fujian",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region14Jiangxi_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region14Jiangxi_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region14Jiangxi",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region15Shandong_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region15Shandong_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region15Shandong",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region16Henan_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region16Henan_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region16Henan",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region17Hubei_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region17Hubei_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region17Hubei",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region18Hunan_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region18Hunan_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region18Hunan",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region19Guangdong_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region19Guangdong_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region19Guangdong",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region20Guangxi_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region20Guangxi_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region20Guangxi",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region21Hainan_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region21Hainan_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region21Hainan",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region22Chongqing_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region22Chongqing_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region22Chongqing",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region23Sichuan_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region23Sichuan_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region23Sichuan",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region24Guizhou_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region24Guizhou_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region24Guizhou",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region25Yunnan_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region25Yunnan_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region25Yunnan",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region26Tibet_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region26Tibet_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region26Tibet",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region27Shaanxi_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region27Shaanxi_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region27Shaanxi",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region28Gansu_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region28Gansu_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region28Gansu",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region29Qinghai_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region29Qinghai_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region29Qinghai",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region30Ningxia_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region30Ningxia_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region30Ningxia",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                },
+                {
+                    "id": "Region31Xinjiang_Hydropower",
+                    "storage": {
+                        "min_outflow_fraction": 0.2,
+                        "charge_discharge_ratio": 1.0
+                    },
+                    "edges": {
+                        "inflow_edge": {
+                            "efficiency": 1.0,
+                            "availability": {
+                                "timeseries": {
+                                    "path": "system/vre_availability_1.csv",
+                                    "header": "Region31Xinjiang_Hydropower"
+                                }
+                            }
+                        },
+                        "discharge_edge": {
+                            "end_vertex": "elec_Region31Xinjiang",
+                            "capacity_size": 200.0,
+                            "existing_capacity": 0.0,
+                            "fixed_om_cost": 36013.88889,
+                            "ramp_down_fraction": 0.083,
+                            "ramp_up_fraction": 0.083,
+                            "efficiency": 1.0
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
