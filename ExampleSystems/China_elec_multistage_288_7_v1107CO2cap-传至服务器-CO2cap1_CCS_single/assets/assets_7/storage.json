@@ -33,7 +33,7 @@
                         "BalanceConstraint": true,
                         "StorageMinDurationConstraint": true
                     },
-                    "max_duration": 2,
+                    "max_duration": 6,
                     "min_capacity": 0,
                     "fixed_om_cost": 0.0,
                     "long_duration": false,
