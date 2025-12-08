@@ -4,6 +4,11 @@
         "NaturalGas",
 		"Coal",
         "CO2",
-		"Uranium"
+		"Uranium",
+        "Aluminum",
+        "Alumina",
+        "AluminumScrap",
+        "Bauxite",
+        "Graphite"
     ]
 }

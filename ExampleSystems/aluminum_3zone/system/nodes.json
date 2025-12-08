@@ -71,17 +71,14 @@
             "global_data": {
                 "time_interval": "Aluminum",
                 "constraints": {
-                    "BalanceConstraint": true
+                    "AggregatedDemandConstraint": true
                 }
             },
             "instance_data": [
                 {
                     "id": "aluminum_produced",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/hourly_aluminum_demand.csv",
-                            "header": "Aluminum_Demand_Tons"
-                        }
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint": 876000
                     }
                 }
             ]

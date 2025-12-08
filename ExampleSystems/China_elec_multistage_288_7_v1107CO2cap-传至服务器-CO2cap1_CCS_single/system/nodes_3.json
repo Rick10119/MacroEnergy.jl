@@ -115,6 +115,97 @@
                 }
             ],
             "type": "Electricity"
+        },
+        {
+            "type": "Aluminum",
+            "global_data": {
+                "time_interval": "Aluminum",
+                "constraints": {
+                    "AggregatedDemandConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminum_produced",
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint": 438000
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Alumina",
+            "global_data": {
+                "time_interval": "Alumina",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "alumina_produced"
+                }
+            ]
+        },
+        {
+            "type": "AluminumScrap",
+            "global_data": {
+                "time_interval": "AluminumScrap",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminumscrap_source_Region15Shandong",
+                    "max_supply": [
+                        25
+                    ],
+                    "price_supply": [
+                        1430
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Bauxite",
+            "global_data": {
+                "time_interval": "Bauxite",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "bauxite_source_Region15Shandong",
+                    "max_supply": [
+                        100000
+                    ],
+                    "price_supply": [
+                        585
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Graphite",
+            "global_data": {
+                "time_interval": "Graphite",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "graphite_source_Region15Shandong",
+                    "max_supply": [
+                        100000
+                    ],
+                    "price_supply": [
+                        5200
+                    ]
+                }
+            ]
         }
     ]
 }

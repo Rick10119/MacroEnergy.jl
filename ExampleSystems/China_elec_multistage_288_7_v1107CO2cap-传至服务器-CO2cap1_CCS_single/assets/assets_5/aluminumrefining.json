@@ -1,0 +1,67 @@
+{
+    "AluminumRefining": [
+        {
+            "type": "AluminumRefining",
+            "global_data": {
+                "nodes": {},
+                "transforms": {
+                    "id": "aluminum_refining",
+                    "timedata": "Aluminum",
+                    "elec_aluminum_rate": 2,
+                    "aluminumscrap_aluminum_rate": 1.05,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "elec_edge":{
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "aluminum_edge":{
+                        "type": "Aluminum",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": false,
+                        "can_expand": true,
+                        "capacity_size": 1,
+                        "investment_cost": 15600000,
+                        "fixed_om_cost": 2730000,
+                        "variable_om_cost": 800,
+                        "end_vertex": "aluminum_produced",
+                        "wacc": 0.039,
+                        "lifetime": 20,
+                        "capital_recovery_period": 20
+                    },
+                    "aluminumscrap_edge":{
+                        "type": "AluminumScrap",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminum_refining_Region15Shandong",
+                    "location": "Region15Shandong",
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region15Shandong",
+                            "end_vertex": "aluminum_refining_Region15Shandong"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region15Shandong",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region15Shandong",
+                            "end_vertex": "aluminum_refining_Region15Shandong"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
