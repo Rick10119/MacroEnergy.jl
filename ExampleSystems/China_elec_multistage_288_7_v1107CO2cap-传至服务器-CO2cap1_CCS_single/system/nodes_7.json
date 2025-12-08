@@ -128,7 +128,7 @@
                 {
                     "id": "aluminum_produced",
                     "rhs_policy": {
-                        "AggregatedDemandConstraint": 438000
+                        "AggregatedDemandConstraint": 14400
                     }
                 }
             ]

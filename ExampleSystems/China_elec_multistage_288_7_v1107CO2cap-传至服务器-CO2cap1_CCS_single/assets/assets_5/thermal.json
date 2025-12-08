@@ -35,11 +35,11 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
-                        "min_up_time": 6,
+                        "min_up_time": 3,
                         "max_capacity": -1,
                         "can_expand": true,
                         "min_flow_fraction": 0.3,
@@ -57,10 +57,10 @@
                         "ramp_up_fraction": 1.0,
                         "startup_cost": 43.05555555555556,
                         "end_vertex": "elec_Region15Shandong",
-                        "investment_cost": 248973.8609428496,
+                        "investment_cost": 875000.0,
                         "variable_om_cost": 62.08333333333332,
                         "startup_fuel_consumption": 0.0,
-                        "min_down_time": 6,
+                        "min_down_time": 3,
                         "capacity_size": 200,
                         "availability": [
                             1
@@ -87,7 +87,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -139,7 +139,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -191,7 +191,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -243,7 +243,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -295,7 +295,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -347,7 +347,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -399,7 +399,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -451,7 +451,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -503,7 +503,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 50,
                         "capital_recovery_period": 50,
                         "can_retire": false,
@@ -555,7 +555,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 40,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -607,7 +607,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 30,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -659,7 +659,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 30,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -711,7 +711,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 30,
                         "capital_recovery_period": 40,
                         "can_retire": true,
@@ -763,7 +763,7 @@
                         "commodity": "CO2"
                     },
                     "elec_edge": {
-                        "wacc": 0.039,
+                        "wacc": 0.08,
                         "lifetime": 30,
                         "capital_recovery_period": 40,
                         "can_retire": true,
