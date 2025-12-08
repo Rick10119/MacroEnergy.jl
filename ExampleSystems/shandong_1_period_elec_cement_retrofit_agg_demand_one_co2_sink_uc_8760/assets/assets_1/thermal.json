@@ -1,0 +1,395 @@
+{
+    "ThermalPower": {
+        "type": "ThermalPower",
+        "global_data": {
+            "edges": {
+                "elec_edge": {
+                    "unidirectional": true,
+                    "has_capacity": true,
+                    "max_capacity": -1,
+                    "availability": [
+                        1
+                    ],
+                    "commodity": "Electricity",
+                    "capacity_size": 200,
+                    "constraints": {
+                        "MinFlowConstraint": true,
+                        "MinDownTimeConstraint": true,
+                        "CapacityConstraint": true,
+                        "MinUpTimeConstraint": true,
+                        "RampingLimitConstraint": true
+                    },
+                    "min_capacity": 0,
+                    "wacc": 0.039,
+                    "uc": true
+                },
+                "fuel_edge": {
+                    "unidirectional": true,
+                    "has_capacity": false
+                },
+                "co2_edge": {
+                    "unidirectional": true,
+                    "has_capacity": false,
+                    "commodity": "CO2"
+                }
+            },
+            "transforms": {
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Region15Shandong_600MW_super",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 10540.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.147693955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.35
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 2.784811129,
+                    "emission_rate": 0.344687997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_1000MW_sub",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 2670.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.310193955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.4
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 3.060365341,
+                    "emission_rate": 0.347219997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_1000MW_ultra",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 34090.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 3.839263796,
+                        "investment_cost": 43648.8138,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.25
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 2.458916518,
+                    "emission_rate": 0.344279997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_naturalgas_power",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 4183.81,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 20,
+                        "can_expand": true,
+                        "min_down_time": 6,
+                        "fixed_om_cost": 15333.33333,
+                        "min_up_time": 6,
+                        "lifetime": 20,
+                        "ramp_down_fraction": 1.0,
+                        "variable_om_cost": 6.766944444,
+                        "investment_cost": 24389.3303,
+                        "startup_fuel_consumption": 0.3,
+                        "ramp_up_fraction": 1.0,
+                        "min_flow_fraction": 0.3,
+                        "startup_cost": 43.06869782
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "natgas_Region15Shandong",
+                        "commodity": "NaturalGas"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 1.785714286,
+                    "emission_rate": 0.181,
+                    "timedata": "NaturalGas"
+                }
+            },
+            {
+                "id": "Region15Shandong_600MW_sub",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 32325.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.310193955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.45
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 3.090915863,
+                    "emission_rate": 0.344954997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_300MW_sub",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 15010.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.422693955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.5
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 3.356650711,
+                    "emission_rate": 0.345709409,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_1000MW_super",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 7980.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.147693955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.3
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 2.66980418,
+                    "emission_rate": 0.344579997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_nuclear",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 2506.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": false,
+                        "capital_recovery_period": 50,
+                        "can_expand": false,
+                        "min_down_time": 24,
+                        "fixed_om_cost": 27800.0,
+                        "min_up_time": 24,
+                        "lifetime": 50,
+                        "ramp_down_fraction": 0.0,
+                        "variable_om_cost": 0.664444444,
+                        "investment_cost": 77273.7983,
+                        "startup_fuel_consumption": 0.0,
+                        "ramp_up_fraction": 0.0,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 3055.555556
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "uranium_source",
+                        "commodity": "Uranium"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 3.03,
+                    "emission_rate": 0.0,
+                    "timedata": "Uranium"
+                }
+            },
+            {
+                "id": "Region15Shandong_600MW_ultra",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 3600.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 3.992172167,
+                        "investment_cost": 48953.78551,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.3
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 2.505093354,
+                    "emission_rate": 0.346799997,
+                    "timedata": "Coal"
+                }
+            },
+            {
+                "id": "Region15Shandong_300MW_super",
+                "edges": {
+                    "elec_edge": {
+                        "existing_capacity": 0.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 40,
+                        "can_expand": true,
+                        "min_down_time": 12,
+                        "fixed_om_cost": 18154.51148,
+                        "min_up_time": 12,
+                        "lifetime": 40,
+                        "ramp_down_fraction": 0.6,
+                        "variable_om_cost": 4.260193955,
+                        "investment_cost": 55677.52873,
+                        "startup_fuel_consumption": 150.3075,
+                        "ramp_up_fraction": 0.6,
+                        "min_flow_fraction": 0.5,
+                        "startup_cost": 0.4
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong",
+                        "commodity": "Coal"
+                    },
+                    "co2_edge": {
+                        "end_vertex": "co2_sink"
+                    }
+                },
+                "transforms": {
+                    "fuel_consumption": 2.957321553,
+                    "emission_rate": 0.343259997,
+                    "timedata": "Coal"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "HydroRes": {
+        "type": "HydroRes",
+        "global_data": {
+            "storage": {
+                "constraints": {
+                    "MinStorageOutflowConstraint": false
+                },
+                "can_retire": false,
+                "commodity": "HydroRes",
+                "can_expand": false,
+                "charge_discharge_ratio": 1,
+                "min_outflow_fraction": 0.2
+            },
+            "edges": {
+                "inflow_edge": {
+                    "constraints": {
+                        "MustRunConstraint": true
+                    },
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "start_vertex": "hydro_source",
+                    "has_capacity": true,
+                    "efficiency": 1,
+                    "availability": {
+                        "timeseries": {
+                            "path": "system/vre_availability_1.csv"
+                        }
+                    }
+                },
+                "spill_edge": {
+                    "has_capacity": false,
+                    "can_retire": false,
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "can_expand": false,
+                    "end_vertex": "hydro_source"
+                },
+                "discharge_edge": {
+                    "constraints": {
+                        "CapacityConstraint": true,
+                        "RampingLimitConstraint": true
+                    },
+                    "can_retire": false,
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "can_expand": false,
+                    "has_capacity": true,
+                    "efficiency": 1,
+                    "fixed_om_cost": 36013.88889,
+                    "ramp_up_fraction": 0.083,
+                    "capacity_size": 200,
+                    "ramp_down_fraction": 0.083
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Region15Shandong_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region15Shandong_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 80.0,
+                        "end_vertex": "elec_Region15Shandong"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,119 @@
+{
+    "Battery": {
+        "type": "Battery",
+        "global_data": {
+            "storage": {
+                "commodity": "Electricity",
+                "max_storage_level": 1,
+                "charge_discharge_ratio": 1,
+                "max_capacity": -1,
+                "capacity_size": 1,
+                "long_duration": false,
+                "min_storage_level": 0,
+                "constraints": {
+                    "StorageMinDurationConstraint": true,
+                    "StorageCapacityConstraint": true,
+                    "StorageMaxDurationConstraint": true,
+                    "StorageSymmetricCapacityConstraint": true,
+                    "BalanceConstraint": true
+                },
+                "min_capacity": 0,
+                "loss_fraction": 0,
+                "wacc": 0.027
+            },
+            "edges": {
+                "discharge_edge": {
+                    "unidirectional": true,
+                    "commodity": "Electricity",
+                    "has_capacity": true,
+                    "max_capacity": -1,
+                    "efficiency": 0.92,
+                    "capacity_size": 1,
+                    "variable_om_cost": 0,
+                    "constraints": {
+                        "StorageDischargeLimitConstraint": true,
+                        "CapacityConstraint": true
+                    },
+                    "min_capacity": 0,
+                    "wacc": 0.027
+                },
+                "charge_edge": {
+                    "unidirectional": true,
+                    "commodity": "Electricity",
+                    "can_retire": false,
+                    "can_expand": false,
+                    "has_capacity": false,
+                    "max_capacity": 0,
+                    "efficiency": 0.92,
+                    "fixed_om_cost": 0,
+                    "capacity_size": 1,
+                    "variable_om_cost": 0,
+                    "investment_cost": 0,
+                    "min_capacity": 0
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Region15Shandong_pumpedhydro",
+                "storage": {
+                    "existing_capacity": 8000.0,
+                    "can_retire": false,
+                    "capital_recovery_period": 50,
+                    "can_expand": false,
+                    "fixed_om_cost": 48895.83333,
+                    "min_duration": 6,
+                    "lifetime": 50,
+                    "investment_cost": 0.0,
+                    "max_duration": 24
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "existing_capacity": 1000.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": false,
+                        "capital_recovery_period": 50,
+                        "can_expand": false,
+                        "fixed_om_cost": 24447.91667,
+                        "lifetime": 50,
+                        "investment_cost": 0.0
+                    },
+                    "charge_edge": {
+                        "existing_capacity": 1000.0,
+                        "start_vertex": "elec_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Region15Shandong_battery",
+                "storage": {
+                    "existing_capacity": 0.0,
+                    "can_retire": true,
+                    "capital_recovery_period": 15,
+                    "can_expand": true,
+                    "fixed_om_cost": 14447.91667,
+                    "min_duration": 1,
+                    "lifetime": 15,
+                    "investment_cost": 67517.74118,
+                    "max_duration": 2
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "existing_capacity": 0.0,
+                        "end_vertex": "elec_Region15Shandong",
+                        "can_retire": true,
+                        "capital_recovery_period": 15,
+                        "can_expand": true,
+                        "fixed_om_cost": 7223.958333,
+                        "lifetime": 15,
+                        "investment_cost": 33758.87059
+                    },
+                    "charge_edge": {
+                        "existing_capacity": 0.0,
+                        "start_vertex": "elec_Region15Shandong"
+                    }
+                }
+            }
+        ]
+    }
+}
