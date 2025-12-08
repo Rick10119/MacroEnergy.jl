@@ -138,12 +138,15 @@
             "global_data": {
                 "time_interval": "Alumina",
                 "constraints": {
-                    "BalanceConstraint": true
+                    "AggregatedDemandConstraint": true
                 }
             },
             "instance_data": [
                 {
-                    "id": "alumina_produced"
+                    "id": "alumina_produced",
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint": 0
+                    }
                 }
             ]
         },
@@ -182,7 +185,7 @@
                         100000
                     ],
                     "price_supply": [
-                        585
+                        0
                     ]
                 }
             ]
@@ -202,7 +205,7 @@
                         100000
                     ],
                     "price_supply": [
-                        5200
+                        0
                     ]
                 }
             ]

@@ -25,7 +25,7 @@
                         "type": "Alumina",
                         "unidirectional": true,
                         "has_capacity": true,
-                        "can_retire": false,
+                        "can_retire": true,
                         "can_expand": true,
                         "capacity_size": 1,
                         "investment_cost": 23400000,
