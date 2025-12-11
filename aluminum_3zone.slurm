@@ -17,8 +17,7 @@ module purge
 module load gurobi/12.0.0
 module load julia/1.12.1
 
+# Run case
 GUROBI_HOME=/usr/licensed/gurobi/12.0.0/linux64 \
 LD_LIBRARY_PATH=/usr/licensed/gurobi/12.0.0/linux64/lib:$LD_LIBRARY_PATH \
-
-# Run case
-julia --project=@. ExampleSystems/aluminum_3zone/run.jl
+julia --project=. ExampleSystems/aluminum_3zone/run.jl
