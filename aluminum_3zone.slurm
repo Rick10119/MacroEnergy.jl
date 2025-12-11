@@ -26,8 +26,8 @@ export OMP_NUM_THREADS=1
 cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
 
 # Install/update dependencies (Gurobi is now in deps, so it will be installed automatically)
-# Rebuild Gurobi to ensure it uses the system Gurobi 12.0.0
-julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.build("Gurobi"; verbose=true)'
+# Note: Even if Gurobi.jl downloads Gurobi 13, we'll force use of system Gurobi 12.0.0 at runtime
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
 # Run case (--project=. now refers to MacroEnergy.jl root)
 julia --project=. ExampleSystems/aluminum_3zone/run.jl
