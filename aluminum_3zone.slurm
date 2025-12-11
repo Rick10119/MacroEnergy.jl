@@ -22,6 +22,10 @@ export GUROBI_HOME=/usr/licensed/gurobi/12.0.0/linux64
 export LD_LIBRARY_PATH=${GUROBI_HOME}/lib:${LD_LIBRARY_PATH}
 export OMP_NUM_THREADS=1
 
+# CRITICAL: Use LD_PRELOAD to force system Gurobi 12.0.0 library to be loaded first
+# This overrides any downloaded Gurobi 13 library
+export LD_PRELOAD=${GUROBI_HOME}/lib/libgurobi120.so
+
 # Change to MacroEnergy.jl root directory
 cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
 

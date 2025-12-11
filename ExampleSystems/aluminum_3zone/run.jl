@@ -5,24 +5,24 @@ ENV["LD_LIBRARY_PATH"] = ENV["GUROBI_HOME"] * "/lib:" * get(ENV, "LD_LIBRARY_PAT
 # Fix OMP_NUM_THREADS warning
 ENV["OMP_NUM_THREADS"] = get(ENV, "OMP_NUM_THREADS", "1")
 
-# Force Julia to use system Gurobi library by preloading it
-# This ensures the system library (12.0.0) is loaded instead of any downloaded version
+# Force Julia to use system Gurobi library by preloading it with RTLD_GLOBAL
+# This ensures the system library (12.0.0) is loaded and available globally
 import Libdl
 gurobi_lib_path = ENV["GUROBI_HOME"] * "/lib"
 system_gurobi_lib = joinpath(gurobi_lib_path, "libgurobi120.so")
 if isfile(system_gurobi_lib)
     try
-        # Preload the system Gurobi library to ensure it's used
+        # Preload with RTLD_GLOBAL to make symbols available to all modules
         Libdl.dlopen(system_gurobi_lib, Libdl.RTLD_LAZY | Libdl.RTLD_GLOBAL)
         println("✓ Preloaded system Gurobi 12.0.0 library")
     catch e
-        println("Note: Could not preload system library: ", e)
+        println("Warning: Could not preload system library: ", e)
     end
 end
 
 using MacroEnergy
 # Gurobi is now in deps, so it will be automatically installed with Pkg.instantiate()
-# The system library should be used due to preloading and LD_LIBRARY_PATH
+# LD_PRELOAD in SLURM script should force use of system Gurobi 12.0.0 library
 using Gurobi
 
 (system, model) = run_case(
