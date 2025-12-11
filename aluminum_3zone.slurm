@@ -25,5 +25,9 @@ export OMP_NUM_THREADS=1
 # Change to MacroEnergy.jl root directory
 cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
 
+# Ensure Gurobi package is installed in the project environment
+# (Gurobi is a weak dependency, so it needs to be added explicitly)
+julia --project=. -e 'using Pkg; try; using Gurobi; println("Gurobi already installed"); catch; println("Installing Gurobi..."); Pkg.add("Gurobi"); Pkg.build("Gurobi"; verbose=true); end'
+
 # Run case (--project=. now refers to MacroEnergy.jl root)
 julia --project=. ExampleSystems/aluminum_3zone/run.jl

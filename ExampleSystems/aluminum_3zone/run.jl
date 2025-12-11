@@ -5,7 +5,16 @@ ENV["LD_LIBRARY_PATH"] = ENV["GUROBI_HOME"] * "/lib:" * get(ENV, "LD_LIBRARY_PAT
 ENV["OMP_NUM_THREADS"] = get(ENV, "OMP_NUM_THREADS", "1")
 
 using MacroEnergy
-using Gurobi
+using Pkg
+# Gurobi is a weak dependency, so install it if not available
+try
+    using Gurobi
+catch
+    println("Gurobi not found, installing...")
+    Pkg.add("Gurobi")
+    Pkg.build("Gurobi"; verbose=true)
+    using Gurobi
+end
 
 (system, model) = run_case(
     @__DIR__;
