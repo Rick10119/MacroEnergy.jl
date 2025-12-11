@@ -17,7 +17,13 @@ module purge
 module load gurobi/12.0.0
 module load julia/1.12.1
 
-# Run case
-GUROBI_HOME=/usr/licensed/gurobi/12.0.0/linux64 \
-LD_LIBRARY_PATH=/usr/licensed/gurobi/12.0.0/linux64/lib:$LD_LIBRARY_PATH \
+# Set Gurobi environment variables
+export GUROBI_HOME=/usr/licensed/gurobi/12.0.0/linux64
+export LD_LIBRARY_PATH=${GUROBI_HOME}/lib:${LD_LIBRARY_PATH}
+export OMP_NUM_THREADS=1
+
+# Change to MacroEnergy.jl root directory
+cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
+
+# Run case (--project=. now refers to MacroEnergy.jl root)
 julia --project=. ExampleSystems/aluminum_3zone/run.jl
