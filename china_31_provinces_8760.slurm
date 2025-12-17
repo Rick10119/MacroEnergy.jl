@@ -14,7 +14,7 @@
 #SBATCH --mail-user=rl8728@princeton.edu
 
 module purge
-module load gurobi/12.0.0
+module load gurobi/13.0.0
 module load julia/1.12.1
 
 # Ensure Julia uses the correct Gurobi version
@@ -33,7 +33,7 @@ if [ -n "$GUROBI_HOME" ] && [ -d "$GUROBI_HOME/lib" ]; then
     export PATH=${GUROBI_HOME}/bin:${PATH}
     echo "Using Gurobi from: $GUROBI_HOME"
 else
-    echo "Warning: GUROBI_HOME not properly set. Julia may not find Gurobi 12.0.0"
+    echo "Warning: GUROBI_HOME not properly set. Julia may not find Gurobi 13.0.0"
 fi
 
 # Verify Gurobi version (for debugging)
@@ -43,9 +43,9 @@ gurobi_cl --version 2>&1 | head -1 || echo "  Could not determine version"
 # Move to MacroEnergy directory
 cd /home/al3792/MacroEnergy.jl
 
-# Rebuild Gurobi.jl to ensure it uses the correct Gurobi version (12.0.0)
+# Rebuild Gurobi.jl to ensure it uses the correct Gurobi version (13.0.0)
 # This is important if the environment was originally installed with a different Gurobi version
-echo "Rebuilding Gurobi.jl with Gurobi 12.0.0..."
+echo "Rebuilding Gurobi.jl with Gurobi 13.0.0..."
 julia --project=@. -e 'using Pkg; Pkg.build("Gurobi"; verbose=true)'
 
 # Run case
