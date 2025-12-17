@@ -18,7 +18,5 @@ module load julia/1.12.1
 
 export OMP_NUM_THREADS=1
 
-julia --project=. -e 'using Pkg; Pkg.instantiate()'
-
 # Run case (--project=. now refers to MacroEnergy.jl root)
 julia --project=. ExampleSystems/aluminum_3zone/run.jl

@@ -12,8 +12,6 @@ git pull
 sbatch aluminum_3zone.slurm
 
 
-
-
 取消所有任务：
 scancel -u rl8728
 
