@@ -1,0 +1,29 @@
+{
+    "HoursPerTimeStep": {
+        "NaturalGas": 1,
+        "Electricity": 1,
+        "CO2": 1,
+		"Coal": 1,
+		"Uranium": 1,
+        "Aluminum": 1,
+        "Alumina": 1,
+        "AluminumScrap": 1,
+        "Bauxite": 1,
+        "Graphite": 1
+    },
+    "NumberOfSubperiods": 12,
+	
+    "HoursPerSubperiod": {
+        "NaturalGas": 24,
+		"Coal": 24,
+        "Electricity": 24,
+        "CO2": 24,
+		"Uranium": 24,
+        "Aluminum": 24,
+        "Alumina": 24,
+        "AluminumScrap": 24,
+        "Bauxite": 24,
+        "Graphite": 24
+    },
+    "TotalHoursModeled": 288
+}

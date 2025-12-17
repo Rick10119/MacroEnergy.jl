@@ -1,0 +1,214 @@
+{
+    "nodes": [
+        {
+            "type": "Electricity",
+            "global_data": {
+                "constraints": {
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true,
+                    "BalanceConstraint": true
+                },
+                "max_nsd": [
+                    1,
+                    0.04,
+                    0.024,
+                    0.003
+                ],
+                "time_interval": "Electricity",
+                "price_nsd": [
+                    50000,
+                    45000,
+                    27500.000000000004,
+                    10000
+                ]
+            },
+            "instance_data": [
+                {
+                    "id": "elec_Region15Shandong",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_4.csv",
+                            "header": "Demand_MW_Region15Shandong"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "NaturalGas",
+            "global_data": {
+                "time_interval": "NaturalGas"
+            },
+            "instance_data": [
+                {
+                    "id": "natgas_Region15Shandong",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices_4.csv",
+                            "header": "natgas_Region15Shandong"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Coal",
+            "global_data": {
+                "time_interval": "Coal"
+            },
+            "instance_data": [
+                {
+                    "id": "coal_Region15Shandong",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices_4.csv",
+                            "header": "coal_Region15Shandong"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Uranium",
+            "global_data": {
+                "time_interval": "Uranium"
+            },
+            "instance_data": [
+                {
+                    "id": "uranium_source",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices_4.csv",
+                            "header": "uranium_source"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "CO2",
+            "global_data": {
+                "time_interval": "CO2",
+                "price_unmet_policy": {
+                    "CO2CapConstraint": 15000
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_sink_national",
+                    "constraints": {
+                        "CO2CapConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 226200000
+                    }
+                }
+            ]
+        },
+        {
+            "global_data": {
+                "time_interval": "Electricity"
+            },
+            "instance_data": [
+                {
+                    "id": "hydro_source"
+                }
+            ],
+            "type": "Electricity"
+        },
+        {
+            "type": "Aluminum",
+            "global_data": {
+                "time_interval": "Aluminum",
+                "constraints": {
+                    "AggregatedDemandConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminum_produced",
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint": 14400
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Alumina",
+            "global_data": {
+                "time_interval": "Alumina",
+                "constraints": {
+                    "AggregatedDemandConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "alumina_produced",
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AluminumScrap",
+            "global_data": {
+                "time_interval": "AluminumScrap",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminumscrap_source_Region15Shandong",
+                    "max_supply": [
+                        33
+                    ],
+                    "price_supply": [
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Bauxite",
+            "global_data": {
+                "time_interval": "Bauxite",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "bauxite_source_Region15Shandong",
+                    "max_supply": [
+                        100000
+                    ],
+                    "price_supply": [
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Graphite",
+            "global_data": {
+                "time_interval": "Graphite",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "graphite_source_Region15Shandong",
+                    "max_supply": [
+                        100000
+                    ],
+                    "price_supply": [
+                        0
+                    ]
+                }
+            ]
+        }
+    ]
+}

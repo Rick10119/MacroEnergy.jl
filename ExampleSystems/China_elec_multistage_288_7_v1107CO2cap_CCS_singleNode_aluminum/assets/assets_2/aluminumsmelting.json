@@ -1,0 +1,90 @@
+{
+    "AluminumSmelting": [
+        {
+            "type": "AluminumSmelting",
+            "global_data": {
+                "nodes": {},
+                "transforms": {
+                    "id": "aluminum_smelting",
+                    "timedata": "Aluminum",
+                    "elec_aluminum_rate": 13.3,
+                    "alumina_aluminum_rate": 1.93,
+                    "graphite_aluminum_rate": 0.45,
+                    "graphite_emissions_rate": 3.67,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "elec_edge":{
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "aluminum_edge":{
+                        "type": "Aluminum",
+                        "uc": true,
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "capacity_size": 1,
+                        "investment_cost": 12000000,
+                        "fixed_om_cost": 2040000,
+                        "variable_om_cost": 62,
+                        "startup_cost": 1469798,
+                        "end_vertex": "aluminum_produced",
+                        "wacc": 0.039,
+                        "lifetime": 50,
+                        "capital_recovery_period": 50,
+                        "min_flow_fraction": 0.7
+                    },
+                    "alumina_edge":{
+                        "type": "Alumina",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "graphite_edge":{
+                        "type": "Graphite",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge":{
+                        "type": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink_national"
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminum_smelting_Region15Shandong",
+                    "location": "Region15Shandong",
+                    "existing_capacity": 40,
+                    "aluminum_constraints": {
+                        "MinFlowConstraint": true
+                    },
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region15Shandong",
+                            "end_vertex": "aluminum_smelting_Region15Shandong"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_smelting_Region15Shandong",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "alumina_edge": {
+                            "start_vertex": "alumina_produced",
+                            "end_vertex": "aluminum_smelting_Region15Shandong"
+                        },
+                        "graphite_edge": {
+                            "start_vertex": "graphite_source_Region15Shandong",
+                            "end_vertex": "aluminum_smelting_Region15Shandong"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "commodities": [
+        "Electricity",
+        "NaturalGas",
+		"Coal",
+        "CO2",
+		"Uranium",
+        "Aluminum",
+        "Alumina",
+        "AluminumScrap",
+        "Bauxite",
+        "Graphite"
+    ]
+}
