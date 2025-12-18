@@ -3,7 +3,7 @@
 #SBATCH --job-name=china_elec_8760_one_stage
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=40
 #SBATCH --mem=100G
 #SBATCH --output=slurm-%j.out
 #SBATCH --time=24:00:00

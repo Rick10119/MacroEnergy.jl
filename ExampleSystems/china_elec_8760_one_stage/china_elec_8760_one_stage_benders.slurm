@@ -1,15 +1,14 @@
 #!/bin/bash
 
 #SBATCH --job-name=china_elec_8760_one_stage_benders
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --nodes=2
+#SBATCH --ntasks=2
+#SBATCH --cpus-per-task=10
 #SBATCH --mem=100G
 #SBATCH --output=slurm-%j.out
 #SBATCH --time=24:00:00
 #SBATCH --constraint=amd
 #SBATCH --qos=high               # high priority queue
-#SBATCH --qos=urgent             # urgent priority queue (if available)
 #SBATCH --mail-type=all          # send email on all events
 #SBATCH --mail-user=rl8728@princeton.edu
 
