@@ -436,6 +436,24 @@ def main():
     update_nodes_files(total_demand, province_info)
     generate_assets(province_info)
 
+    # 同时更新 time_data.json，加入铝相关 commodities 的时间步信息
+    time_data_path = os.path.join(BASE_DIR, "system", "time_data.json")
+    if os.path.exists(time_data_path):
+        with open(time_data_path, "r", encoding="utf-8") as f:
+            td = json.load(f)
+        # 仿照单节点案例：所有新 commodity 都是 1 小时时间步、每子期 24 小时，总共 288 小时
+        hours_per_ts = td.get("HoursPerTimeStep", {})
+        hours_per_sp = td.get("HoursPerSubperiod", {})
+        for k in ["Aluminum", "Alumina", "AluminumScrap", "Bauxite", "Graphite"]:
+            hours_per_ts.setdefault(k, 1)
+            hours_per_sp.setdefault(k, 24)
+        td["HoursPerTimeStep"] = hours_per_ts
+        td["HoursPerSubperiod"] = hours_per_sp
+        td.setdefault("NumberOfSubperiods", 12)
+        td.setdefault("TotalHoursModeled", 288)
+        with open(time_data_path, "w", encoding="utf-8") as f:
+            json.dump(td, f, indent=2, ensure_ascii=False)
+
     print("Done. commodities.json, nodes_*.json, and assets_*/aluminum*.json have been updated/created.")
 
 
