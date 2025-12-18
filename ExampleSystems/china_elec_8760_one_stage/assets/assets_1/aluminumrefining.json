@@ -1,0 +1,561 @@
+{
+    "AluminumRefining": [
+        {
+            "type": "AluminumRefining",
+            "global_data": {
+                "nodes": {},
+                "transforms": {
+                    "id": "aluminum_refining",
+                    "timedata": "Aluminum",
+                    "elec_aluminum_rate": 2,
+                    "aluminumscrap_aluminum_rate": 1.05,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges": {
+                    "elec_edge": {
+                        "type": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "aluminum_edge": {
+                        "type": "Aluminum",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": false,
+                        "can_expand": true,
+                        "capacity_size": 1,
+                        "investment_cost": 2400000,
+                        "fixed_om_cost": 420000,
+                        "variable_om_cost": 123,
+                        "end_vertex": "aluminum_produced",
+                        "wacc": 0.039,
+                        "lifetime": 20,
+                        "capital_recovery_period": 20
+                    },
+                    "aluminumscrap_edge": {
+                        "type": "AluminumScrap",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "aluminum_refining_Region12Anhui",
+                    "location": "Region12Anhui",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region12Anhui",
+                            "end_vertex": "aluminum_refining_Region12Anhui"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region12Anhui",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region12Anhui",
+                            "end_vertex": "aluminum_refining_Region12Anhui"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region22Chongqing",
+                    "location": "Region22Chongqing",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region22Chongqing",
+                            "end_vertex": "aluminum_refining_Region22Chongqing"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region22Chongqing",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region22Chongqing",
+                            "end_vertex": "aluminum_refining_Region22Chongqing"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region13Fujian",
+                    "location": "Region13Fujian",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region13Fujian",
+                            "end_vertex": "aluminum_refining_Region13Fujian"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region13Fujian",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region13Fujian",
+                            "end_vertex": "aluminum_refining_Region13Fujian"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region28Gansu",
+                    "location": "Region28Gansu",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region28Gansu",
+                            "end_vertex": "aluminum_refining_Region28Gansu"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region28Gansu",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region28Gansu",
+                            "end_vertex": "aluminum_refining_Region28Gansu"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region19Guangdong",
+                    "location": "Region19Guangdong",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region19Guangdong",
+                            "end_vertex": "aluminum_refining_Region19Guangdong"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region19Guangdong",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region19Guangdong",
+                            "end_vertex": "aluminum_refining_Region19Guangdong"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region20Guangxi",
+                    "location": "Region20Guangxi",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region20Guangxi",
+                            "end_vertex": "aluminum_refining_Region20Guangxi"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region20Guangxi",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region20Guangxi",
+                            "end_vertex": "aluminum_refining_Region20Guangxi"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region24Guizhou",
+                    "location": "Region24Guizhou",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region24Guizhou",
+                            "end_vertex": "aluminum_refining_Region24Guizhou"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region24Guizhou",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region24Guizhou",
+                            "end_vertex": "aluminum_refining_Region24Guizhou"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region3Hebei",
+                    "location": "Region3Hebei",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region3Hebei",
+                            "end_vertex": "aluminum_refining_Region3Hebei"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region3Hebei",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region3Hebei",
+                            "end_vertex": "aluminum_refining_Region3Hebei"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region8Heilongjiang",
+                    "location": "Region8Heilongjiang",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region8Heilongjiang",
+                            "end_vertex": "aluminum_refining_Region8Heilongjiang"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region8Heilongjiang",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region8Heilongjiang",
+                            "end_vertex": "aluminum_refining_Region8Heilongjiang"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region16Henan",
+                    "location": "Region16Henan",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region16Henan",
+                            "end_vertex": "aluminum_refining_Region16Henan"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region16Henan",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region16Henan",
+                            "end_vertex": "aluminum_refining_Region16Henan"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region17Hubei",
+                    "location": "Region17Hubei",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region17Hubei",
+                            "end_vertex": "aluminum_refining_Region17Hubei"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region17Hubei",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region17Hubei",
+                            "end_vertex": "aluminum_refining_Region17Hubei"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region18Hunan",
+                    "location": "Region18Hunan",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region18Hunan",
+                            "end_vertex": "aluminum_refining_Region18Hunan"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region18Hunan",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region18Hunan",
+                            "end_vertex": "aluminum_refining_Region18Hunan"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region5Innermongolia",
+                    "location": "Region5Innermongolia",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region5Innermongolia",
+                            "end_vertex": "aluminum_refining_Region5Innermongolia"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region5Innermongolia",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region5Innermongolia",
+                            "end_vertex": "aluminum_refining_Region5Innermongolia"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region10Jiangsu",
+                    "location": "Region10Jiangsu",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region10Jiangsu",
+                            "end_vertex": "aluminum_refining_Region10Jiangsu"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region10Jiangsu",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region10Jiangsu",
+                            "end_vertex": "aluminum_refining_Region10Jiangsu"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region14Jiangxi",
+                    "location": "Region14Jiangxi",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region14Jiangxi",
+                            "end_vertex": "aluminum_refining_Region14Jiangxi"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region14Jiangxi",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region14Jiangxi",
+                            "end_vertex": "aluminum_refining_Region14Jiangxi"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region7Jilin",
+                    "location": "Region7Jilin",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region7Jilin",
+                            "end_vertex": "aluminum_refining_Region7Jilin"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region7Jilin",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region7Jilin",
+                            "end_vertex": "aluminum_refining_Region7Jilin"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region6Liaoning",
+                    "location": "Region6Liaoning",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region6Liaoning",
+                            "end_vertex": "aluminum_refining_Region6Liaoning"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region6Liaoning",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region6Liaoning",
+                            "end_vertex": "aluminum_refining_Region6Liaoning"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region30Ningxia",
+                    "location": "Region30Ningxia",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region30Ningxia",
+                            "end_vertex": "aluminum_refining_Region30Ningxia"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region30Ningxia",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region30Ningxia",
+                            "end_vertex": "aluminum_refining_Region30Ningxia"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region29Qinghai",
+                    "location": "Region29Qinghai",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region29Qinghai",
+                            "end_vertex": "aluminum_refining_Region29Qinghai"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region29Qinghai",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region29Qinghai",
+                            "end_vertex": "aluminum_refining_Region29Qinghai"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region27Shaanxi",
+                    "location": "Region27Shaanxi",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region27Shaanxi",
+                            "end_vertex": "aluminum_refining_Region27Shaanxi"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region27Shaanxi",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region27Shaanxi",
+                            "end_vertex": "aluminum_refining_Region27Shaanxi"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region15Shandong",
+                    "location": "Region15Shandong",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region15Shandong",
+                            "end_vertex": "aluminum_refining_Region15Shandong"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region15Shandong",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region15Shandong",
+                            "end_vertex": "aluminum_refining_Region15Shandong"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region4Shanxi",
+                    "location": "Region4Shanxi",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region4Shanxi",
+                            "end_vertex": "aluminum_refining_Region4Shanxi"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region4Shanxi",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region4Shanxi",
+                            "end_vertex": "aluminum_refining_Region4Shanxi"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region23Sichuan",
+                    "location": "Region23Sichuan",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region23Sichuan",
+                            "end_vertex": "aluminum_refining_Region23Sichuan"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region23Sichuan",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region23Sichuan",
+                            "end_vertex": "aluminum_refining_Region23Sichuan"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region26Tibet",
+                    "location": "Region26Tibet",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region26Tibet",
+                            "end_vertex": "aluminum_refining_Region26Tibet"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region26Tibet",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region26Tibet",
+                            "end_vertex": "aluminum_refining_Region26Tibet"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region31Xinjiang",
+                    "location": "Region31Xinjiang",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region31Xinjiang",
+                            "end_vertex": "aluminum_refining_Region31Xinjiang"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region31Xinjiang",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region31Xinjiang",
+                            "end_vertex": "aluminum_refining_Region31Xinjiang"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region25Yunnan",
+                    "location": "Region25Yunnan",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region25Yunnan",
+                            "end_vertex": "aluminum_refining_Region25Yunnan"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region25Yunnan",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region25Yunnan",
+                            "end_vertex": "aluminum_refining_Region25Yunnan"
+                        }
+                    }
+                },
+                {
+                    "id": "aluminum_refining_Region11Zhejiang",
+                    "location": "Region11Zhejiang",
+                    "existing_capacity": 0.0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_Region11Zhejiang",
+                            "end_vertex": "aluminum_refining_Region11Zhejiang"
+                        },
+                        "aluminum_edge": {
+                            "start_vertex": "aluminum_refining_Region11Zhejiang",
+                            "end_vertex": "aluminum_produced"
+                        },
+                        "aluminumscrap_edge": {
+                            "start_vertex": "aluminumscrap_source_Region11Zhejiang",
+                            "end_vertex": "aluminum_refining_Region11Zhejiang"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -3,17 +3,26 @@
         "NaturalGas": 1,
         "Electricity": 1,
         "CO2": 1,
-		"Coal":1,
-		"Uranium":1
+        "Coal": 1,
+        "Uranium": 1,
+        "Aluminum": 1,
+        "Alumina": 1,
+        "AluminumScrap": 1,
+        "Bauxite": 1,
+        "Graphite": 1
     },
     "NumberOfSubperiods": 1,
-	
     "HoursPerSubperiod": {
         "NaturalGas": 8760,
-		"Coal": 8760,
+        "Coal": 8760,
         "Electricity": 8760,
         "CO2": 8760,
-		"Uranium":8760
+        "Uranium": 8760,
+        "Aluminum": 8760,
+        "Alumina": 8760,
+        "AluminumScrap": 8760,
+        "Bauxite": 8760,
+        "Graphite": 8760
     },
     "TotalHoursModeled": 8760
 }

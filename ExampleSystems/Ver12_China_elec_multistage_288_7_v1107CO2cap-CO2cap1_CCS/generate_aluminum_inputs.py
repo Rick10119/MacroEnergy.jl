@@ -250,7 +250,7 @@ def update_nodes_files(total_demand: dict, province_info: dict):
         # 添加新的节点
         nodes.append(aluminum_node_block(total_demand[p]))
         nodes.append(alumina_node_block())
-        nodes.append(resource_node_block("AluminumScrap", "aluminumscrap_source", province_info, max_supply=11.0))
+        nodes.append(resource_node_block("AluminumScrap", "aluminumscrap_source", province_info, max_supply=0.0))
         nodes.append(resource_node_block("Bauxite", "bauxite_source", province_info, max_supply=100_000.0))
         nodes.append(resource_node_block("Graphite", "graphite_source", province_info, max_supply=100_000.0))
 
