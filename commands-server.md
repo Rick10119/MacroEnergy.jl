@@ -9,7 +9,8 @@ cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
 # 更新代码并提交作业
 git restore .
 git pull
-sbatch aluminum_3zone.slurm
+sbatch ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/ver12_china_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS.slurm
+
 
 
 取消所有任务：
