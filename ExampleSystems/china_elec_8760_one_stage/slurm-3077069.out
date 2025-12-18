@@ -1,0 +1,152 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Red Hat Enterprise Linux 9.6 (Plow)")
+
+CPU model: AMD EPYC 9654 96-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 192 physical cores, 192 logical processors, using up to 32 threads
+
+Non-default parameters:
+Method  2
+BarConvTol  0.001
+Crossover  0
+
+Optimize a model with 66499753 rows, 38354319 columns and 279721748 nonzeros (Min)
+Model fingerprint: 0x577c97b6
+Model has 13307814 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e-03, 2e+05]
+  Objective range  [1e+01, 1e+08]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-01, 1e+06]
+Presolve removed 5011542 rows and 1585905 columns (presolve time = 5s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 13s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 16s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 21s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 27s)...
+Presolve removed 7639797 rows and 2760000 columns (presolve time = 30s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 43s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 51s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 56s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 61s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 72s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 77s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 86s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 92s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 97s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 100s)...
+Presolve removed 24344924 rows and 11520944 columns
+Presolve time: 108.32s
+Presolved: 42154829 rows, 27096175 columns, 254373917 nonzeros
+Elapsed ordering time = 49s
+Elapsed ordering time = 51s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 181s
+Elapsed ordering time = 185s
+Elapsed ordering time = 190s
+Elapsed ordering time = 195s
+Elapsed ordering time = 200s
+Elapsed ordering time = 205s
+Elapsed ordering time = 210s
+Elapsed ordering time = 215s
+Elapsed ordering time = 220s
+Elapsed ordering time = 225s
+Elapsed ordering time = 230s
+Elapsed ordering time = 235s
+Elapsed ordering time = 578s
+Elapsed ordering time = 603s
+Elapsed ordering time = 636s
+Elapsed ordering time = 649s
+Elapsed ordering time = 659s
+Elapsed ordering time = 673s
+Elapsed ordering time = 689s
+Elapsed ordering time = 695s
+Elapsed ordering time = 701s
+Elapsed ordering time = 705s
+Elapsed ordering time = 716s
+Elapsed ordering time = 722s
+Elapsed ordering time = 729s
+Elapsed ordering time = 736s
+Elapsed ordering time = 742s
+Elapsed ordering time = 746s
+Elapsed ordering time = 752s
+Elapsed ordering time = 755s
+Elapsed ordering time = 760s
+Elapsed ordering time = 766s
+Elapsed ordering time = 773s
+Elapsed ordering time = 775s
+Elapsed ordering time = 781s
+Elapsed ordering time = 786s
+Elapsed ordering time = 791s
+Elapsed ordering time = 796s
+Elapsed ordering time = 801s
+Elapsed ordering time = 806s
+Elapsed ordering time = 811s
+Elapsed ordering time = 815s
+Elapsed ordering time = 820s
+Elapsed ordering time = 826s
+Elapsed ordering time = 831s
+Elapsed ordering time = 836s
+Elapsed ordering time = 840s
+Elapsed ordering time = 846s
+Elapsed ordering time = 851s
+Elapsed ordering time = 856s
+Elapsed ordering time = 860s
+Elapsed ordering time = 866s
+Elapsed ordering time = 870s
+Elapsed ordering time = 875s
+Elapsed ordering time = 882s
+Elapsed ordering time = 885s
+Elapsed ordering time = 890s
+Elapsed ordering time = 895s
+Elapsed ordering time = 900s
+Elapsed ordering time = 905s
+Elapsed ordering time = 910s
+Elapsed ordering time = 915s
+Elapsed ordering time = 920s
+Elapsed ordering time = 925s
+Elapsed ordering time = 930s
+Elapsed ordering time = 1013s
+Elapsed ordering time = 1044s
+Elapsed ordering time = 1071s
+Elapsed ordering time = 1087s
+Elapsed ordering time = 1098s
+Elapsed ordering time = 1110s
+Elapsed ordering time = 1122s
+Elapsed ordering time = 1130s
+Elapsed ordering time = 1135s
+Elapsed ordering time = 1141s
+Elapsed ordering time = 1146s
+Elapsed ordering time = 1151s
+Elapsed ordering time = 1157s
+Elapsed ordering time = 1162s
+Elapsed ordering time = 1168s
+Elapsed ordering time = 1173s
+Elapsed ordering time = 1175s
+Elapsed ordering time = 1182s
+Elapsed ordering time = 1186s
+Elapsed ordering time = 1191s
+Elapsed ordering time = 1195s
+Elapsed ordering time = 1202s
+[2025-12-17T13:11:10.016] error: *** JOB 3077069 ON della-h16n8 CANCELLED AT 2025-12-17T13:11:10 DUE TO TIME LIMIT ***

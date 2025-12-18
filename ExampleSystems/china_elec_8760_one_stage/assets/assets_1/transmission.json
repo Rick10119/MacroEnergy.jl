@@ -1,0 +1,4346 @@
+{
+    "transmission": {
+        "global_data": {
+            "transforms": {},
+            "edges": {
+                "transmission_edge": {
+                    "unidirectional": false,
+                    "has_capacity": true,
+                    "commodity": "Electricity",
+                    "wacc": 0.062,
+                    "lifetime": 100,
+                    "capital_recovery_period": 100
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Line1ExistingAC_Region4Shanxi_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 9818.906776
+                    }
+                }
+            },
+            {
+                "id": "Line2ExistingAC_Region16Henan_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region16Henan",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 8758.914335
+                    }
+                }
+            },
+            {
+                "id": "Line3ExistingAC_Region12Anhui_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 11824.84184
+                    }
+                }
+            },
+            {
+                "id": "Line4ExistingAC_Region11Zhejiang_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 6806.649775
+                    }
+                }
+            },
+            {
+                "id": "Line5ExistingAC_Region12Anhui_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 11000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 11000.0,
+                        "investment_cost": 10156.78699
+                    }
+                }
+            },
+            {
+                "id": "Line6ExistingAC_Region10Jiangsu_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region10Jiangsu",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 11000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 11000.0,
+                        "investment_cost": 9267.564333
+                    }
+                }
+            },
+            {
+                "id": "Line7ExistingAC_Region11Zhejiang_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 10500.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10500.0,
+                        "investment_cost": 12667.27706
+                    }
+                }
+            },
+            {
+                "id": "Line8ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 11952.30928
+                    }
+                }
+            },
+            {
+                "id": "Line9ExistingAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 7215.887363
+                    }
+                }
+            },
+            {
+                "id": "Line10ExistingAC_Region2Tianjin_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region2Tianjin",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 8691.826206
+                    }
+                }
+            },
+            {
+                "id": "Line11ExistingAC_Region5Innermongolia_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 7430.569377
+                    }
+                }
+            },
+            {
+                "id": "Line12ExistingAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 8329.550308
+                    }
+                }
+            },
+            {
+                "id": "Line13ExistingAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 7269.557867
+                    }
+                }
+            },
+            {
+                "id": "Line14ExistingAC_Region27Shaanxi_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 8651.573328
+                    }
+                }
+            },
+            {
+                "id": "Line15ExistingAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 8423.473689
+                    }
+                }
+            },
+            {
+                "id": "Line16ExistingAC_Region3Hebei_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 11887.90468
+                    }
+                }
+            },
+            {
+                "id": "Line17ExistingAC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 8020.944914
+                    }
+                }
+            },
+            {
+                "id": "Line18ExistingAC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 9188.278362
+                    }
+                }
+            },
+            {
+                "id": "Line19ExistingAC_Region15Shandong_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region15Shandong",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 16012.48286
+                    }
+                }
+            },
+            {
+                "id": "Line20ExistingAC_Region5Innermongolia_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 9094.354981
+                    }
+                }
+            },
+            {
+                "id": "Line21ExistingAC_Region24Guizhou_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 18466.7064
+                    }
+                }
+            },
+            {
+                "id": "Line22ExistingAC_Region20Guangxi_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region20Guangxi",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 18466.7064
+                    }
+                }
+            },
+            {
+                "id": "Line23ExistingAC_Region24Guizhou_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 2400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2400.0,
+                        "investment_cost": 22116.17639
+                    }
+                }
+            },
+            {
+                "id": "Line24ExistingAC_Region25Yunnan_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 2400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2400.0,
+                        "investment_cost": 8248.190422
+                    }
+                }
+            },
+            {
+                "id": "Line25ExistingAC_Region19Guangdong_to_Region21Hainan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region19Guangdong",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region21Hainan",
+                        "max_capacity": 1200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1200.0,
+                        "investment_cost": 10554.65546
+                    }
+                }
+            },
+            {
+                "id": "Line26ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 4000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4000.0,
+                        "investment_cost": 12029.04133
+                    }
+                }
+            },
+            {
+                "id": "Line27ExistingAC_Region3Hebei_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 1000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1000.0,
+                        "investment_cost": 3554.972013
+                    }
+                }
+            },
+            {
+                "id": "Line28ExistingAC_Region4Shanxi_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.03,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 2000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2000.0,
+                        "investment_cost": 13167.67597
+                    }
+                }
+            },
+            {
+                "id": "Line29ExistingAC_Region27Shaanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 2000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2000.0,
+                        "investment_cost": 11656.79539
+                    }
+                }
+            },
+            {
+                "id": "Line30ExistingAC_Region27Shaanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 2000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2000.0,
+                        "investment_cost": 11656.79539
+                    }
+                }
+            },
+            {
+                "id": "Line31ExistingAC_Region24Guizhou_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 1500.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1500.0,
+                        "investment_cost": 7660.392808
+                    }
+                }
+            },
+            {
+                "id": "Line32ExistingAC_Region24Guizhou_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 1000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1000.0,
+                        "investment_cost": 7660.392808
+                    }
+                }
+            },
+            {
+                "id": "Line33ExistingAC_Region23Sichuan_to_Region26Tibet",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region26Tibet",
+                        "max_capacity": 600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 600.0,
+                        "investment_cost": 38867.24365
+                    }
+                }
+            },
+            {
+                "id": "Line34ExistingAC_Region27Shaanxi_to_Region28Gansu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region28Gansu",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 10317.12931
+                    }
+                }
+            },
+            {
+                "id": "Line35ExistingAC_Region27Shaanxi_to_Region28Gansu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region28Gansu",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 7985.816824
+                    }
+                }
+            },
+            {
+                "id": "Line36ExistingAC_Region28Gansu_to_Region30Ningxia",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region30Ningxia",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 8672.258835
+                    }
+                }
+            },
+            {
+                "id": "Line37ExistingAC_Region28Gansu_to_Region30Ningxia",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region30Ningxia",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 5938.147354
+                    }
+                }
+            },
+            {
+                "id": "Line38ExistingAC_Region28Gansu_to_Region29Qinghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region29Qinghai",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 8555.69321
+                    }
+                }
+            },
+            {
+                "id": "Line39ExistingAC_Region28Gansu_to_Region29Qinghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region29Qinghai",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 8307.019878
+                    }
+                }
+            },
+            {
+                "id": "Line40ExistingAC_Region28Gansu_to_Region29Qinghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region29Qinghai",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 10305.73179
+                    }
+                }
+            },
+            {
+                "id": "Line41ExistingAC_Region28Gansu_to_Region31Xinjiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region31Xinjiang",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 11547.54424
+                    }
+                }
+            },
+            {
+                "id": "Line42ExistingAC_Region28Gansu_to_Region31Xinjiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region31Xinjiang",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 12487.84028
+                    }
+                }
+            },
+            {
+                "id": "Line43ExistingAC_Region5Innermongolia_to_Region8Heilongjiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.0192,
+                        "end_vertex": "elec_Region8Heilongjiang",
+                        "max_capacity": 2400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2400.0,
+                        "investment_cost": 6166.167792
+                    }
+                }
+            },
+            {
+                "id": "Line44ExistingAC_Region5Innermongolia_to_Region7Jilin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.0192,
+                        "end_vertex": "elec_Region7Jilin",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 6166.167792
+                    }
+                }
+            },
+            {
+                "id": "Line45ExistingAC_Region5Innermongolia_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.0192,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 7200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 7200.0,
+                        "investment_cost": 6166.167792
+                    }
+                }
+            },
+            {
+                "id": "Line46ExistingAC_Region8Heilongjiang_to_Region7Jilin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region8Heilongjiang",
+                        "loss_fraction": 0.0192,
+                        "end_vertex": "elec_Region7Jilin",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 6166.167792
+                    }
+                }
+            },
+            {
+                "id": "Line47ExistingAC_Region7Jilin_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region7Jilin",
+                        "loss_fraction": 0.0192,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 6166.167792
+                    }
+                }
+            },
+            {
+                "id": "Line48ExistingAC_Region12Anhui_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line49ExistingAC_Region12Anhui_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line50ExistingAC_Region10Jiangsu_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region10Jiangsu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line51ExistingAC_Region11Zhejiang_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line52ExistingAC_Region11Zhejiang_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line53ExistingAC_Region10Jiangsu_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region10Jiangsu",
+                        "loss_fraction": 0.0083,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 3461.910528
+                    }
+                }
+            },
+            {
+                "id": "Line54ExistingAC_Region16Henan_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region16Henan",
+                        "loss_fraction": 0.008,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 5093.223614
+                    }
+                }
+            },
+            {
+                "id": "Line55ExistingAC_Region17Hubei_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.008,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 5093.223614
+                    }
+                }
+            },
+            {
+                "id": "Line56ExistingAC_Region17Hubei_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.008,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 3600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3600.0,
+                        "investment_cost": 5093.223614
+                    }
+                }
+            },
+            {
+                "id": "Line57ExistingAC_Region17Hubei_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.008,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 5093.223614
+                    }
+                }
+            },
+            {
+                "id": "Line58ExistingAC_Region23Sichuan_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.008,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 5093.223614
+                    }
+                }
+            },
+            {
+                "id": "Line59ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 6124.198887
+                    }
+                }
+            },
+            {
+                "id": "Line60ExistingAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 10800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10800.0,
+                        "investment_cost": 6124.198887
+                    }
+                }
+            },
+            {
+                "id": "Line61ExistingAC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 7200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 7200.0,
+                        "investment_cost": 6124.198887
+                    }
+                }
+            },
+            {
+                "id": "Line62ExistingAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 6124.198887
+                    }
+                }
+            },
+            {
+                "id": "Line63ExistingAC_Region1Beijing_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region1Beijing",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 2400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2400.0,
+                        "investment_cost": 3503.879433
+                    }
+                }
+            },
+            {
+                "id": "Line64ExistingAC_Region3Hebei_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.0134,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 6124.198887
+                    }
+                }
+            },
+            {
+                "id": "Line65ExistingAC_Region25Yunnan_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.027,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 2400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2400.0,
+                        "investment_cost": 5492.840578
+                    }
+                }
+            },
+            {
+                "id": "Line66ExistingAC_Region20Guangxi_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region20Guangxi",
+                        "loss_fraction": 0.027,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4800.0,
+                        "investment_cost": 5492.840578
+                    }
+                }
+            },
+            {
+                "id": "Line67ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 6120.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 6120.0,
+                        "investment_cost": 6910.051425
+                    }
+                }
+            },
+            {
+                "id": "Line68ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 2520.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2520.0,
+                        "investment_cost": 6631.996568
+                    }
+                }
+            },
+            {
+                "id": "Line69ExistingAC_Region6Liaoning_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region6Liaoning",
+                        "loss_fraction": 0.01,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 2000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2000.0,
+                        "investment_cost": 3270.313354
+                    }
+                }
+            },
+            {
+                "id": "Line70ExistingAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 2520.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2520.0,
+                        "investment_cost": 3955.718575
+                    }
+                }
+            },
+            {
+                "id": "Line71ExistingAC_Region24Guizhou_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 2640.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2640.0,
+                        "investment_cost": 3802.472432
+                    }
+                }
+            },
+            {
+                "id": "Line72CandidateAC_Region17Hubei_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 12532.80796
+                    }
+                }
+            },
+            {
+                "id": "Line73CandidateAC_Region17Hubei_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11369.4998
+                    }
+                }
+            },
+            {
+                "id": "Line74CandidateAC_Region14Jiangxi_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region14Jiangxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11275.57642
+                    }
+                }
+            },
+            {
+                "id": "Line75CandidateAC_Region16Henan_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region16Henan",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10716.06142
+                    }
+                }
+            },
+            {
+                "id": "Line76CandidateAC_Region15Shandong_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region15Shandong",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11290.33581
+                    }
+                }
+            },
+            {
+                "id": "Line77CandidateAC_Region27Shaanxi_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 14903.70244
+                    }
+                }
+            },
+            {
+                "id": "Line78CandidateAC_Region4Shanxi_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 16790.22064
+                    }
+                }
+            },
+            {
+                "id": "Line79CandidateAC_Region13Fujian_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region13Fujian",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 4800.0,
+                        "max_new_capacity": 4800.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 7316.488494
+                    }
+                }
+            },
+            {
+                "id": "Line80CandidateAC_Region14Jiangxi_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region14Jiangxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9592.612472
+                    }
+                }
+            },
+            {
+                "id": "Line81CandidateAC_Region17Hubei_to_Region12Anhui",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region12Anhui",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8752.644064
+                    }
+                }
+            },
+            {
+                "id": "Line82CandidateAC_Region14Jiangxi_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region14Jiangxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9646.570673
+                    }
+                }
+            },
+            {
+                "id": "Line83CandidateAC_Region23Sichuan_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8407.034675
+                    }
+                }
+            },
+            {
+                "id": "Line84CandidateAC_Region27Shaanxi_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10425.33043
+                    }
+                }
+            },
+            {
+                "id": "Line85CandidateAC_Region28Gansu_to_Region23Sichuan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region23Sichuan",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10619.3977
+                    }
+                }
+            },
+            {
+                "id": "Line86CandidateAC_Region28Gansu_to_Region27Shaanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region27Shaanxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10059.04815
+                    }
+                }
+            },
+            {
+                "id": "Line87CandidateAC_Region15Shandong_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region15Shandong",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10224.94261
+                    }
+                }
+            },
+            {
+                "id": "Line88CandidateAC_Region31Xinjiang_to_Region29Qinghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region29Qinghai",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 16145.99546
+                    }
+                }
+            },
+            {
+                "id": "Line89CandidateAC_Region31Xinjiang_to_Region28Gansu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region28Gansu",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 17293.35447
+                    }
+                }
+            },
+            {
+                "id": "Line90CandidateAC_Region29Qinghai_to_Region28Gansu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region28Gansu",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8064.916151
+                    }
+                }
+            },
+            {
+                "id": "Line91CandidateAC_Region28Gansu_to_Region30Ningxia",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region30Ningxia",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9130.181207
+                    }
+                }
+            },
+            {
+                "id": "Line92CandidateAC_Region4Shanxi_to_Region28Gansu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.02,
+                        "end_vertex": "elec_Region28Gansu",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 12080.80157
+                    }
+                }
+            },
+            {
+                "id": "Line93CandidateAC_Region26Tibet_to_Region23Sichuan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region26Tibet",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region23Sichuan",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 10000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 13312.57526
+                    }
+                }
+            },
+            {
+                "id": "Line94CandidateAC_Region23Sichuan_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5161.675927
+                    }
+                }
+            },
+            {
+                "id": "Line95CandidateAC_Region22Chongqing_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region22Chongqing",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9611.780435
+                    }
+                }
+            },
+            {
+                "id": "Line96CandidateAC_Region17Hubei_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5339.495809
+                    }
+                }
+            },
+            {
+                "id": "Line97CandidateAC_Region17Hubei_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 7063.723147
+                    }
+                }
+            },
+            {
+                "id": "Line98CandidateAC_Region17Hubei_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5054.977068
+                    }
+                }
+            },
+            {
+                "id": "Line99CandidateAC_Region25Yunnan_to_Region24Guizhou",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region24Guizhou",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 6677.784253
+                    }
+                }
+            },
+            {
+                "id": "Line100CandidateAC_Region24Guizhou_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 6793.311572
+                    }
+                }
+            },
+            {
+                "id": "Line101CandidateAC_Region24Guizhou_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9650.814825
+                    }
+                }
+            },
+            {
+                "id": "Line102CandidateAC_Region20Guangxi_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region20Guangxi",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 7312.642446
+                    }
+                }
+            },
+            {
+                "id": "Line103CandidateAC_Region25Yunnan_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8376.522493
+                    }
+                }
+            },
+            {
+                "id": "Line104CandidateAC_Region19Guangdong_to_Region21Hainan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region19Guangdong",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region21Hainan",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 6911.833677
+                    }
+                }
+            },
+            {
+                "id": "Line105CandidateAC_Region13Fujian_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region13Fujian",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 7040.087498
+                    }
+                }
+            },
+            {
+                "id": "Line106CandidateAC_Region12Anhui_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5737.627761
+                    }
+                }
+            },
+            {
+                "id": "Line107CandidateAC_Region12Anhui_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 4038.045853
+                    }
+                }
+            },
+            {
+                "id": "Line108CandidateAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 6320.830307
+                    }
+                }
+            },
+            {
+                "id": "Line109CandidateAC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5198.188129
+                    }
+                }
+            },
+            {
+                "id": "Line110CandidateAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5154.036721
+                    }
+                }
+            },
+            {
+                "id": "Line111CandidateAC_Region2Tianjin_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region2Tianjin",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 3714.217847
+                    }
+                }
+            },
+            {
+                "id": "Line112CandidateAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 19200.0,
+                        "max_new_capacity": 19200.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 4293.822839
+                    }
+                }
+            },
+            {
+                "id": "Line113CandidateAC_Region3Hebei_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5193.38774
+                    }
+                }
+            },
+            {
+                "id": "Line114CandidateAC_Region7Jilin_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region7Jilin",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 5294.403035
+                    }
+                }
+            },
+            {
+                "id": "Line115CandidateAC_Region5Innermongolia_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11712.23907
+                    }
+                }
+            },
+            {
+                "id": "Line116CandidateAC_Region8Heilongjiang_to_Region7Jilin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region8Heilongjiang",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region7Jilin",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 4834.332795
+                    }
+                }
+            },
+            {
+                "id": "Line117CandidateAC_Region5Innermongolia_to_Region8Heilongjiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region8Heilongjiang",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 14841.49125
+                    }
+                }
+            },
+            {
+                "id": "Line118CandidateAC_Region5Innermongolia_to_Region7Jilin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.025,
+                        "end_vertex": "elec_Region7Jilin",
+                        "max_capacity": 9600.0,
+                        "max_new_capacity": 9600.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 13441.35128
+                    }
+                }
+            },
+            {
+                "id": "Line119CandidateAC_Region4Shanxi_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 10000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11472.81552
+                    }
+                }
+            },
+            {
+                "id": "Line120CandidateAC_Region16Henan_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region16Henan",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 10000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10412.82308
+                    }
+                }
+            },
+            {
+                "id": "Line121CandidateAC_Region12Anhui_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 13478.75058
+                    }
+                }
+            },
+            {
+                "id": "Line122CandidateAC_Region11Zhejiang_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8460.558516
+                    }
+                }
+            },
+            {
+                "id": "Line123CandidateAC_Region12Anhui_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region12Anhui",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 22000.0,
+                        "max_new_capacity": 22000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 11810.69568
+                    }
+                }
+            },
+            {
+                "id": "Line124CandidateAC_Region10Jiangsu_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region10Jiangsu",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 22000.0,
+                        "max_new_capacity": 22000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10921.47308
+                    }
+                }
+            },
+            {
+                "id": "Line125CandidateAC_Region11Zhejiang_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region11Zhejiang",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 21000.0,
+                        "max_new_capacity": 21000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 14321.18577
+                    }
+                }
+            },
+            {
+                "id": "Line126CandidateAC_Region5Innermongolia_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 13606.21803
+                    }
+                }
+            },
+            {
+                "id": "Line127CandidateAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8869.796104
+                    }
+                }
+            },
+            {
+                "id": "Line128CandidateAC_Region2Tianjin_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region2Tianjin",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10345.73495
+                    }
+                }
+            },
+            {
+                "id": "Line129CandidateAC_Region5Innermongolia_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9084.478117
+                    }
+                }
+            },
+            {
+                "id": "Line130CandidateAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9983.459049
+                    }
+                }
+            },
+            {
+                "id": "Line131CandidateAC_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region2Tianjin",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 8923.466607
+                    }
+                }
+            },
+            {
+                "id": "Line132CandidateAC_Region27Shaanxi_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10305.48207
+                    }
+                }
+            },
+            {
+                "id": "Line133CandidateAC_Region4Shanxi_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10077.38243
+                    }
+                }
+            },
+            {
+                "id": "Line134CandidateAC_Region3Hebei_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 13541.81342
+                    }
+                }
+            },
+            {
+                "id": "Line135CandidateAC_Region1Beijing_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region1Beijing",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 9674.853654
+                    }
+                }
+            },
+            {
+                "id": "Line136CandidateAC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10842.1871
+                    }
+                }
+            },
+            {
+                "id": "Line137CandidateAC_Region15Shandong_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region15Shandong",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 17666.3916
+                    }
+                }
+            },
+            {
+                "id": "Line138CandidateAC_Region5Innermongolia_to_Region4Shanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.015,
+                        "end_vertex": "elec_Region4Shanxi",
+                        "max_capacity": 20000.0,
+                        "max_new_capacity": 20000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 10748.26372
+                    }
+                }
+            },
+            {
+                "id": "Line139ExistingDC_Region17Hubei_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.075,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 14781.90643
+                    }
+                }
+            },
+            {
+                "id": "Line140ExistingDC_Region17Hubei_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.075,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 1200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1200.0,
+                        "investment_cost": 32545.11925
+                    }
+                }
+            },
+            {
+                "id": "Line141ExistingDC_Region17Hubei_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.075,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 3016.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3016.0,
+                        "investment_cost": 19517.24461
+                    }
+                }
+            },
+            {
+                "id": "Line142ExistingDC_Region17Hubei_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.075,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 3007.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3007.0,
+                        "investment_cost": 20439.88792
+                    }
+                }
+            },
+            {
+                "id": "Line143ExistingDC_Region17Hubei_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region17Hubei",
+                        "loss_fraction": 0.0765,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 21589.1774
+                    }
+                }
+            },
+            {
+                "id": "Line144ExistingDC_Region5Innermongolia_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.0412,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 19001.15963
+                    }
+                }
+            },
+            {
+                "id": "Line145ExistingDC_Region29Qinghai_to_Region26Tibet",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.137,
+                        "end_vertex": "elec_Region26Tibet",
+                        "max_capacity": 600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 600.0,
+                        "investment_cost": 52582.65071
+                    }
+                }
+            },
+            {
+                "id": "Line146ExistingDC_Region23Sichuan_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 7200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 7200.0,
+                        "investment_cost": 26496.51099
+                    }
+                }
+            },
+            {
+                "id": "Line147ExistingDC_Region23Sichuan_to_Region9Shanghai",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region9Shanghai",
+                        "max_capacity": 6400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 6400.0,
+                        "investment_cost": 26796.72478
+                    }
+                }
+            },
+            {
+                "id": "Line148ExistingDC_Region23Sichuan_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 7500.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 7500.0,
+                        "investment_cost": 23270.51773
+                    }
+                }
+            },
+            {
+                "id": "Line149ExistingDC_Region27Shaanxi_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.01,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 390.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 390.0,
+                        "investment_cost": 4961.726222
+                    }
+                }
+            },
+            {
+                "id": "Line150ExistingDC_Region23Sichuan_to_Region27Shaanxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.03,
+                        "end_vertex": "elec_Region27Shaanxi",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 16068.07283
+                    }
+                }
+            },
+            {
+                "id": "Line151ExistingDC_Region3Hebei_to_Region6Liaoning",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.017,
+                        "end_vertex": "elec_Region6Liaoning",
+                        "max_capacity": 300.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 300.0,
+                        "investment_cost": 4961.726222
+                    }
+                }
+            },
+            {
+                "id": "Line152ExistingDC_Region31Xinjiang_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.072,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 8000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 8000.0,
+                        "investment_cost": 25654.91991
+                    }
+                }
+            },
+            {
+                "id": "Line153ExistingDC_Region30Ningxia_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region30Ningxia",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 4000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 4000.0,
+                        "investment_cost": 28477.42582
+                    }
+                }
+            },
+            {
+                "id": "Line154ExistingDC_Region30Ningxia_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region30Ningxia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 8000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 8000.0,
+                        "investment_cost": 22844.3233
+                    }
+                }
+            },
+            {
+                "id": "Line155ExistingDC_Region28Gansu_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 8000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 8000.0,
+                        "investment_cost": 26792.25879
+                    }
+                }
+            },
+            {
+                "id": "Line156ExistingDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 6400.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 6400.0,
+                        "investment_cost": 16479.0677
+                    }
+                }
+            },
+            {
+                "id": "Line157ExistingDC_Region5Innermongolia_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 18461.69808
+                    }
+                }
+            },
+            {
+                "id": "Line158ExistingDC_Region5Innermongolia_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 18480.75297
+                    }
+                }
+            },
+            {
+                "id": "Line159ExistingDC_Region5Innermongolia_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 10000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 10000.0,
+                        "investment_cost": 20357.65986
+                    }
+                }
+            },
+            {
+                "id": "Line160ExistingDC_Region4Shanxi_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region4Shanxi",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 8000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 8000.0,
+                        "investment_cost": 19265.57635
+                    }
+                }
+            },
+            {
+                "id": "Line161ExistingDC_Region31Xinjiang_to_Region12Anhui",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.07,
+                        "end_vertex": "elec_Region12Anhui",
+                        "max_capacity": 12000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 12000.0,
+                        "investment_cost": 36586.89911
+                    }
+                }
+            },
+            {
+                "id": "Line162ExistingDC_Region22Chongqing_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region22Chongqing",
+                        "loss_fraction": 0.007,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 2600.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 2600.0,
+                        "investment_cost": 11880.18955
+                    }
+                }
+            },
+            {
+                "id": "Line163ExistingDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.0657,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 27284.11319
+                    }
+                }
+            },
+            {
+                "id": "Line164ExistingDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.0657,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 31266.58568
+                    }
+                }
+            },
+            {
+                "id": "Line165ExistingDC_Region24Guizhou_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.0563,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 1800.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 1800.0,
+                        "investment_cost": 24428.15445
+                    }
+                }
+            },
+            {
+                "id": "Line166ExistingDC_Region24Guizhou_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.0705,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 6000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 6000.0,
+                        "investment_cost": 15864.1684
+                    }
+                }
+            },
+            {
+                "id": "Line167ExistingDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.0657,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 5000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 5000.0,
+                        "investment_cost": 25683.50225
+                    }
+                }
+            },
+            {
+                "id": "Line168ExistingDC_Region25Yunnan_to_Region20Guangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region20Guangxi",
+                        "max_capacity": 3200.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3200.0,
+                        "investment_cost": 20004.50667
+                    }
+                }
+            },
+            {
+                "id": "Line169ExistingDC_Region29Qinghai_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 8000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 8000.0,
+                        "investment_cost": 22052.35434
+                    }
+                }
+            },
+            {
+                "id": "Line170ExistingDC_Region25Yunnan_to_Region24Guizhou",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.01,
+                        "end_vertex": "elec_Region24Guizhou",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 4961.726222
+                    }
+                }
+            },
+            {
+                "id": "Line171ExistingDC_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region3Hebei",
+                        "loss_fraction": 0.06,
+                        "end_vertex": "elec_Region1Beijing",
+                        "max_capacity": 3000.0,
+                        "max_new_capacity": 0.0,
+                        "can_expand": false,
+                        "existing_capacity": 3000.0,
+                        "investment_cost": 13934.9188
+                    }
+                }
+            },
+            {
+                "id": "Line172CandidateDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 21248.47607
+                    }
+                }
+            },
+            {
+                "id": "Line173CandidateDC_Region31Xinjiang_to_Region23Sichuan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region23Sichuan",
+                        "max_capacity": 24000.0,
+                        "max_new_capacity": 24000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 30686.60725
+                    }
+                }
+            },
+            {
+                "id": "Line174CandidateDC_Region23Sichuan_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 25660.87456
+                    }
+                }
+            },
+            {
+                "id": "Line175CandidateDC_Region23Sichuan_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 25535.82683
+                    }
+                }
+            },
+            {
+                "id": "Line176CandidateDC_Region27Shaanxi_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19372.76012
+                    }
+                }
+            },
+            {
+                "id": "Line177CandidateDC_Region23Sichuan_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 22790.73142
+                    }
+                }
+            },
+            {
+                "id": "Line178CandidateDC_Region31Xinjiang_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 27111.08768
+                    }
+                }
+            },
+            {
+                "id": "Line179CandidateDC_Region31Xinjiang_to_Region12Anhui",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region12Anhui",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 29844.49874
+                    }
+                }
+            },
+            {
+                "id": "Line180CandidateDC_Region31Xinjiang_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 25702.55714
+                    }
+                }
+            },
+            {
+                "id": "Line181CandidateDC_Region31Xinjiang_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 29058.14532
+                    }
+                }
+            },
+            {
+                "id": "Line182CandidateDC_Region31Xinjiang_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 30541.36302
+                    }
+                }
+            },
+            {
+                "id": "Line183CandidateDC_Region31Xinjiang_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 29518.90429
+                    }
+                }
+            },
+            {
+                "id": "Line184CandidateDC_Region30Ningxia_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region30Ningxia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 18358.11145
+                    }
+                }
+            },
+            {
+                "id": "Line185CandidateDC_Region30Ningxia_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region30Ningxia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 21935.30332
+                    }
+                }
+            },
+            {
+                "id": "Line186CandidateDC_Region30Ningxia_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region30Ningxia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 23556.28211
+                    }
+                }
+            },
+            {
+                "id": "Line187CandidateDC_Region28Gansu_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19932.0754
+                    }
+                }
+            },
+            {
+                "id": "Line188CandidateDC_Region28Gansu_to_Region17Hubei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region17Hubei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19495.93548
+                    }
+                }
+            },
+            {
+                "id": "Line189CandidateDC_Region29Qinghai_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19114.9532
+                    }
+                }
+            },
+            {
+                "id": "Line190CandidateDC_Region29Qinghai_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 24686.03967
+                    }
+                }
+            },
+            {
+                "id": "Line191CandidateDC_Region29Qinghai_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region29Qinghai",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 22046.02306
+                    }
+                }
+            },
+            {
+                "id": "Line192CandidateDC_Region25Yunnan_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region25Yunnan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19067.67701
+                    }
+                }
+            },
+            {
+                "id": "Line193CandidateDC_Region24Guizhou_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region24Guizhou",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 17122.22096
+                    }
+                }
+            },
+            {
+                "id": "Line194CandidateDC_Region23Sichuan_to_Region13Fujian",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region13Fujian",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 21976.7077
+                    }
+                }
+            },
+            {
+                "id": "Line195CandidateDC_Region23Sichuan_to_Region11Zhejiang",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region23Sichuan",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region11Zhejiang",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 21804.03761
+                    }
+                }
+            },
+            {
+                "id": "Line196CandidateDC_Region5Innermongolia_to_Region22Chongqing",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region22Chongqing",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 20531.36811
+                    }
+                }
+            },
+            {
+                "id": "Line197CandidateDC_Region5Innermongolia_to_Region10Jiangsu",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region10Jiangsu",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19540.86656
+                    }
+                }
+            },
+            {
+                "id": "Line198CandidateDC_Region5Innermongolia_to_Region12Anhui",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region12Anhui",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 19245.40213
+                    }
+                }
+            },
+            {
+                "id": "Line199CandidateDC_Region5Innermongolia_to_Region14Jiangxi",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region14Jiangxi",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 20962.01333
+                    }
+                }
+            },
+            {
+                "id": "Line200CandidateDC_Region5Innermongolia_to_Region18Hunan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region18Hunan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 20983.85486
+                    }
+                }
+            },
+            {
+                "id": "Line201CandidateDC_Region28Gansu_to_Region15Shandong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region28Gansu",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region15Shandong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 17520.86278
+                    }
+                }
+            },
+            {
+                "id": "Line202CandidateDC_Region8Heilongjiang_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region8Heilongjiang",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 20460.38218
+                    }
+                }
+            },
+            {
+                "id": "Line203CandidateDC_Region6Liaoning_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region6Liaoning",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 17761.82695
+                    }
+                }
+            },
+            {
+                "id": "Line204CandidateDC_Region26Tibet_to_Region16Henan",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region26Tibet",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region16Henan",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 23320.69561
+                    }
+                }
+            },
+            {
+                "id": "Line205CandidateDC_Region26Tibet_to_Region3Hebei",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region26Tibet",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region3Hebei",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 24391.34236
+                    }
+                }
+            },
+            {
+                "id": "Line206CandidateDC_Region26Tibet_to_Region19Guangdong",
+                "edges": {
+                    "transmission_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true,
+                            "MaxNewCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_Region26Tibet",
+                        "loss_fraction": 0.065,
+                        "end_vertex": "elec_Region19Guangdong",
+                        "max_capacity": 16000.0,
+                        "max_new_capacity": 16000.0,
+                        "can_expand": true,
+                        "existing_capacity": 0.0,
+                        "investment_cost": 23692.26601
+                    }
+                }
+            }
+        ],
+        "type": "TransmissionLink"
+    }
+}

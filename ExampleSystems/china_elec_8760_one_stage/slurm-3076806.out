@@ -1,0 +1,54 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Precompiling packages...
+Info Given UserAdditions was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+   5681.9 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 8 seconds
+  1 dependency had output during precompilation:
+┌ UserAdditions
+│  [Output was shown above]
+└  
+ERROR: LoadError: Your number of systems (7) does not match the number of periods lengths (1) in your case settings.
+            If you didn't specify period lengths, the default is for one 1-year period
+Stacktrace:
+ [1] error(s::String)
+   @ Base ./error.jl:44
+ [2] generate_case(path::String, systems_data::Dict{Symbol, Any})
+   @ MacroEnergy ~/MacroEnergy.jl/src/model/case.jl:24
+ [3] load_case(path::String; lazy_load::Bool)
+   @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_stages_data.jl:39
+ [4] load_case
+   @ ~/MacroEnergy.jl/src/load_inputs/load_stages_data.jl:23 [inlined]
+ [5] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}})
+   @ MacroEnergy ~/MacroEnergy.jl/src/utilities/run_tools.jl:34
+ [6] top-level scope
+   @ ~/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/run.jl:4
+ [7] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [8] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [9] _start()
+   @ Base ./client.jl:550
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/run.jl:4
+[ Info: 2025-12-17 12:02:59 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage
+[ Info: 2025-12-17 12:03:00  ++ Loading user additions from ExampleSystems/china_elec_8760_one_stage/tmp/UserAdditions.jl
+[ Info: 2025-12-17 12:03:09  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-17 12:03:09 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/system_data.json
+[ Info: 2025-12-17 12:03:09 Loading system data
+[ Info: 2025-12-17 12:03:10 Done loading system data. It took 0.91 seconds
+[ Info: 2025-12-17 12:03:10 Done loading case data. It took 0.91 seconds
+[ Info: 2025-12-17 12:03:10 *** Generating case ***
+[ Info: 2025-12-17 12:03:11 Configuring case from settings/case_settings.json
+[ Info: 2025-12-17 12:03:11 Configuring case
+[ Info: 2025-12-17 12:03:11  -- Setting solution algorithm
+[ Info: 2025-12-17 12:03:11  -- Solution algorithm set to MacroEnergy.Monolithic()
+┌ Warning: 2025-12-17 12:03:11 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-17 12:03:12 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

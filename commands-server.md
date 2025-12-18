@@ -18,6 +18,8 @@ export OMP_NUM_THREADS=1
 
 sbatch ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/ver12_china_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS.slurm
 
+
+# 更新gurobi
 julia --project=@. -e '
     using Pkg;
     Pkg.add("Gurobi");

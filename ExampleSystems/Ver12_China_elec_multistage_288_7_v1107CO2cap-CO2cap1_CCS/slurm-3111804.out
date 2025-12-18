@@ -1,0 +1,418 @@
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Precompiling packages...
+   7214.4 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 10 seconds
+ERROR: LoadError: TaskFailedException
+
+    nested task error: On worker 2:
+    JuMP.OptimizeNotCalled()
+    Stacktrace:
+      [1] get
+        @ ~/.julia/packages/JuMP/e83v9/src/optimizer_interface.jl:1237
+      [2] #value#31
+        @ ~/.julia/packages/JuMP/e83v9/src/variables.jl:2092
+      [3] value
+        @ ~/.julia/packages/JuMP/e83v9/src/variables.jl:2091
+      [4] #get_optimal_flow##6
+        @ ./none:-1
+      [5] iterate
+        @ ./generator.jl:48 [inlined]
+      [6] collect
+        @ ./array.jl:790
+      [7] get_optimal_flow
+        @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/write_flow.jl:245
+      [8] #get_optimal_flow##0
+        @ ./none:-1
+      [9] iterate
+        @ ./generator.jl:48 [inlined]
+     [10] grow_to!
+        @ ./array.jl:863
+     [11] collect
+        @ ./array.jl:787 [inlined]
+     [12] get_optimal_flow
+        @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/write_flow.jl:220 [inlined]
+     [13] #get_optimal_flow#628
+        @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/write_flow.jl:183
+     [14] get_optimal_flow
+        @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/write_flow.jl:153
+     [15] get_local_expressions
+        @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/utilities/output_utilities.jl:442
+     [16] #collect_distributed_flows##2
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/macros.jl:148
+     [17] #handle_msg##4
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/process_messages.jl:287
+     [18] run_work_thunk
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/process_messages.jl:70
+     [19] #handle_msg##2
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/process_messages.jl:287
+    Stacktrace:
+     [1] remotecall_fetch(::Function, ::Distributed.Worker; kwargs::@Kwargs{})
+       @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:465
+     [2] remotecall_fetch(::Function, ::Distributed.Worker)
+       @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:454
+     [3] remotecall_fetch
+       @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:492 [inlined]
+     [4] (::MacroEnergy.var"#collect_distributed_flows##0#collect_distributed_flows##1"{MacroEnergy.BendersResults, Vector{Vector{DataFrames.DataFrame}}, Vector{Int64}, Int64})()
+       @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/utilities/benders_output_utilities.jl:51
+Stacktrace:
+  [1] sync_end(c::Channel{Any})
+    @ Base ./task.jl:601
+  [2] macro expansion
+    @ ./task.jl:634 [inlined]
+  [3] collect_distributed_flows(bd_results::MacroEnergy.BendersResults)
+    @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/utilities/benders_output_utilities.jl:50
+  [4] collect_flow_results(case::MacroEnergy.Case, bd_results::MacroEnergy.BendersResults)
+    @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/utilities/benders_output_utilities.jl:37
+  [5] write_outputs(case_path::String, case::MacroEnergy.Case, bd_results::MacroEnergy.BendersResults)
+    @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/write_outputs/write_outputs.jl:53
+  [6] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}})
+    @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/utilities/run_tools.jl:61
+  [7] top-level scope
+    @ /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/run_benders.jl:4
+  [8] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+  [9] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:317
+ [10] _start()
+    @ Base ./client.jl:550
+in expression starting at /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/run_benders.jl:4
+[ Info: 2025-12-18 10:25:26 Running case at /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS
+[ Info: 2025-12-18 10:25:26  ++ Loading user additions from ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/tmp/UserAdditions.jl
+[ Info: 2025-12-18 10:25:37  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-18 10:25:37 Loading case from /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/system_data.json
+[ Info: 2025-12-18 10:25:37 Loading system data
+[ Info: 2025-12-18 10:25:38 Done loading system data. It took 1.0 seconds
+[ Info: 2025-12-18 10:25:38 Done loading case data. It took 1.01 seconds
+[ Info: 2025-12-18 10:25:38 *** Generating case ***
+[ Info: 2025-12-18 10:25:38 Configuring case from settings/case_settings.json
+[ Info: 2025-12-18 10:25:38 Configuring case
+[ Info: 2025-12-18 10:25:38  -- Setting solution algorithm
+[ Info: 2025-12-18 10:25:38  -- Solution algorithm set to MacroEnergy.Benders()
+[ Info: 2025-12-18 10:25:38 Configuring benders
+[ Info: 2025-12-18 10:25:38 Generating systems
+[ Info: 2025-12-18 10:25:39 Generating system
+┌ Warning: 2025-12-18 10:25:40 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:25:41 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:41 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:41 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:25:42 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:26:22 Done generating system. It took 43.1 seconds
+[ Info: 2025-12-18 10:26:22 Generating system
+┌ Warning: 2025-12-18 10:26:23 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:26:37 Done generating system. It took 14.6 seconds
+[ Info: 2025-12-18 10:26:37 Generating system
+┌ Warning: 2025-12-18 10:26:37 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:37 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:26:51 Done generating system. It took 14.18 seconds
+[ Info: 2025-12-18 10:26:51 Generating system
+┌ Warning: 2025-12-18 10:26:51 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:26:51 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:27:05 Done generating system. It took 14.03 seconds
+[ Info: 2025-12-18 10:27:05 Generating system
+┌ Warning: 2025-12-18 10:27:06 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:27:22 Done generating system. It took 17.46 seconds
+[ Info: 2025-12-18 10:27:22 Generating system
+┌ Warning: 2025-12-18 10:27:23 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:27:37 Done generating system. It took 14.63 seconds
+[ Info: 2025-12-18 10:27:37 Generating system
+┌ Warning: 2025-12-18 10:27:38 Could not find: "locations", full path: /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/locations
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-18 10:27:38 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-18 10:27:51 Done generating system. It took 14.35 seconds
+[ Info: 2025-12-18 10:27:52  -- Discounting fixed costs for period 1
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 1
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 2
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 2
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 3
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 3
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 4
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 4
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 5
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 5
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 6
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 6
+[ Info: 2025-12-18 10:27:53  -- Discounting fixed costs for period 7
+[ Info: 2025-12-18 10:27:53  -- Computing retirement case for period 7
+[ Info: 2025-12-18 10:27:54 *** Done generating case. It took 135.1 seconds ***
+┌ Warning: 2025-12-18 10:27:55 The Slurm functionality in the `ClusterManagers.jl` package is deprecated (including `ClusterManagers.addprocs_slurm` and `ClusterManagers.SlurmManager`). It will be removed from ClusterManagers.jl in a future release. We recommend migrating to the [https://github.com/JuliaParallel/SlurmClusterManager.jl](https://github.com/JuliaParallel/SlurmClusterManager.jl) package instead.
+│   caller = ip:0x0
+└ @ Core :-1
+[ Info: 2025-12-18 10:27:55 Starting SLURM job julia-732566: `srun -J julia-732566 -n 1 -D /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl -o /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/./julia-732566-17660716757-%4t.out /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/bin/julia '-t 20' --worker=5ZwGaZFWRBdfvTxn`
+[ Info: 2025-12-18 10:27:55 Worker 0 (after 0 s): No output file "/scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl/./julia-732566-17660716757-0000.out" yet
+[ Info: 2025-12-18 10:27:57 Worker 0 (after 1 s): Output file found, but no connection details yet
+[ Info: 2025-12-18 10:27:59 Worker 0 ready after 3 s on host 172.17.9.8, port 9337
+[ Info: 2025-12-18 10:28:10 Number of procs: 2
+[ Info: 2025-12-18 10:28:10 Number of workers: 1
+[ Info: 2025-12-18 10:28:10 *** Running simulation with Benders decomposition ***
+[ Info: 2025-12-18 10:28:19 Generating planning problem
+[ Info: 2025-12-18 10:28:19  -- Period 1
+[ Info: 2025-12-18 10:28:19  -- Adding linking variables
+[ Info: 2025-12-18 10:28:20  -- Defining available capacity
+[ Info: 2025-12-18 10:28:22  -- Generating planning model
+[ Info: 2025-12-18 10:28:24  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:24  -- Available capacity in period 1 is being carried over to period 2
+[ Info: 2025-12-18 10:28:26  -- Period 2
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:26  -- Available capacity in period 2 is being carried over to period 3
+[ Info: 2025-12-18 10:28:26  -- Period 3
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:26  -- Available capacity in period 3 is being carried over to period 4
+[ Info: 2025-12-18 10:28:26  -- Period 4
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:26  -- Available capacity in period 4 is being carried over to period 5
+[ Info: 2025-12-18 10:28:26  -- Period 5
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:26  -- Available capacity in period 5 is being carried over to period 6
+[ Info: 2025-12-18 10:28:26  -- Period 6
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:26  -- Available capacity in period 6 is being carried over to period 7
+[ Info: 2025-12-18 10:28:26  -- Period 7
+[ Info: 2025-12-18 10:28:26  -- Adding linking variables
+[ Info: 2025-12-18 10:28:26  -- Defining available capacity
+[ Info: 2025-12-18 10:28:26  -- Generating planning model
+[ Info: 2025-12-18 10:28:26  -- Including age-based retirements
+[ Info: 2025-12-18 10:28:27  -- Planning problem generation complete, it took 8.20993685722351 seconds
+[ Info: 2025-12-18 10:28:27 Scaling constraints and RHS
+[ Info: 2025-12-18 10:31:36 Distributed operational subproblems generation took 186.559 seconds
+[ 2025-12-18 10:31:37 Running Benders decomposition algorithm from `MacroEnergySolvers.jl`
+[ 2025-12-18 10:35:01 Solving the subproblems required 169.82707285881042 seconds
+Updating the planning problem....done (it took 0.8561141490936279 s).
+[ 2025-12-18 10:35:02 Solving the planning problem required 0.09503793716430664 seconds
+[ 2025-12-18 10:35:02 The optimal value of the planning problem is 2.834832923078362e11
+[ 2025-12-18 10:35:03 ***k = 0      LB = 2.834832923078362e11     UB = Inf       Gap = Inf       CPU Time = 172.5932
+[ 2025-12-18 10:36:25 Solving the subproblems required 81.97226095199585 seconds
+Updating the planning problem....done (it took 0.15637493133544922 s).
+[ 2025-12-18 10:36:25 Solving the planning problem required 0.5419790744781494 seconds
+[ 2025-12-18 10:36:25 The optimal value of the planning problem is 2.907577352029694e11
+[ 2025-12-18 10:36:25 ***k = 1      LB = 2.907577352029694e11     UB = Inf       Gap = Inf       CPU Time = 255.36649
+[ 2025-12-18 10:38:28 Solving the subproblems required 123.0303680896759 seconds
+Updating the planning problem....done (it took 0.08345413208007812 s).
+[ 2025-12-18 10:38:29 Solving the planning problem required 0.7365798950195312 seconds
+[ 2025-12-18 10:38:29 The optimal value of the planning problem is 5.3605272307886804e11
+[ 2025-12-18 10:38:29 ***k = 2      LB = 5.360527230788681e11     UB = Inf       Gap = Inf       CPU Time = 379.22666
+[ 2025-12-18 10:46:18 Solving the subproblems required 468.8270061016083 seconds
+Updating the planning problem....done (it took 0.10855603218078613 s).
+[ 2025-12-18 10:46:19 Solving the planning problem required 0.8925139904022217 seconds
+[ 2025-12-18 10:46:19 The optimal value of the planning problem is 7.044641420837397e11
+[ 2025-12-18 10:46:19 ***k = 3      LB = 7.044641420837397e11     UB = Inf       Gap = Inf       CPU Time = 849.06066
+[ 2025-12-18 10:51:39 Solving the subproblems required 320.4102602005005 seconds
+Updating the planning problem....done (it took 0.08889579772949219 s).
+[ 2025-12-18 10:51:40 Solving the planning problem required 0.9981667995452881 seconds
+[ 2025-12-18 10:51:40 The optimal value of the planning problem is 7.935309541817686e11
+[ 2025-12-18 10:51:40 ***k = 4      LB = 7.935309541817684e11     UB = Inf       Gap = Inf       CPU Time = 1170.56413
+[ 2025-12-18 10:58:45 Solving the subproblems required 424.97583198547363 seconds
+Updating the planning problem....done (it took 0.0912630558013916 s).
+[ 2025-12-18 10:58:47 Solving the planning problem required 1.4669549465179443 seconds
+[ 2025-12-18 10:58:47 The optimal value of the planning problem is 1.0028698166092012e12
+[ 2025-12-18 10:58:47 ***k = 5      LB = 1.0028698166092012e12     UB = Inf       Gap = Inf       CPU Time = 1597.10419
+[ 2025-12-18 11:04:24 Solving the subproblems required 336.9137980937958 seconds
+Updating the planning problem....done (it took 0.09360408782958984 s).
+[ 2025-12-18 11:04:25 Solving the planning problem required 1.3526899814605713 seconds
+[ 2025-12-18 11:04:25 The optimal value of the planning problem is 1.251795216457848e12
+[ 2025-12-18 11:04:25 ***k = 6      LB = 1.251795216457848e12     UB = Inf       Gap = Inf       CPU Time = 1935.47047
+[ 2025-12-18 11:17:28 Solving the subproblems required 783.121551990509 seconds
+Updating the planning problem....done (it took 0.1574709415435791 s).
+[ 2025-12-18 11:17:30 Solving the planning problem required 1.5632240772247314 seconds
+[ 2025-12-18 11:17:30 The optimal value of the planning problem is 1.2816406092804424e12
+[ 2025-12-18 11:17:30 ***k = 7      LB = 1.2816406092804424e12     UB = Inf       Gap = Inf       CPU Time = 2720.3195
+[ 2025-12-18 11:22:31 Solving the subproblems required 300.93199706077576 seconds
+Updating the planning problem....done (it took 0.08836698532104492 s).
+[ 2025-12-18 11:22:33 Solving the planning problem required 2.0615551471710205 seconds
+[ 2025-12-18 11:22:33 The optimal value of the planning problem is 1.345663732331041e12
+[ 2025-12-18 11:22:33 ***k = 8      LB = 1.345663732331041e12     UB = Inf       Gap = Inf       CPU Time = 3023.40723
+[ 2025-12-18 11:27:01 Solving the subproblems required 267.56908893585205 seconds
+Updating the planning problem....done (it took 0.08907103538513184 s).
+[ 2025-12-18 11:27:03 Solving the planning problem required 1.8941650390625 seconds
+[ 2025-12-18 11:27:03 The optimal value of the planning problem is 1.3969795416331077e12
+[ 2025-12-18 11:27:03 ***k = 9      LB = 1.3969795416331077e12     UB = Inf       Gap = Inf       CPU Time = 3292.96528
+[ 2025-12-18 11:32:54 Solving the subproblems required 351.28778409957886 seconds
+Updating the planning problem....done (it took 0.1420440673828125 s).
+[ 2025-12-18 11:32:56 Solving the planning problem required 2.2074952125549316 seconds
+[ 2025-12-18 11:32:56 The optimal value of the planning problem is 1.4257267227743252e12
+[ 2025-12-18 11:32:56 ***k = 10      LB = 1.4257267227743252e12     UB = Inf       Gap = Inf       CPU Time = 3646.61024
+[ 2025-12-18 11:39:46 Solving the subproblems required 409.66146183013916 seconds
+Updating the planning problem....done (it took 0.09375500679016113 s).
+[ 2025-12-18 11:39:49 Solving the planning problem required 2.3397951126098633 seconds
+[ 2025-12-18 11:39:49 The optimal value of the planning problem is 1.4629521385242603e12
+[ 2025-12-18 11:39:49 ***k = 11      LB = 1.4629521385242603e12     UB = Inf       Gap = Inf       CPU Time = 4058.7111
+[ 2025-12-18 11:50:33 Solving the subproblems required 644.4519910812378 seconds
+Updating the planning problem....done (it took 0.09984087944030762 s).
+[ 2025-12-18 11:50:36 Solving the planning problem required 3.037264823913574 seconds
+[ 2025-12-18 11:50:36 The optimal value of the planning problem is 1.5259631723912742e12
+[ 2025-12-18 11:50:36 ***k = 12      LB = 1.5259631723912742e12     UB = Inf       Gap = Inf       CPU Time = 4706.30602
+[ 2025-12-18 12:13:19 Solving the subproblems required 1362.6622989177704 seconds
+Updating the planning problem....done (it took 0.07080793380737305 s).
+[ 2025-12-18 12:13:22 Solving the planning problem required 2.5720109939575195 seconds
+[ 2025-12-18 12:13:22 The optimal value of the planning problem is 1.8846486043225166e12
+[ 2025-12-18 12:13:22 ***k = 13      LB = 1.8846486043225166e12     UB = Inf       Gap = Inf       CPU Time = 6071.62028
+[ 2025-12-18 12:27:38 Solving the subproblems required 856.4454729557037 seconds
+Updating the planning problem....done (it took 0.09099006652832031 s).
+[ 2025-12-18 12:27:40 Solving the planning problem required 2.3641679286956787 seconds
+[ 2025-12-18 12:27:40 The optimal value of the planning problem is 2.0369788061509243e12
+[ 2025-12-18 12:27:40 ***k = 14      LB = 2.036978806150924e12     UB = Inf       Gap = Inf       CPU Time = 6930.52749
+[ 2025-12-18 12:36:28 Solving the subproblems required 527.7541449069977 seconds
+Updating the planning problem....done (it took 0.08558893203735352 s).
+[ 2025-12-18 12:36:31 Solving the planning problem required 2.5127251148223877 seconds
+[ 2025-12-18 12:36:31 The optimal value of the planning problem is 2.150939302086116e12
+[ 2025-12-18 12:36:31 ***k = 15      LB = 2.1509393020861157e12     UB = Inf       Gap = Inf       CPU Time = 7460.88593
+┌ Warning: 2025-12-18 12:36:43 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

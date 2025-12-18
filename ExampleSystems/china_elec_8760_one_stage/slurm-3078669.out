@@ -1,0 +1,471 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Red Hat Enterprise Linux 9.6 (Plow)")
+
+CPU model: AMD EPYC 9654 96-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 192 physical cores, 192 logical processors, using up to 32 threads
+
+Non-default parameters:
+Method  2
+BarConvTol  0.001
+Crossover  0
+
+Optimize a model with 66499753 rows, 38354319 columns and 279721748 nonzeros (Min)
+Model fingerprint: 0x577c97b6
+Model has 13307814 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e-03, 2e+05]
+  Objective range  [1e+01, 1e+08]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-01, 1e+06]
+Presolve removed 5011542 rows and 1585905 columns (presolve time = 6s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 13s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 16s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 21s)...
+Presolve removed 7630782 rows and 2750985 columns (presolve time = 27s)...
+Presolve removed 7639797 rows and 2760000 columns (presolve time = 30s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 43s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 51s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 56s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 61s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 72s)...
+Presolve removed 24082092 rows and 11520943 columns (presolve time = 77s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 86s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 92s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 97s)...
+Presolve removed 24082124 rows and 11520944 columns (presolve time = 101s)...
+Presolve removed 24344924 rows and 11520944 columns
+Presolve time: 108.72s
+Presolved: 42154829 rows, 27096175 columns, 254373917 nonzeros
+Elapsed ordering time = 49s
+Elapsed ordering time = 51s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 180s
+Elapsed ordering time = 185s
+Elapsed ordering time = 190s
+Elapsed ordering time = 195s
+Elapsed ordering time = 200s
+Elapsed ordering time = 205s
+Elapsed ordering time = 210s
+Elapsed ordering time = 215s
+Elapsed ordering time = 220s
+Elapsed ordering time = 225s
+Elapsed ordering time = 230s
+Elapsed ordering time = 235s
+Elapsed ordering time = 240s
+Elapsed ordering time = 245s
+Elapsed ordering time = 250s
+Elapsed ordering time = 255s
+Elapsed ordering time = 583s
+Elapsed ordering time = 608s
+Elapsed ordering time = 639s
+Elapsed ordering time = 652s
+Elapsed ordering time = 662s
+Elapsed ordering time = 676s
+Elapsed ordering time = 690s
+Elapsed ordering time = 697s
+Elapsed ordering time = 702s
+Elapsed ordering time = 706s
+Elapsed ordering time = 710s
+Elapsed ordering time = 717s
+Elapsed ordering time = 723s
+Elapsed ordering time = 729s
+Elapsed ordering time = 736s
+Elapsed ordering time = 742s
+Elapsed ordering time = 746s
+Elapsed ordering time = 752s
+Elapsed ordering time = 755s
+Elapsed ordering time = 760s
+Elapsed ordering time = 766s
+Elapsed ordering time = 772s
+Elapsed ordering time = 775s
+Elapsed ordering time = 781s
+Elapsed ordering time = 786s
+Elapsed ordering time = 791s
+Elapsed ordering time = 795s
+Elapsed ordering time = 800s
+Elapsed ordering time = 806s
+Elapsed ordering time = 811s
+Elapsed ordering time = 816s
+Elapsed ordering time = 820s
+Elapsed ordering time = 825s
+Elapsed ordering time = 831s
+Elapsed ordering time = 836s
+Elapsed ordering time = 841s
+Elapsed ordering time = 845s
+Elapsed ordering time = 850s
+Elapsed ordering time = 856s
+Elapsed ordering time = 860s
+Elapsed ordering time = 865s
+Elapsed ordering time = 870s
+Elapsed ordering time = 876s
+Elapsed ordering time = 880s
+Elapsed ordering time = 885s
+Elapsed ordering time = 890s
+Elapsed ordering time = 895s
+Elapsed ordering time = 900s
+Elapsed ordering time = 905s
+Elapsed ordering time = 910s
+Elapsed ordering time = 990s
+Elapsed ordering time = 1020s
+Elapsed ordering time = 1046s
+Elapsed ordering time = 1062s
+Elapsed ordering time = 1074s
+Elapsed ordering time = 1086s
+Elapsed ordering time = 1098s
+Elapsed ordering time = 1106s
+Elapsed ordering time = 1111s
+Elapsed ordering time = 1116s
+Elapsed ordering time = 1122s
+Elapsed ordering time = 1127s
+Elapsed ordering time = 1133s
+Elapsed ordering time = 1139s
+Elapsed ordering time = 1145s
+Elapsed ordering time = 1149s
+Elapsed ordering time = 1152s
+Elapsed ordering time = 1156s
+Elapsed ordering time = 1160s
+Elapsed ordering time = 1167s
+Elapsed ordering time = 1171s
+Elapsed ordering time = 1176s
+Elapsed ordering time = 1181s
+Elapsed ordering time = 1186s
+Elapsed ordering time = 1190s
+Elapsed ordering time = 1197s
+Elapsed ordering time = 1200s
+Elapsed ordering time = 1206s
+Elapsed ordering time = 1211s
+Elapsed ordering time = 1217s
+Elapsed ordering time = 1221s
+Elapsed ordering time = 1226s
+Elapsed ordering time = 1232s
+Elapsed ordering time = 1235s
+Elapsed ordering time = 1242s
+Elapsed ordering time = 1245s
+Elapsed ordering time = 1251s
+Elapsed ordering time = 1256s
+Elapsed ordering time = 1261s
+Elapsed ordering time = 1266s
+Elapsed ordering time = 1270s
+Elapsed ordering time = 1275s
+Elapsed ordering time = 1280s
+Elapsed ordering time = 1288s
+Elapsed ordering time = 1290s
+Elapsed ordering time = 1295s
+Elapsed ordering time = 1300s
+Elapsed ordering time = 1305s
+Elapsed ordering time = 1310s
+Elapsed ordering time = 1315s
+Elapsed ordering time = 1320s
+Elapsed ordering time = 1400s
+Elapsed ordering time = 1423s
+Elapsed ordering time = 1446s
+Elapsed ordering time = 1456s
+Elapsed ordering time = 1467s
+Elapsed ordering time = 1477s
+Elapsed ordering time = 1489s
+Elapsed ordering time = 1494s
+Elapsed ordering time = 1498s
+Elapsed ordering time = 1503s
+Elapsed ordering time = 1508s
+Elapsed ordering time = 1512s
+Elapsed ordering time = 1517s
+Elapsed ordering time = 1523s
+Elapsed ordering time = 1528s
+Elapsed ordering time = 1531s
+Elapsed ordering time = 1537s
+Elapsed ordering time = 1541s
+Elapsed ordering time = 1546s
+Elapsed ordering time = 1552s
+Elapsed ordering time = 1557s
+Elapsed ordering time = 1561s
+Elapsed ordering time = 1566s
+Elapsed ordering time = 1570s
+Elapsed ordering time = 1576s
+Elapsed ordering time = 1581s
+Elapsed ordering time = 1586s
+Elapsed ordering time = 1591s
+Elapsed ordering time = 1597s
+Elapsed ordering time = 1600s
+Elapsed ordering time = 1605s
+Elapsed ordering time = 1611s
+Elapsed ordering time = 1615s
+Elapsed ordering time = 1621s
+Elapsed ordering time = 1625s
+Elapsed ordering time = 1630s
+Elapsed ordering time = 1635s
+Elapsed ordering time = 1640s
+Elapsed ordering time = 1645s
+Elapsed ordering time = 1650s
+Elapsed ordering time = 1655s
+Elapsed ordering time = 1660s
+Elapsed ordering time = 1665s
+Elapsed ordering time = 1670s
+Elapsed ordering time = 1675s
+Elapsed ordering time = 1680s
+Elapsed ordering time = 1685s
+Elapsed ordering time = 1690s
+Elapsed ordering time = 1774s
+Elapsed ordering time = 1803s
+Elapsed ordering time = 1830s
+Elapsed ordering time = 1844s
+Elapsed ordering time = 1857s
+Elapsed ordering time = 1871s
+Elapsed ordering time = 1883s
+Elapsed ordering time = 1891s
+Elapsed ordering time = 1897s
+Elapsed ordering time = 1903s
+Elapsed ordering time = 1909s
+Elapsed ordering time = 1915s
+Elapsed ordering time = 1920s
+Elapsed ordering time = 1926s
+Elapsed ordering time = 1931s
+Elapsed ordering time = 1935s
+Elapsed ordering time = 1942s
+Elapsed ordering time = 1947s
+Elapsed ordering time = 1952s
+Elapsed ordering time = 1957s
+Elapsed ordering time = 1962s
+Elapsed ordering time = 1967s
+Elapsed ordering time = 1971s
+Elapsed ordering time = 1977s
+Elapsed ordering time = 1981s
+Elapsed ordering time = 1986s
+Elapsed ordering time = 1990s
+Elapsed ordering time = 1995s
+Elapsed ordering time = 2000s
+Elapsed ordering time = 2005s
+Elapsed ordering time = 2011s
+Elapsed ordering time = 2015s
+Elapsed ordering time = 2021s
+Elapsed ordering time = 2025s
+Elapsed ordering time = 2030s
+Elapsed ordering time = 2036s
+Elapsed ordering time = 2041s
+Elapsed ordering time = 2046s
+Elapsed ordering time = 2050s
+Elapsed ordering time = 2055s
+Elapsed ordering time = 2061s
+Elapsed ordering time = 2065s
+Elapsed ordering time = 2070s
+Elapsed ordering time = 2075s
+Elapsed ordering time = 2080s
+Elapsed ordering time = 2085s
+Elapsed ordering time = 2090s
+Elapsed ordering time = 2095s
+Elapsed ordering time = 2100s
+Elapsed ordering time = 2105s
+Elapsed ordering time = 2110s
+Ordering time: 2124.97s
+
+Barrier statistics:
+ Dense cols : 661
+ AA' NZ     : 6.130e+08
+ Factor NZ  : 1.129e+10 (roughly 120.0 GB of memory)
+ Factor Ops : 2.457e+14 (roughly 360 seconds per iteration)
+ Threads    : 32
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.81300612e+17 -2.20855900e+16  9.03e+12 1.14e-10  2.39e+12  2335s
+   1   2.80239839e+17 -3.01951012e+16  6.65e+12 4.49e+05  1.31e+12  2346s
+   2   2.68255280e+17 -3.21483786e+16  6.38e+12 4.10e+05  1.13e+12  2358s
+   3   2.60829053e+17 -3.27660893e+16  6.21e+12 3.88e+05  1.07e+12  2372s
+   4   2.54017000e+17 -3.31367731e+16  6.06e+12 3.82e+05  1.05e+12  2387s
+   5   2.45953953e+17 -3.75958841e+16  5.88e+12 2.95e+05  9.73e+11  2405s
+   6   1.59589259e+17 -3.92466772e+16  3.86e+12 2.74e+05  6.87e+11  2419s
+   7   1.45582899e+17 -4.05727308e+16  3.54e+12 2.20e+05  6.23e+11  2439s
+   8   7.64354257e+16 -4.09313035e+16  1.88e+12 2.16e+05  4.13e+11  2453s
+   9   7.46542434e+16 -4.14834415e+16  1.83e+12 2.07e+05  3.97e+11  2467s
+  10   5.90346196e+16 -4.17445420e+16  1.43e+12 2.04e+05  3.43e+11  2480s
+  11   3.67045570e+16 -4.27928552e+16  7.81e+11 1.87e+05  2.44e+11  2492s
+  12   4.77069008e+16 -4.57289043e+16  6.48e+11 1.57e+05  2.03e+11  2521s
+  13   4.21379290e+16 -4.91496195e+16  5.41e+11 9.35e+04  1.42e+11  2540s
+  14   1.91736062e+16 -4.93824843e+16  1.74e+11 8.80e+04  8.45e+10  2554s
+  15   1.47360011e+16 -4.84420526e+16  6.25e+10 5.24e+04  4.55e+10  2587s
+  16   1.35658890e+16 -4.40148752e+16  3.09e+10 2.19e+04  2.06e+10  2616s
+  17   1.14218862e+16 -3.66528970e+16  6.75e+09 1.26e+04  1.00e+10  2652s
+  18   1.15296213e+16 -3.64761109e+16  6.54e+09 5.32e+05  9.93e+09  2758s
+  19   1.24398310e+16 -2.84199791e+16  4.50e+09 2.08e+07  6.96e+09  2869s
+  20   1.29627001e+16 -7.24741368e+15  2.33e+09 2.19e+07  7.79e+08  2984s
+  21   9.00072027e+15 -3.10920932e+15  7.68e+08 1.05e+07  3.12e+08  3104s
+  22   1.58391898e+15 -6.70543444e+14  1.42e+07 8.55e+05  3.97e+07  3230s
+  23   3.78171490e+14 -1.37173888e+14  2.59e+06 1.27e+05  8.32e+06  3435s
+  24   5.04758679e+13 -3.46709982e+13  2.91e+05 1.16e+04  1.33e+06  3656s
+  25   2.68374930e+13 -1.41316354e+13  1.50e+05 4.70e+03  6.37e+05  3871s
+  26   1.87746613e+13 -9.18633233e+12  1.02e+05 3.15e+03  4.35e+05  4081s
+  27   1.46859295e+13 -5.76204203e+12  7.84e+04 2.12e+03  3.18e+05  4284s
+  28   1.20250026e+13 -3.52933530e+12  6.32e+04 1.48e+03  2.42e+05  4483s
+  29   1.11029343e+13 -3.40512906e+12  5.80e+04 1.44e+03  2.25e+05  4676s
+  30   1.04443666e+13 -3.02304041e+12  5.44e+04 1.33e+03  2.09e+05  4873s
+  31   9.11094383e+12 -2.36747755e+12  4.70e+04 1.14e+03  1.78e+05  5076s
+  32   7.83635030e+12 -1.95809277e+12  4.00e+04 1.02e+03  1.52e+05  5279s
+  33   7.10774991e+12 -1.44637083e+12  3.58e+04 8.64e+02  1.33e+05  5483s
+  34   6.34568644e+12 -1.19977503e+12  3.12e+04 7.92e+02  1.17e+05  5686s
+  35   5.56201907e+12 -9.44439423e+11  2.67e+04 7.18e+02  1.01e+05  5890s
+  36   5.26907045e+12 -6.57447350e+11  2.49e+04 6.34e+02  9.22e+04  6093s
+  37   4.89646959e+12 -4.24483743e+11  2.28e+04 5.66e+02  8.28e+04  6297s
+  38   4.59515585e+12 -2.94050025e+11  2.09e+04 5.28e+02  7.61e+04  6501s
+  39   4.28800497e+12 -4.61878084e+10  1.91e+04 4.51e+02  6.74e+04  6703s
+  40   3.89603443e+12  1.43256724e+11  1.68e+04 3.95e+02  5.84e+04  6907s
+  41   3.67169231e+12  2.20234997e+11  1.54e+04 3.72e+02  5.37e+04  7109s
+  42   3.55748708e+12  2.55163456e+11  1.46e+04 3.61e+02  5.14e+04  7311s
+  43   3.35907172e+12  3.23171898e+11  1.32e+04 3.40e+02  4.73e+04  7500s
+  44   3.21381766e+12  4.25768587e+11  1.22e+04 3.09e+02  4.34e+04  7699s
+  45   2.93356753e+12  5.19652621e+11  1.04e+04 2.80e+02  3.76e+04  7904s
+  46   2.81722528e+12  6.51126100e+11  9.56e+03 2.43e+02  3.37e+04  8107s
+  47   2.67695063e+12  7.41535089e+11  8.58e+03 2.18e+02  3.02e+04  8304s
+  48   2.53884870e+12  8.10981665e+11  7.61e+03 1.99e+02  2.69e+04  8506s
+  49   2.44892905e+12  8.65887717e+11  6.97e+03 1.83e+02  2.47e+04  8698s
+  50   2.34920562e+12  9.28834381e+11  6.28e+03 1.66e+02  2.21e+04  8900s
+  51   2.24996234e+12  9.99231898e+11  5.55e+03 1.45e+02  1.95e+04  9103s
+  52   2.15061027e+12  1.02590026e+12  4.83e+03 1.37e+02  1.75e+04  9305s
+  53   2.06747202e+12  1.06235612e+12  4.22e+03 1.26e+02  1.57e+04  9507s
+  54   2.01200948e+12  1.09607611e+12  3.82e+03 1.16e+02  1.43e+04  9699s
+  55   1.95415214e+12  1.12264424e+12  3.40e+03 1.08e+02  1.30e+04  9902s
+  56   1.90718206e+12  1.15640140e+12  3.08e+03 9.77e+01  1.17e+04  10105s
+  57   1.86368251e+12  1.18027206e+12  2.77e+03 9.00e+01  1.07e+04  10306s
+  58   1.79903340e+12  1.20727101e+12  2.32e+03 8.13e+01  9.24e+03  10507s
+  59   1.76259457e+12  1.22670915e+12  2.06e+03 7.47e+01  8.37e+03  10710s
+  60   1.73530785e+12  1.24787753e+12  1.87e+03 6.79e+01  7.61e+03  10902s
+  61   1.71082036e+12  1.26168211e+12  1.71e+03 6.32e+01  7.01e+03  11103s
+  62   1.67937080e+12  1.27639350e+12  1.49e+03 5.83e+01  6.29e+03  11304s
+  63   1.65014432e+12  1.28559949e+12  1.29e+03 5.52e+01  5.70e+03  11504s
+  64   1.63329085e+12  1.29979625e+12  1.18e+03 5.06e+01  5.21e+03  11706s
+  65   1.60459624e+12  1.30979348e+12  9.88e+02 4.72e+01  4.61e+03  11907s
+  66   1.58893674e+12  1.32427682e+12  8.88e+02 4.23e+01  4.14e+03  12108s
+  67   1.57435132e+12  1.33434449e+12  7.97e+02 3.90e+01  3.75e+03  12310s
+  68   1.56395901e+12  1.34477623e+12  7.33e+02 3.53e+01  3.43e+03  12510s
+  69   1.54756548e+12  1.35338721e+12  6.31e+02 3.24e+01  3.04e+03  12713s
+  70   1.53889966e+12  1.36092982e+12  5.76e+02 2.97e+01  2.78e+03  12914s
+  71   1.52975143e+12  1.36895436e+12  5.17e+02 2.70e+01  2.52e+03  13114s
+  72   1.52405695e+12  1.37618611e+12  4.81e+02 2.45e+01  2.31e+03  13315s
+  73   1.51664613e+12  1.38069680e+12  4.34e+02 2.29e+01  2.13e+03  13510s
+  74   1.50839347e+12  1.38552575e+12  3.83e+02 2.13e+01  1.92e+03  13711s
+  75   1.50494962e+12  1.38880945e+12  3.63e+02 2.02e+01  1.82e+03  13901s
+  76   1.49983693e+12  1.39291167e+12  3.32e+02 1.87e+01  1.67e+03  14101s
+  77   1.49585745e+12  1.39639984e+12  3.08e+02 1.75e+01  1.56e+03  14301s
+  78   1.49221102e+12  1.39762088e+12  2.87e+02 1.70e+01  1.48e+03  14496s
+  79   1.48854729e+12  1.40205660e+12  2.65e+02 1.54e+01  1.35e+03  14696s
+  80   1.48686085e+12  1.40487972e+12  2.56e+02 1.44e+01  1.28e+03  14896s
+  81   1.48600848e+12  1.40607052e+12  2.51e+02 1.39e+01  1.25e+03  15089s
+  82   1.48382371e+12  1.40765582e+12  2.39e+02 1.33e+01  1.19e+03  15289s
+  83   1.48184556e+12  1.40943850e+12  2.28e+02 1.26e+01  1.13e+03  15483s
+  84   1.47886850e+12  1.41101304e+12  2.11e+02 1.20e+01  1.06e+03  15682s
+  85   1.47829750e+12  1.41210247e+12  2.08e+02 1.15e+01  1.04e+03  15873s
+  86   1.47657962e+12  1.41308552e+12  1.99e+02 1.11e+01  9.94e+02  16067s
+  87   1.47556911e+12  1.41419738e+12  1.93e+02 1.07e+01  9.61e+02  16262s
+  88   1.47282628e+12  1.41564566e+12  1.79e+02 1.01e+01  8.95e+02  16461s
+  89   1.47164282e+12  1.41629431e+12  1.72e+02 9.80e+00  8.66e+02  16651s
+  90   1.46873264e+12  1.41758532e+12  1.57e+02 9.24e+00  8.01e+02  16849s
+  91   1.46737401e+12  1.41820428e+12  1.50e+02 8.97e+00  7.70e+02  17048s
+  92   1.46627403e+12  1.41875405e+12  1.44e+02 8.73e+00  7.44e+02  17242s
+  93   1.46482641e+12  1.41978139e+12  1.37e+02 8.28e+00  7.05e+02  17442s
+  94   1.46352175e+12  1.42046899e+12  1.30e+02 7.99e+00  6.74e+02  17640s
+  95   1.46199219e+12  1.42121371e+12  1.22e+02 7.66e+00  6.39e+02  17838s
+  96   1.46082892e+12  1.42177638e+12  1.16e+02 7.41e+00  6.12e+02  18035s
+  97   1.46041792e+12  1.42209940e+12  1.14e+02 7.26e+00  6.00e+02  18233s
+  98   1.45941182e+12  1.42238078e+12  1.09e+02 7.13e+00  5.80e+02  18422s
+  99   1.45845000e+12  1.42266064e+12  1.04e+02 7.01e+00  5.61e+02  18620s
+ 100   1.45725097e+12  1.42410831e+12  9.80e+01 6.36e+00  5.19e+02  18819s
+ 101   1.45630990e+12  1.42495707e+12  9.33e+01 5.97e+00  4.91e+02  19016s
+ 102   1.45512498e+12  1.42561944e+12  8.74e+01 5.67e+00  4.62e+02  19215s
+ 103   1.45487860e+12  1.42584799e+12  8.61e+01 5.57e+00  4.55e+02  19403s
+ 104   1.45440808e+12  1.42603394e+12  8.38e+01 5.48e+00  4.45e+02  19596s
+ 105   1.45369817e+12  1.42647330e+12  8.03e+01 5.27e+00  4.27e+02  19783s
+ 106   1.45333805e+12  1.42673432e+12  7.85e+01 5.15e+00  4.17e+02  19972s
+ 107   1.45285239e+12  1.42684617e+12  7.61e+01 5.09e+00  4.08e+02  20160s
+ 108   1.45268043e+12  1.42720782e+12  7.52e+01 4.92e+00  3.99e+02  20352s
+ 109   1.45218995e+12  1.42741872e+12  7.28e+01 4.82e+00  3.88e+02  20540s
+ 110   1.45115782e+12  1.42788179e+12  6.76e+01 4.61e+00  3.65e+02  20737s
+ 111   1.45020312e+12  1.42818854e+12  6.27e+01 4.47e+00  3.45e+02  20933s
+ 112   1.44937952e+12  1.42859396e+12  5.85e+01 4.29e+00  3.26e+02  21130s
+ 113   1.44907254e+12  1.42896214e+12  5.69e+01 4.12e+00  3.15e+02  21311s
+ 114   1.44878783e+12  1.42925782e+12  5.54e+01 3.99e+00  3.06e+02  21507s
+ 115   1.44830012e+12  1.42988517e+12  5.29e+01 3.70e+00  2.89e+02  21698s
+ 116   1.44774193e+12  1.43015640e+12  5.00e+01 3.58e+00  2.76e+02  21893s
+ 117   1.44718001e+12  1.43061230e+12  4.71e+01 3.38e+00  2.60e+02  22089s
+ 118   1.44687722e+12  1.43086390e+12  4.55e+01 3.27e+00  2.51e+02  22275s
+ 119   1.44644429e+12  1.43117759e+12  4.32e+01 3.13e+00  2.39e+02  22470s
+ 120   1.44600725e+12  1.43159755e+12  4.10e+01 2.95e+00  2.26e+02  22665s
+ 121   1.44558701e+12  1.43187176e+12  3.88e+01 2.83e+00  2.15e+02  22859s
+
+Barrier solved model in 121 iterations and 22859.54 seconds (31767.02 work units)
+Optimal objective 1.44558701e+12
+
+
+User-callback calls 434311, time in user-callback 0.45 sec
+[ Info: 2025-12-17 13:57:31 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage
+[ Info: 2025-12-17 13:57:31  ++ Loading user additions from ExampleSystems/china_elec_8760_one_stage/tmp/UserAdditions.jl
+[ Info: 2025-12-17 13:57:32  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-17 13:57:32 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/system_data.json
+[ Info: 2025-12-17 13:57:32 Loading system data
+[ Info: 2025-12-17 13:57:33 Done loading system data. It took 0.86 seconds
+[ Info: 2025-12-17 13:57:33 Done loading case data. It took 0.86 seconds
+[ Info: 2025-12-17 13:57:33 *** Generating case ***
+[ Info: 2025-12-17 13:57:33 Configuring case from settings/case_settings.json
+[ Info: 2025-12-17 13:57:33 Configuring case
+[ Info: 2025-12-17 13:57:33  -- Setting solution algorithm
+[ Info: 2025-12-17 13:57:33  -- Solution algorithm set to MacroEnergy.Monolithic()
+[ Info: 2025-12-17 13:57:33 Generating systems
+[ Info: 2025-12-17 13:57:34 Generating system
+┌ Warning: 2025-12-17 13:57:35 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 13:57:36 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 13:57:36 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 13:57:36 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 13:57:36 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 13:57:36 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 13:59:57 Done generating system. It took 143.67 seconds
+[ Info: 2025-12-17 13:59:58  -- Discounting fixed costs for period 1
+[ Info: 2025-12-17 13:59:58  -- Computing retirement case for period 1
+[ Info: 2025-12-17 13:59:59 *** Done generating case. It took 145.39 seconds ***
+[ Info: 2025-12-17 13:59:59 *** Running simulation with monolithic solver ***
+[ Info: 2025-12-17 13:59:59 Generating model
+[ Info: 2025-12-17 13:59:59  -- Period 1
+[ Info: 2025-12-17 13:59:59  -- Adding linking variables
+[ Info: 2025-12-17 13:59:59  -- Defining available capacity
+[ Info: 2025-12-17 14:00:00  -- Generating planning model
+[ Info: 2025-12-17 14:00:01  -- Including age-based retirements
+[ Info: 2025-12-17 14:00:01  -- Generating operational model
+[ Info: 2025-12-17 14:29:37  -- Model generation complete, it took 1778.4120450019836 seconds
+[ Info: 2025-12-17 14:29:37 Scaling constraints and RHS
+[ Info: 2025-12-17 21:01:22 Writing results for period 1
+[ Info: 2025-12-17 21:02:08 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results/capacity.csv
+[ Info: 2025-12-17 21:02:12 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results/costs.csv
+[ Info: 2025-12-17 21:02:23 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results/undiscounted_costs.csv
+[ Info: 2025-12-17 21:02:33 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results/flows.csv
+[ Info: 2025-12-17 21:03:18 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results
+[ Info: 2025-12-17 21:03:18 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results
+[ Info: 2025-12-17 21:03:19 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/results_001/results
+┌ Warning: 2025-12-17 21:03:20 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-17 21:03:20 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
