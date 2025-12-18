@@ -1,934 +1,1726 @@
 {
-    "nodes": [
+  "nodes": [
+    {
+      "type": "Electricity",
+      "global_data": {
+        "constraints": {
+          "MaxNonServedDemandConstraint": true,
+          "MaxNonServedDemandPerSegmentConstraint": true,
+          "BalanceConstraint": true
+        },
+        "max_nsd": [
+          1,
+          0.04,
+          0.024,
+          0.003
+        ],
+        "time_interval": "Electricity",
+        "price_nsd": [
+          50000,
+          45000,
+          27500.000000000004,
+          10000
+        ]
+      },
+      "instance_data": [
         {
-            "type": "Electricity",
-			"global_data": {
-                "constraints": {
-                    "MaxNonServedDemandConstraint": true,
-                    "MaxNonServedDemandPerSegmentConstraint": true,
-                    "BalanceConstraint": true
-                },
-                "max_nsd": [
-                    1,
-                    0.04,
-                    0.024,
-                    0.003
-                ],
-                "time_interval": "Electricity",
-                "price_nsd": [
-                    50000,
-                    45000,
-                    27500.000000000004,
-                    10000
-                ]
-            },
-            "instance_data": [
-			
-				{
-                    "id": "elec_Region1Beijing",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region1Beijing"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region2Tianjin",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region2Tianjin"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region3Hebei",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region3Hebei"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region4Shanxi",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region4Shanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region5Innermongolia",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region5Innermongolia"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region6Liaoning",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region6Liaoning"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region7Jilin",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region7Jilin"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region8Heilongjiang",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region8Heilongjiang"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region9Shanghai",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region9Shanghai"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region10Jiangsu",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region10Jiangsu"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region11Zhejiang",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region11Zhejiang"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region12Anhui",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region12Anhui"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region13Fujian",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region13Fujian"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region14Jiangxi",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region14Jiangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region15Shandong",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region15Shandong"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region16Henan",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region16Henan"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region17Hubei",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region17Hubei"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region18Hunan",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region18Hunan"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region19Guangdong",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region19Guangdong"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region20Guangxi",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region20Guangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region21Hainan",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region21Hainan"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region22Chongqing",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region22Chongqing"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region23Sichuan",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region23Sichuan"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region24Guizhou",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region24Guizhou"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region25Yunnan",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region25Yunnan"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region26Tibet",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region26Tibet"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region27Shaanxi",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region27Shaanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region28Gansu",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region28Gansu"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region29Qinghai",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region29Qinghai"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region30Ningxia",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region30Ningxia"
-                        }
-                    }
-                },
-                {
-                    "id": "elec_Region31Xinjiang",
-                    "demand": {
-                        "timeseries": {
-                            "path": "system/demand_3.csv",
-                            "header": "Demand_MW_Region31Xinjiang"
-                        }
-                    }
-                }
-            ]
+          "id": "elec_Region1Beijing",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region1Beijing"
+            }
+          }
         },
         {
-            "type": "NaturalGas",
-			"global_data": {
-                "time_interval": "NaturalGas"
-            },
-            "instance_data": [
-                {
-                    "id": "natgas_Region1Beijing",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region1Beijing"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region2Tianjin",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region2Tianjin"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region3Hebei",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region3Hebei"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region4Shanxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region4Shanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region5Innermongolia",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region5Innermongolia"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region6Liaoning",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region6Liaoning"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region7Jilin",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region7Jilin"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region8Heilongjiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region8Heilongjiang"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region9Shanghai",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region9Shanghai"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region10Jiangsu",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region10Jiangsu"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region11Zhejiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region11Zhejiang"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region12Anhui",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region12Anhui"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region13Fujian",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region13Fujian"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region14Jiangxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region14Jiangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region15Shandong",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region15Shandong"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region16Henan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region16Henan"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region17Hubei",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region17Hubei"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region18Hunan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region18Hunan"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region19Guangdong",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region19Guangdong"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region20Guangxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region20Guangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region21Hainan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region21Hainan"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region22Chongqing",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region22Chongqing"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region23Sichuan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region23Sichuan"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region24Guizhou",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region24Guizhou"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region25Yunnan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region25Yunnan"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region26Tibet",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region26Tibet"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region27Shaanxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region27Shaanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region28Gansu",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region28Gansu"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region29Qinghai",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region29Qinghai"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region30Ningxia",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region30Ningxia"
-                        }
-                    }
-                },
-                {
-                    "id": "natgas_Region31Xinjiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "natgas_Region31Xinjiang"
-                        }
-                    }
-                }
-            ]
-            
-        },
-		{
-            "type": "Coal",
-			"global_data": {
-                "time_interval": "Coal"
-            },
-            "instance_data": [
-                {
-                    "id": "coal_Region1Beijing",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region1Beijing"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region2Tianjin",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region2Tianjin"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region3Hebei",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region3Hebei"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region4Shanxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region4Shanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region5Innermongolia",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region5Innermongolia"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region6Liaoning",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region6Liaoning"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region7Jilin",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region7Jilin"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region8Heilongjiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region8Heilongjiang"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region9Shanghai",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region9Shanghai"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region10Jiangsu",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region10Jiangsu"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region11Zhejiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region11Zhejiang"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region12Anhui",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region12Anhui"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region13Fujian",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region13Fujian"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region14Jiangxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region14Jiangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region15Shandong",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region15Shandong"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region16Henan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region16Henan"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region17Hubei",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region17Hubei"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region18Hunan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region18Hunan"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region19Guangdong",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region19Guangdong"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region20Guangxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region20Guangxi"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region21Hainan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region21Hainan"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region22Chongqing",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region22Chongqing"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region23Sichuan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region23Sichuan"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region24Guizhou",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region24Guizhou"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region25Yunnan",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region25Yunnan"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region26Tibet",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region26Tibet"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region27Shaanxi",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region27Shaanxi"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region28Gansu",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region28Gansu"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region29Qinghai",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region29Qinghai"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region30Ningxia",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region30Ningxia"
-                        }
-                    }
-                },
-                {
-                    "id": "coal_Region31Xinjiang",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "coal_Region31Xinjiang"
-                        }
-                    }
-                }
-            ]
-            
-        },
-        {	
-			"type": "Uranium",
-            "global_data": {
-                "time_interval": "Uranium"
-            },
-            "instance_data": [
-                {
-                    "id": "uranium_source",
-                    "price": {
-                        "timeseries": {
-                            "path": "system/fuel_prices_3.csv",
-                            "header": "uranium_source"
-                        }
-                    }
-                }
-            ]
-            
+          "id": "elec_Region2Tianjin",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region2Tianjin"
+            }
+          }
         },
         {
-            "type": "CO2",
-            "global_data": {
-                "time_interval": "CO2",
-                "price_unmet_policy": {
-                    "CO2CapConstraint": 15000
-                }
-            },
-            "instance_data": [
-                {
-                    "id": "co2_sink_national",
-                    "constraints": {
-                        "CO2CapConstraint": true
-                    },
-                    "rhs_policy": {
-                        "CO2CapConstraint": 293000000
-                    }
-                }
-            ]
+          "id": "elec_Region3Hebei",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region3Hebei"
+            }
+          }
         },
         {
-            "global_data": {
-                "time_interval": "Electricity"
-            },
-            "instance_data": [
-                {
-                    "id": "hydro_source"
-                }
-            ],
-            "type": "Electricity"
+          "id": "elec_Region4Shanxi",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region4Shanxi"
+            }
+          }
+        },
+        {
+          "id": "elec_Region5Innermongolia",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region5Innermongolia"
+            }
+          }
+        },
+        {
+          "id": "elec_Region6Liaoning",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region6Liaoning"
+            }
+          }
+        },
+        {
+          "id": "elec_Region7Jilin",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region7Jilin"
+            }
+          }
+        },
+        {
+          "id": "elec_Region8Heilongjiang",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region8Heilongjiang"
+            }
+          }
+        },
+        {
+          "id": "elec_Region9Shanghai",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region9Shanghai"
+            }
+          }
+        },
+        {
+          "id": "elec_Region10Jiangsu",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region10Jiangsu"
+            }
+          }
+        },
+        {
+          "id": "elec_Region11Zhejiang",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region11Zhejiang"
+            }
+          }
+        },
+        {
+          "id": "elec_Region12Anhui",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region12Anhui"
+            }
+          }
+        },
+        {
+          "id": "elec_Region13Fujian",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region13Fujian"
+            }
+          }
+        },
+        {
+          "id": "elec_Region14Jiangxi",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region14Jiangxi"
+            }
+          }
+        },
+        {
+          "id": "elec_Region15Shandong",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region15Shandong"
+            }
+          }
+        },
+        {
+          "id": "elec_Region16Henan",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region16Henan"
+            }
+          }
+        },
+        {
+          "id": "elec_Region17Hubei",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region17Hubei"
+            }
+          }
+        },
+        {
+          "id": "elec_Region18Hunan",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region18Hunan"
+            }
+          }
+        },
+        {
+          "id": "elec_Region19Guangdong",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region19Guangdong"
+            }
+          }
+        },
+        {
+          "id": "elec_Region20Guangxi",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region20Guangxi"
+            }
+          }
+        },
+        {
+          "id": "elec_Region21Hainan",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region21Hainan"
+            }
+          }
+        },
+        {
+          "id": "elec_Region22Chongqing",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region22Chongqing"
+            }
+          }
+        },
+        {
+          "id": "elec_Region23Sichuan",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region23Sichuan"
+            }
+          }
+        },
+        {
+          "id": "elec_Region24Guizhou",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region24Guizhou"
+            }
+          }
+        },
+        {
+          "id": "elec_Region25Yunnan",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region25Yunnan"
+            }
+          }
+        },
+        {
+          "id": "elec_Region26Tibet",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region26Tibet"
+            }
+          }
+        },
+        {
+          "id": "elec_Region27Shaanxi",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region27Shaanxi"
+            }
+          }
+        },
+        {
+          "id": "elec_Region28Gansu",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region28Gansu"
+            }
+          }
+        },
+        {
+          "id": "elec_Region29Qinghai",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region29Qinghai"
+            }
+          }
+        },
+        {
+          "id": "elec_Region30Ningxia",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region30Ningxia"
+            }
+          }
+        },
+        {
+          "id": "elec_Region31Xinjiang",
+          "demand": {
+            "timeseries": {
+              "path": "system/demand_3.csv",
+              "header": "Demand_MW_Region31Xinjiang"
+            }
+          }
         }
-    ]
+      ]
+    },
+    {
+      "type": "NaturalGas",
+      "global_data": {
+        "time_interval": "NaturalGas"
+      },
+      "instance_data": [
+        {
+          "id": "natgas_Region1Beijing",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region1Beijing"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region2Tianjin",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region2Tianjin"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region3Hebei",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region3Hebei"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region4Shanxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region4Shanxi"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region5Innermongolia",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region5Innermongolia"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region6Liaoning",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region6Liaoning"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region7Jilin",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region7Jilin"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region8Heilongjiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region8Heilongjiang"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region9Shanghai",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region9Shanghai"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region10Jiangsu",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region10Jiangsu"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region11Zhejiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region11Zhejiang"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region12Anhui",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region12Anhui"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region13Fujian",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region13Fujian"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region14Jiangxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region14Jiangxi"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region15Shandong",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region15Shandong"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region16Henan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region16Henan"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region17Hubei",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region17Hubei"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region18Hunan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region18Hunan"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region19Guangdong",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region19Guangdong"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region20Guangxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region20Guangxi"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region21Hainan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region21Hainan"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region22Chongqing",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region22Chongqing"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region23Sichuan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region23Sichuan"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region24Guizhou",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region24Guizhou"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region25Yunnan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region25Yunnan"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region26Tibet",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region26Tibet"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region27Shaanxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region27Shaanxi"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region28Gansu",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region28Gansu"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region29Qinghai",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region29Qinghai"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region30Ningxia",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region30Ningxia"
+            }
+          }
+        },
+        {
+          "id": "natgas_Region31Xinjiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "natgas_Region31Xinjiang"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "Coal",
+      "global_data": {
+        "time_interval": "Coal"
+      },
+      "instance_data": [
+        {
+          "id": "coal_Region1Beijing",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region1Beijing"
+            }
+          }
+        },
+        {
+          "id": "coal_Region2Tianjin",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region2Tianjin"
+            }
+          }
+        },
+        {
+          "id": "coal_Region3Hebei",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region3Hebei"
+            }
+          }
+        },
+        {
+          "id": "coal_Region4Shanxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region4Shanxi"
+            }
+          }
+        },
+        {
+          "id": "coal_Region5Innermongolia",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region5Innermongolia"
+            }
+          }
+        },
+        {
+          "id": "coal_Region6Liaoning",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region6Liaoning"
+            }
+          }
+        },
+        {
+          "id": "coal_Region7Jilin",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region7Jilin"
+            }
+          }
+        },
+        {
+          "id": "coal_Region8Heilongjiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region8Heilongjiang"
+            }
+          }
+        },
+        {
+          "id": "coal_Region9Shanghai",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region9Shanghai"
+            }
+          }
+        },
+        {
+          "id": "coal_Region10Jiangsu",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region10Jiangsu"
+            }
+          }
+        },
+        {
+          "id": "coal_Region11Zhejiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region11Zhejiang"
+            }
+          }
+        },
+        {
+          "id": "coal_Region12Anhui",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region12Anhui"
+            }
+          }
+        },
+        {
+          "id": "coal_Region13Fujian",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region13Fujian"
+            }
+          }
+        },
+        {
+          "id": "coal_Region14Jiangxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region14Jiangxi"
+            }
+          }
+        },
+        {
+          "id": "coal_Region15Shandong",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region15Shandong"
+            }
+          }
+        },
+        {
+          "id": "coal_Region16Henan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region16Henan"
+            }
+          }
+        },
+        {
+          "id": "coal_Region17Hubei",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region17Hubei"
+            }
+          }
+        },
+        {
+          "id": "coal_Region18Hunan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region18Hunan"
+            }
+          }
+        },
+        {
+          "id": "coal_Region19Guangdong",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region19Guangdong"
+            }
+          }
+        },
+        {
+          "id": "coal_Region20Guangxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region20Guangxi"
+            }
+          }
+        },
+        {
+          "id": "coal_Region21Hainan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region21Hainan"
+            }
+          }
+        },
+        {
+          "id": "coal_Region22Chongqing",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region22Chongqing"
+            }
+          }
+        },
+        {
+          "id": "coal_Region23Sichuan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region23Sichuan"
+            }
+          }
+        },
+        {
+          "id": "coal_Region24Guizhou",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region24Guizhou"
+            }
+          }
+        },
+        {
+          "id": "coal_Region25Yunnan",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region25Yunnan"
+            }
+          }
+        },
+        {
+          "id": "coal_Region26Tibet",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region26Tibet"
+            }
+          }
+        },
+        {
+          "id": "coal_Region27Shaanxi",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region27Shaanxi"
+            }
+          }
+        },
+        {
+          "id": "coal_Region28Gansu",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region28Gansu"
+            }
+          }
+        },
+        {
+          "id": "coal_Region29Qinghai",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region29Qinghai"
+            }
+          }
+        },
+        {
+          "id": "coal_Region30Ningxia",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region30Ningxia"
+            }
+          }
+        },
+        {
+          "id": "coal_Region31Xinjiang",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "coal_Region31Xinjiang"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "Uranium",
+      "global_data": {
+        "time_interval": "Uranium"
+      },
+      "instance_data": [
+        {
+          "id": "uranium_source",
+          "price": {
+            "timeseries": {
+              "path": "system/fuel_prices_3.csv",
+              "header": "uranium_source"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "CO2",
+      "global_data": {
+        "time_interval": "CO2",
+        "price_unmet_policy": {
+          "CO2CapConstraint": 15000
+        }
+      },
+      "instance_data": [
+        {
+          "id": "co2_sink_national",
+          "constraints": {
+            "CO2CapConstraint": true
+          },
+          "rhs_policy": {
+            "CO2CapConstraint": 293000000
+          }
+        }
+      ]
+    },
+    {
+      "global_data": {
+        "time_interval": "Electricity"
+      },
+      "instance_data": [
+        {
+          "id": "hydro_source"
+        }
+      ],
+      "type": "Electricity"
+    },
+    {
+      "type": "Aluminum",
+      "global_data": {
+        "time_interval": "Aluminum",
+        "constraints": {
+          "AggregatedDemandConstraint": true
+        }
+      },
+      "instance_data": [
+        {
+          "id": "aluminum_produced",
+          "rhs_policy": {
+            "AggregatedDemandConstraint": 672075.6921638087
+          }
+        }
+      ]
+    },
+    {
+      "type": "Alumina",
+      "global_data": {
+        "time_interval": "Alumina",
+        "constraints": {
+          "AggregatedDemandConstraint": true
+        }
+      },
+      "instance_data": [
+        {
+          "id": "alumina_produced",
+          "rhs_policy": {
+            "AggregatedDemandConstraint": 0
+          }
+        }
+      ]
+    },
+    {
+      "type": "AluminumScrap",
+      "global_data": {
+        "time_interval": "AluminumScrap",
+        "constraints": {
+          "BalanceConstraint": true
+        }
+      },
+      "instance_data": [
+        {
+          "id": "aluminumscrap_source_Region12Anhui",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region22Chongqing",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region13Fujian",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region28Gansu",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region19Guangdong",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region20Guangxi",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region24Guizhou",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region3Hebei",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region8Heilongjiang",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region16Henan",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region17Hubei",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region18Hunan",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region5Innermongolia",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region10Jiangsu",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region14Jiangxi",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region7Jilin",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region6Liaoning",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region30Ningxia",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region29Qinghai",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region27Shaanxi",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region15Shandong",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region4Shanxi",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region23Sichuan",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region26Tibet",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region31Xinjiang",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region25Yunnan",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "aluminumscrap_source_Region11Zhejiang",
+          "max_supply": [
+            11.0
+          ],
+          "price_supply": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Bauxite",
+      "global_data": {
+        "time_interval": "Bauxite",
+        "constraints": {
+          "BalanceConstraint": true
+        }
+      },
+      "instance_data": [
+        {
+          "id": "bauxite_source_Region12Anhui",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region22Chongqing",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region13Fujian",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region28Gansu",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region19Guangdong",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region20Guangxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region24Guizhou",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region3Hebei",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region8Heilongjiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region16Henan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region17Hubei",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region18Hunan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region5Innermongolia",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region10Jiangsu",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region14Jiangxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region7Jilin",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region6Liaoning",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region30Ningxia",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region29Qinghai",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region27Shaanxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region15Shandong",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region4Shanxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region23Sichuan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region26Tibet",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region31Xinjiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region25Yunnan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "bauxite_source_Region11Zhejiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Graphite",
+      "global_data": {
+        "time_interval": "Graphite",
+        "constraints": {
+          "BalanceConstraint": true
+        }
+      },
+      "instance_data": [
+        {
+          "id": "graphite_source_Region12Anhui",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region22Chongqing",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region13Fujian",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region28Gansu",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region19Guangdong",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region20Guangxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region24Guizhou",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region3Hebei",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region8Heilongjiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region16Henan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region17Hubei",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region18Hunan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region5Innermongolia",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region10Jiangsu",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region14Jiangxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region7Jilin",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region6Liaoning",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region30Ningxia",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region29Qinghai",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region27Shaanxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region15Shandong",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region4Shanxi",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region23Sichuan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region26Tibet",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region31Xinjiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region25Yunnan",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        },
+        {
+          "id": "graphite_source_Region11Zhejiang",
+          "max_supply": [
+            100000.0
+          ],
+          "price_supply": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
 }
