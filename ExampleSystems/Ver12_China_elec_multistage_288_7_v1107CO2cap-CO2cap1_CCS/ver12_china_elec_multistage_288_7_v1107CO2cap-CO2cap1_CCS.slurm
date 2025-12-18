@@ -17,14 +17,6 @@ module purge
 module load gurobi/13.0.0
 module load julia/1.12.1
 
-export OMP_NUM_THREADS=1
-
-julia --project=@. -e '
-    using Pkg;
-    Pkg.add("Gurobi");
-    Pkg.build("Gurobi"; verbose=true);
-'
-
 # 更新package
 
 # 运行 Ver12 案例（Benders）

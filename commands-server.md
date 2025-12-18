@@ -9,6 +9,19 @@ cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
 # 更新代码并提交作业
 git restore .
 git pull
+
+module purge
+module load gurobi/13.0.0
+module load julia/1.12.1
+
+export OMP_NUM_THREADS=1
+
+julia --project=@. -e '
+    using Pkg;
+    Pkg.add("Gurobi");
+    Pkg.build("Gurobi"; verbose=true);
+'
+
 sbatch ExampleSystems/Ver12_China_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS/ver12_china_elec_multistage_288_7_v1107CO2cap-CO2cap1_CCS.slurm
 
 
