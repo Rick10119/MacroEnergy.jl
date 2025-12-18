@@ -3,10 +3,10 @@
 #SBATCH --job-name=ver12_china_aluminum_288
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=500G
+#SBATCH --cpus-per-task=20
+#SBATCH --mem=100G
 #SBATCH --output=slurm-%j.out
-#SBATCH --time=5:00:00
+#SBATCH --time=24:00:00
 #SBATCH --constraint=amd
 #SBATCH --qos=high               # high priority queue
 #SBATCH --qos=urgent             # urgent priority queue (if available)
