@@ -2,8 +2,8 @@
 
 #SBATCH --job-name=china_elec_8760_one_stage_benders_1321
 #SBATCH --nodes=1
-#SBATCH --ntasks=32
-#SBATCH --cpus-per-task=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
 #SBATCH --mem=1000G
 #SBATCH --output=slurm-%j.out
 #SBATCH --time=24:00:00
