@@ -104,34 +104,42 @@ def load_total_demand_per_period(demand_2025_10kt: float = 4000.0) -> dict:
 
 
 def load_province_capacity() -> dict:
-    """读取每个省份的 existing_capacity（吨/秒），小于阈值的记为 0"""
+    """读取每个省份的 existing_capacity（吨/小时），小于阈值的记为 0"""
     cap_csv_path = os.path.join(
         BASE_DIR,
         "data",
         "aluminum_demand",
         "aluminum_capacity_by_province.csv",
     )
-    capacity_eps = 1e-4
+    capacity_eps = 1e-4  # 吨/小时的阈值
     info = {}
-    with open(cap_csv_path, "r", encoding="utf-8") as f:
+    with open(cap_csv_path, "r", encoding="utf-8-sig") as f:  # utf-8-sig 自动处理BOM
         reader = csv.DictReader(f)
         # 处理可能存在的 BOM 或不同拼写
         fieldnames = [fn for fn in (reader.fieldnames or [])]
         def _match(colname: str, target: str) -> bool:
-            return colname.strip().lstrip("\ufeff") == target
+            return colname.strip().lstrip("\ufeff").lower() == target.lower()
 
         prov_key = None
         cap_key = None
         for fn in fieldnames:
-            if prov_key is None and _match(fn, "Province"):
+            fn_clean = fn.strip().lstrip("\ufeff")
+            if prov_key is None and _match(fn_clean, "Province"):
                 prov_key = fn
-            if cap_key is None and _match(fn, "Capacity_tons_per_second"):
-                cap_key = fn
+            # 支持多种可能的列名：Capacity_ton_per_h, Capacity_tons_per_hour, Capacity_tons_per_second
+            if cap_key is None:
+                if _match(fn_clean, "Capacity_ton_per_h") or \
+                   _match(fn_clean, "Capacity_tons_per_hour") or \
+                   _match(fn_clean, "Capacity_tons_per_second"):
+                    cap_key = fn
 
         if prov_key is None or cap_key is None:
             raise KeyError(
-                f"在 {cap_csv_path} 的表头中找不到 'Province' 或 'Capacity_tons_per_second' 列，实际列名: {fieldnames}"
+                f"在 {cap_csv_path} 的表头中找不到 'Province' 或容量列，实际列名: {fieldnames}"
             )
+
+        # 检查是否需要单位转换（如果列名是 tons_per_second，需要转换为 tons_per_hour）
+        needs_conversion = "tons_per_second" in cap_key.lower() or "ton_per_second" in cap_key.lower()
 
         for row in reader:
             if not row:  # 跳过空行
@@ -146,13 +154,16 @@ def load_province_capacity() -> dict:
             cap_val = row.get(cap_key, "")
             if cap_val is None or cap_val == "":
                 continue
-            cap_tps = float(cap_val)
-            existing_cap = 0.0 if cap_tps < capacity_eps else cap_tps
+            cap_value = float(cap_val)
+            # 如果需要转换（从吨/秒到吨/小时）
+            if needs_conversion:
+                cap_value = cap_value * 3600.0  # 1 吨/秒 = 3600 吨/小时
+            existing_cap = 0.0 if cap_value < capacity_eps else cap_value
             info[prov] = {
                 "province": prov,
                 "region_str": region_str,
                 "region_num": region_num,
-                "existing_capacity": existing_cap,
+                "existing_capacity": existing_cap,  # 单位：吨/小时
             }
     return info
 

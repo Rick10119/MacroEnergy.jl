@@ -5,8 +5,6 @@
 
 # 进入 MacroEnergy.jl 目录
 cd /scratch/gpfs/JENKINS/rl8728/MacroEnergy.jl
-
-# 更新代码并提交作业
 git restore .
 git pull
 

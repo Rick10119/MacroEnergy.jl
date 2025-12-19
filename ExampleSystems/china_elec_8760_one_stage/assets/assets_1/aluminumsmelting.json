@@ -61,7 +61,7 @@
                 {
                     "id": "aluminum_smelting_Region12Anhui",
                     "location": "Region12Anhui",
-                    "existing_capacity": 0.05120898401826484,
+                    "existing_capacity": 184.35234246575342,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -87,7 +87,7 @@
                 {
                     "id": "aluminum_smelting_Region22Chongqing",
                     "location": "Region22Chongqing",
-                    "existing_capacity": 0.01191494149543379,
+                    "existing_capacity": 42.89378938356164,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -113,7 +113,7 @@
                 {
                     "id": "aluminum_smelting_Region13Fujian",
                     "location": "Region13Fujian",
-                    "existing_capacity": 0.019812835331050226,
+                    "existing_capacity": 71.32620719178081,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -139,7 +139,7 @@
                 {
                     "id": "aluminum_smelting_Region28Gansu",
                     "location": "Region28Gansu",
-                    "existing_capacity": 0.0951675399543379,
+                    "existing_capacity": 342.60314383561644,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -165,7 +165,7 @@
                 {
                     "id": "aluminum_smelting_Region19Guangdong",
                     "location": "Region19Guangdong",
-                    "existing_capacity": 0.013000630707762558,
+                    "existing_capacity": 46.802270547945206,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -191,7 +191,7 @@
                 {
                     "id": "aluminum_smelting_Region20Guangxi",
                     "location": "Region20Guangxi",
-                    "existing_capacity": 0.09779885416666667,
+                    "existing_capacity": 352.075875,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -217,7 +217,7 @@
                 {
                     "id": "aluminum_smelting_Region24Guizhou",
                     "location": "Region24Guizhou",
-                    "existing_capacity": 0.037187805365296804,
+                    "existing_capacity": 133.8760993150685,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -243,7 +243,7 @@
                 {
                     "id": "aluminum_smelting_Region3Hebei",
                     "location": "Region3Hebei",
-                    "existing_capacity": 0.001642351598173516,
+                    "existing_capacity": 5.912465753424657,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -269,7 +269,7 @@
                 {
                     "id": "aluminum_smelting_Region8Heilongjiang",
                     "location": "Region8Heilongjiang",
-                    "existing_capacity": 0.004786900684931507,
+                    "existing_capacity": 17.23284246575342,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -295,7 +295,7 @@
                 {
                     "id": "aluminum_smelting_Region16Henan",
                     "location": "Region16Henan",
-                    "existing_capacity": 0.09442137557077626,
+                    "existing_capacity": 339.91695205479454,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -321,7 +321,7 @@
                 {
                     "id": "aluminum_smelting_Region17Hubei",
                     "location": "Region17Hubei",
-                    "existing_capacity": 0.023077798230593607,
+                    "existing_capacity": 83.08007363013698,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -347,7 +347,7 @@
                 {
                     "id": "aluminum_smelting_Region18Hunan",
                     "location": "Region18Hunan",
-                    "existing_capacity": 0.03915981164383562,
+                    "existing_capacity": 140.97532191780823,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -373,7 +373,7 @@
                 {
                     "id": "aluminum_smelting_Region5Innermongolia",
                     "location": "Region5Innermongolia",
-                    "existing_capacity": 0.16037204052511414,
+                    "existing_capacity": 577.339345890411,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -399,7 +399,7 @@
                 {
                     "id": "aluminum_smelting_Region10Jiangsu",
                     "location": "Region10Jiangsu",
-                    "existing_capacity": 0.018573176369863015,
+                    "existing_capacity": 66.86343493150686,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -425,7 +425,7 @@
                 {
                     "id": "aluminum_smelting_Region14Jiangxi",
                     "location": "Region14Jiangxi",
-                    "existing_capacity": 0.05098987157534247,
+                    "existing_capacity": 183.5635376712329,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -451,7 +451,7 @@
                 {
                     "id": "aluminum_smelting_Region7Jilin",
                     "location": "Region7Jilin",
-                    "existing_capacity": 0.0026293407534246577,
+                    "existing_capacity": 9.465626712328767,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -477,7 +477,7 @@
                 {
                     "id": "aluminum_smelting_Region6Liaoning",
                     "location": "Region6Liaoning",
-                    "existing_capacity": 0.017880308219178083,
+                    "existing_capacity": 64.3691095890411,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -503,7 +503,7 @@
                 {
                     "id": "aluminum_smelting_Region30Ningxia",
                     "location": "Region30Ningxia",
-                    "existing_capacity": 0.028814182363013696,
+                    "existing_capacity": 103.73105650684931,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -529,7 +529,7 @@
                 {
                     "id": "aluminum_smelting_Region29Qinghai",
                     "location": "Region29Qinghai",
-                    "existing_capacity": 0.05904568350456621,
+                    "existing_capacity": 212.56446061643837,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -555,7 +555,7 @@
                 {
                     "id": "aluminum_smelting_Region27Shaanxi",
                     "location": "Region27Shaanxi",
-                    "existing_capacity": 0.03934536529680365,
+                    "existing_capacity": 141.64331506849314,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -581,7 +581,7 @@
                 {
                     "id": "aluminum_smelting_Region15Shandong",
                     "location": "Region15Shandong",
-                    "existing_capacity": 0.16708357163242007,
+                    "existing_capacity": 601.5008578767123,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -607,7 +607,7 @@
                 {
                     "id": "aluminum_smelting_Region4Shanxi",
                     "location": "Region4Shanxi",
-                    "existing_capacity": 0.02944585616438356,
+                    "existing_capacity": 106.00508219178082,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -633,7 +633,7 @@
                 {
                     "id": "aluminum_smelting_Region23Sichuan",
                     "location": "Region23Sichuan",
-                    "existing_capacity": 0.03364253710045662,
+                    "existing_capacity": 121.11313356164383,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -659,7 +659,7 @@
                 {
                     "id": "aluminum_smelting_Region26Tibet",
                     "location": "Region26Tibet",
-                    "existing_capacity": 0.0,
+                    "existing_capacity": 0.29845890410958903,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -685,7 +685,7 @@
                 {
                     "id": "aluminum_smelting_Region31Xinjiang",
                     "location": "Region31Xinjiang",
-                    "existing_capacity": 0.16993992009132422,
+                    "existing_capacity": 611.7837123287671,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -711,7 +711,7 @@
                 {
                     "id": "aluminum_smelting_Region25Yunnan",
                     "location": "Region25Yunnan",
-                    "existing_capacity": 0.14626005850456622,
+                    "existing_capacity": 526.5362106164383,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },
@@ -737,7 +737,7 @@
                 {
                     "id": "aluminum_smelting_Region11Zhejiang",
                     "location": "Region11Zhejiang",
-                    "existing_capacity": 0.013655991723744293,
+                    "existing_capacity": 49.16157020547946,
                     "aluminum_constraints": {
                         "MinFlowConstraint": true
                     },

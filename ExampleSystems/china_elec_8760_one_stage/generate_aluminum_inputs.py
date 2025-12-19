@@ -68,7 +68,7 @@ def load_total_demand_2025(demand_2025_10kt: float = 4000.0) -> float:
 
 
 def load_province_capacity():
-    """从CSV读取省份产能数据"""
+    """从CSV读取省份产能数据（单位：吨/小时）"""
     # 尝试从当前目录或上级目录的Ver12案例读取数据
     cap_csv_paths = [
         os.path.join(BASE_DIR, "data", "aluminum_demand", "aluminum_capacity_by_province.csv"),
@@ -90,7 +90,7 @@ def load_province_capacity():
     
     print(f"  读取产能CSV: {cap_csv_path}")
     
-    with open(cap_csv_path, "r", encoding="utf-8") as f:
+    with open(cap_csv_path, "r", encoding="utf-8-sig") as f:  # utf-8-sig 自动处理BOM
         reader = csv.DictReader(f)
         rows = list(reader)
     
@@ -103,15 +103,23 @@ def load_province_capacity():
     capacity_col = None
     
     for key in first_row.keys():
-        if "province" in key.lower():
+        key_clean = key.strip().lstrip("\ufeff").lower()
+        if "province" in key_clean:
             province_col = key
-        if "capacity_tons_per_second" in key.lower():
-            capacity_col = key
+        # 支持多种可能的列名：Capacity_ton_per_h, Capacity_tons_per_hour, Capacity_tons_per_second
+        if capacity_col is None:
+            if "capacity_ton_per_h" in key_clean or \
+               "capacity_tons_per_hour" in key_clean or \
+               "capacity_tons_per_second" in key_clean:
+                capacity_col = key
     
     if province_col is None or capacity_col is None:
         raise ValueError(f"CSV文件缺少必要的列。找到的列: {list(first_row.keys())}")
     
-    capacity_eps = 1e-4
+    # 检查是否需要单位转换（如果列名是 tons_per_second，需要转换为 tons_per_hour）
+    needs_conversion = "tons_per_second" in capacity_col.lower() or "ton_per_second" in capacity_col.lower()
+    
+    capacity_eps = 1e-4  # 吨/小时的阈值
     province_info = {}
     
     for row in rows:
@@ -122,21 +130,25 @@ def load_province_capacity():
         
         region_str, region_num = PROVINCE_TO_REGION[prov]
         try:
-            cap_tps = float(row[capacity_col])
+            cap_value = float(row[capacity_col])
         except (ValueError, KeyError):
             print(f"  警告: 省份 {prov} 的产能数据无效，设为0")
-            cap_tps = 0.0
+            cap_value = 0.0
         
-        existing_cap = 0.0 if cap_tps < capacity_eps else cap_tps
+        # 如果需要转换（从吨/秒到吨/小时）
+        if needs_conversion:
+            cap_value = cap_value * 3600.0  # 1 吨/秒 = 3600 吨/小时
+        
+        existing_cap = 0.0 if cap_value < capacity_eps else cap_value
         
         province_info[prov] = {
             "province": prov,
             "region_str": region_str,
             "region_num": region_num,
-            "existing_capacity": existing_cap,
+            "existing_capacity": existing_cap,  # 单位：吨/小时
         }
     
-    print(f"  成功加载 {len(province_info)} 个省份的产能数据")
+    print(f"  成功加载 {len(province_info)} 个省份的产能数据（单位：吨/小时）")
     return province_info
 
 
