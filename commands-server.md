@@ -13,9 +13,10 @@ module load gurobi/13.0.0
 module load julia/1.12.1
 
 export OMP_NUM_THREADS=4
+sbatch ExampleSystems/china_elec_8760_one_stage/china_elec_8760_one_stage_benders.slurm
 
 sbatch ExampleSystems/china_elec_8760_one_stage/china_elec_8760_one_stage.slurm
-sbatch ExampleSystems/china_elec_8760_one_stage/china_elec_8760_one_stage_benders.slurm
+
 
 
 
