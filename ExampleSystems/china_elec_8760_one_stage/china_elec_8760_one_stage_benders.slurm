@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --job-name=china_elec_8760_one_stage_benders
-#SBATCH --nodes=2
-#SBATCH --ntasks=2
-#SBATCH --cpus-per-task=10
-#SBATCH --mem=100G
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=1000G
 #SBATCH --output=slurm-%j.out
 #SBATCH --time=24:00:00
 #SBATCH --constraint=amd
